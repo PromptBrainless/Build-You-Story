@@ -1,0 +1,98 @@
+{
+  "id": "kirche",
+  "titel": "Kirche und Fenn",
+  "quest": "gasse",
+  "datei": "gasse/kirche.json",
+  "szenen": [
+    {
+      "id": "gasse-kirche",
+      "title": "Vor der Kirche",
+      "art": "chapel",
+      "portrait": "beggar",
+      "lines": [
+        "Die Kirche von Lindendorf steht einen Schritt tiefer als der Platz davor, als hätte sie sich langsam in die Erde gesenkt, müde von allem, was ihr je gebeichtet wurde.",
+        "An der Schwelle hat der Stein eine flache Mulde geschliffen, in der das Regenwasser steht wie ein kleiner Spiegel. Niemand hat in zehn Jahren einen Abfluss geschlagen.",
+        "Im Schatten der Kirchmauer sitzt Fenn. Die nackten Füße im Wasser der Dachrinne, als sei Kälte ein alter Bekannter. Er hebt den Blick, noch bevor du an ihm vorbeigehst."
+      ],
+      "choices": [
+        "Weiter"
+      ]
+    },
+    {
+      "id": "gasse-hub",
+      "title": "Die leere Gasse",
+      "art": "gate",
+      "portrait": null,
+      "lines": [
+        "Hinter der Gerberei liegt eine Gasse, die niemand mehr als Weg benutzt. Die Bretter an den Fenstern sind älter als die Ausreden, warum niemand dort wohnt.",
+        "Fenn bleibt an der Mauer. Vahl sitzt irgendwo im Rathaus und rechnet mit Baumannschaft. Die Kirche hält die Schwelle nass.",
+        "In einer Woche kommen Bretter, sagt man. Bretter über eine Gasse sind keine Reparatur. Sie sind ein Beschluss."
+      ],
+      "choices": [
+        "Bei Fenn an der Kirchmauer bleiben",
+        "Ratsherr Vahl im Rathaus aufsuchen",
+        "Die Gasse hinter der Gerberei ansehen",
+        "Zurück zum Dorfplatz"
+      ]
+    },
+    {
+      "id": "fenn",
+      "title": "Fenn",
+      "art": "chapel",
+      "portrait": "beggar",
+      "lines": [
+        "Fenn ist Teil der Mauer, ein Schatten unter Schatten, den man grüßt, ohne ihn anzuschauen. Heute nicht. Heute sieht er zuerst.",
+        "In der Tasche des geflickten Mantels hält er ein morsches Stück Lattenzaun. Zehn Winter haben das Holz glattgeschliffen. Die Nagellöcher sind Dellen, aber wer hinsieht, erkennt noch den rechten Winkel.",
+        "Er wartet nicht auf eine Antwort. Die Hand in der Tasche bleibt in Bewegung, als zähle sie etwas, das niemand mehr zählen will."
+      ],
+      "choices": [
+        "Weiter"
+      ]
+    },
+    {
+      "id": "fenn-an-der-kirchmauer",
+      "title": "Fenn an der Kirchmauer",
+      "art": "chapel",
+      "portrait": null,
+      "lines": [
+        "Du hast deinen Platz so gewählt, dass die Kirchentür dich nicht trifft, wenn sie aufschlägt — eine Berechnung, die nur ein Mensch anstellt, der diesen Platz nicht zum ersten Mal einnimmt. Die Dämmerung liegt schwer auf dem nassen Dach der Steinkapelle, und der Geruch von nassem Stein und fauligem Moos drückt dir in die Nase, kalt, erdig, mit dem metallischen Beigeschmack von altem Eisen im Mörtel. Wasser sickert in dünnen Fäden über die Kante und tropft neben deinem Ohr auf den Boden, regelmäßig wie ein schwacher Puls.",
+        "Der Stein unter dir ist abgewetzt zu einer sanften Mulde, genau von der Form, die ein Körper über viele, viele Winter hinterlässt. Dein Gewicht sinkt hinein, die Kälte greift durch Hose und Haut bis in die Hüfte, zäh und bleiern, und die Mulde nimmt dich auf, als hätte sie schon lange auf genau dieses Maß gewartet. Die Kirchmauer im Rücken ist rau, fleckig von dunklen Flechten, die sich wie vertrocknete Wunden über die Blöcke ziehen; jeder Atemzug reibt deine Schultern daran, und du spürst das feine Abschaben, das Gewicht deines eigenen Körpers, das den Stein weiter aushöhlt.",
+        "Wer hier sitzt, sitzt nicht zum ersten Mal, und er sitzt auch nicht zum zehnten. Die Kälte hat sich in die Gelenke gesetzt, ein dumpfer Druck hinter den Knien, und der nasse Geruch steigt weiter, mischt sich mit dem schwachen Hauch von verrottetem Laub, der unter der Mauer hervorquillt.",
+        "„Weißt du, warum dort niemand mehr geht?“ Du stellst die Frage, ohne eine Antwort zu erwarten, als wäre die Frage selbst schon die halbe Last, die du abzugeben hattest. Der Dampf deines Atems hängt einen Moment vor dem Gesicht, dann reißt ihn die Dämmerung weg, und du bleibst in der Mulde sitzen, schwer, kalt, mit dem Stein, der dich hält."
+      ],
+      "choices": [
+        "Warten und zuhören",
+        "Ihn drängen",
+        "Gehen"
+      ]
+    },
+    {
+      "id": "vahls-stube",
+      "title": "Vahls Stube",
+      "art": "townhall",
+      "portrait": null,
+      "lines": [
+        "Vahls Stube im Rathaus ist wärmer als der Platz. Die Wärme kommt von einem Ofen, der mehr Holz verbraucht, als ein Ratsherr zugeben würde.",
+        "Auf dem Tisch liegen Pläne, sauber, ohne die Gasse, als sei sie schon wegradiert. Ein Lineal liegt quer über Namen, die nicht mehr in der Tusche stehen.",
+        "Die Luft riecht nach Siegellack. Nicht nach dem Wachs vom Hang. Nach dem, das Beschlüsse hält, bis niemand mehr widerspricht."
+      ],
+      "choices": [
+        "Weiter"
+      ]
+    },
+    {
+      "id": "ratsherr-vahl",
+      "title": "Ratsherr Vahl",
+      "art": "townhall",
+      "portrait": null,
+      "lines": [
+        "Vahl lächelt, wie man lächelt, wenn man den Satz schon fertig hat. „Hinter der Gerberei liegt Ödland. Ödland wird nützlich, oder es bleibt eine offene Rechnung.“",
+        "Er bietet dir keinen Stuhl. Stühle sind für Leute, die bleiben sollen. Du sollst verstehen und gehen.",
+        "„Das Kesseljahr ist vorbei“, sagt er. „Wer es ausgräbt, gräbt für sich, nicht fürs Dorf.“ Die Hände bleiben ruhig. Ruhige Hände haben hier oft mehr getan als laute."
+      ],
+      "choices": [
+        "Weiter"
+      ]
+    }
+  ]
+}

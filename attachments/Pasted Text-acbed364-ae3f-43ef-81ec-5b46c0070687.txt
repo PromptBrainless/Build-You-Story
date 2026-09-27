@@ -1,0 +1,60 @@
+Übersetzt in echte Lindendorf-Begriffe, Kategorie für Kategorie. Wo es schon existiert, steht der Dateiname; wo nicht, was das Äquivalent wäre — oder warum es keins braucht, weil Lindendorf ein Text-Solo-Spiel ohne Grid/Kampfkarte ist.
+
+## VTT-Funktionen (Foundry, Roll20, Fantasy Grounds)
+
+| Original | Lindendorf-Äquivalent |
+|---|---|
+| Foundry-Module (Automationen, UI-Erweiterungen) | Die Werkstatt-Dateien selbst sind das: `editor-fluss.ts`, `editor-quests.ts`, `editor-assets.ts`, `testTools.ts` |
+| Foundry-Makros | `aendereRuf()`, `merkeDir()`, `protokolliere()` — kleine, wiederverwendbare Aktionen statt Feldzugriff von Hand |
+| Roll20 Würfel-Makros | `probe()` in `engine.ts` mit `LEICHT/MITTEL/SCHWER` |
+| Roll20 Initiative-Tools | **kein Äquivalent nötig** — es gibt keine Kampfreihenfolge zwischen mehreren Figuren, Kämpfe sind Einzelproben im Text |
+| Fantasy-Grounds-Regelpakete | Held-Felder in `types.ts` + `effekte.ts` |
+| Kampfsystem-Automation | `schaden()`, `tot()`, `vielleichtHeiltrank()` in `heal.ts`/`engine.ts` |
+| Token-Management (Layer, Sichtlinien) | **kein Äquivalent** — kein Raster, keine Sichtlinien |
+| Fog-of-War | inhaltlich am nächsten: `deriveKnowledge()`/`KNOWLEDGE_META` — was der Spieler weiß, ist "Wissens-Nebel" statt Karten-Nebel |
+| Status-Effekte | existiert schon: `effekte.ts`, `EFFEKT_IDS`, `EffektChips` |
+| Türen, Fallen, Trigger | `ortZustand()`/`wendeOrtWechselAn()` in `seiten-zustaende.ts`; eine "Falle" wäre bei euch eine Situationsprobe mit Schadenkonsequenz, kein technisches Subsystem |
+| Dynamische Beleuchtung | löst ihr bereits anders: `weltzustand.ts` (Tag/Dämmerung/Nacht) beeinflusst Stimmung über Text, nicht über Grafik-Layer |
+
+## Weltbau (Inkarnate, Wonderdraft, Dungeon Alchemist, World Anvil, Campaign Cartographer)
+
+| Original | Lindendorf-Äquivalent |
+|---|---|
+| Weltkarten, Regionen, Kontinente | **kein Äquivalent nötig** — ein Dorf plus Wald plus Lager, keine Kartografie-Ebene |
+| KI-Dungeon-Generierung | **nicht passend** — eure Orte sind handgeschrieben nach dem Kanon-Regelwerk, kein prozedurales Layout |
+| Lore-Datenbank, Zeitlinien, Fraktionen | existiert schon, nur als Text statt Tool: `.grok/skills/lindendorf-questreihe/references/kanon.md` (Eigennamen-Register) + `docs/QUESTREGISTER.md` |
+| Professionelle Karten | **kein Äquivalent nötig** |
+
+## Sound (Syrinscape, Tabletop Audio, Ambient Mixer, Voice-Mod)
+
+| Original | Lindendorf-Äquivalent |
+|---|---|
+| Soundboards, Musiktrigger | noch nicht gebaut, aber naheliegend: ein Ambient-Loop pro `ArtKey` + `zeitphase`, wie letztes Mal besprochen |
+| 10-Minuten-Ambients | dasselbe, nur als kurze Audiodatei pro Ort statt Soundboard-Bibliothek |
+| Eigene Soundkulissen mischen | **zu viel für den Umfang** — ein einzelner Loop pro Ort/Tageszeit reicht, kein Mixer nötig |
+| Voice-Mod (NPC-Stimmen) | **passt nicht** — reines Textspiel ohne Sprachausgabe, würde dem Charakter widersprechen |
+
+## KI-Automatisierung
+
+| Original | Lindendorf-Äquivalent |
+|---|---|
+| NPC-Generatoren, Plot-Generatoren | existiert schon: der "KI-Entwurf"-Reiter (`WeltEntwurf.tsx`, `formuliereText` über xai-api) — mit dem offenen Diff-Problem von letztem Mal |
+| Ortsbeschreibungen generieren | dieselbe Funktion, andere Eingabe |
+| Item-Generatoren | **kein Bedarf sichtbar** — Inventar ist bei euch bewusst schmal (Heiltrank/Schlüssel/Gold laut `wiring.md`, Punkt 8) |
+| Regel-Automatisierung (Effekte, Würfelmodifikatoren) | existiert schon: `zeitModifikator()`, `aendereRuf()`, `probe()`-Modifikatoren |
+
+## Modding-Werkzeuge (JSON, JS, HTML, CSS)
+
+| Original | Lindendorf-Äquivalent |
+|---|---|
+| JSON-Datenbearbeitung | existiert schon: `export-modul.ts`, `JsonMonaco.tsx` in Fach Prüfen |
+| JavaScript-Makros | existiert schon: `content.ts`, `quest-*.ts` — TypeScript statt separater Makrosprache |
+| HTML-UI-Design | existiert schon: React-Komponenten unter `src/components/game/` |
+| CSS-Themes | existiert schon: Tailwind-Klassen, kein separates Theme-System nötig |
+| Asset-Strukturierung (Ordner, Tags) | existiert schon: `art.ts` mit `ART`/`PORTRAITS` als feste Schlüssel-Register |
+
+## Assets (Tokens, Handouts, Bilder, Icons)
+
+Bereits letztes Mal behandelt — Bild-Datenbank und Icon-Sets sind vorhanden (`art.ts`, `effekte.ts`), Handout-Designer wäre neu (briefartige Kartenansicht für Dokument-Wissen), Token-Generatoren haben kein Gegenstück, weil Porträts (`PORTRAITS`) dieselbe Funktion schon erfüllen.
+
+**Zusammengefasst:** Von der ganzen Liste ist der einzige echte, noch fehlende Baustein der Ambient-Sound pro Ort/Tageszeit und der Handout-Baustein fürs Dokument-Wissen — alles andere existiert entweder schon unter anderem Namen oder passt strukturell nicht zu einem Text-Solo-Spiel ohne Kampfkarte. Soll ich für einen der beiden fehlenden Bausteine konkreten Code schreiben?

@@ -1,0 +1,38 @@
+{
+  "id": "schacht",
+  "titel": "Schacht und Graben",
+  "quest": "brunnen",
+  "datei": "brunnen/schacht.json",
+  "szenen": [
+    {
+      "id": "brunnenschacht",
+      "title": "Brunnenschacht",
+      "art": "well",
+      "portrait": null,
+      "lines": [
+        "Frischer Mörtel klebt an einer Steinfuge, nicht älter als ein paar Nächte, glatt und hell im Gegensatz zum verwitterten Stein ringsum. Dahinter, kaum zu erkennen, ein schmaler Ablaufgraben, der aus dem Dorf hinausführt, Richtung Wald, unauffällig genug, um von jedem, der nicht genau hinsieht, für ein Werk des Regens gehalten zu werden.",
+        "Denneks Stock, das fällt einem jetzt erst auf, hat beim Rühren stets genau diese Stelle gemieden, jedes Mal, als kenne die Hand, die ihn führt, die Wahrheit besser als der Mund, der sie leugnet.",
+        "Frischer Mörtel klebt an einer Steinfuge. Dahinter führt ein Ablauf aus dem Dorf. Denneks Stock hat diese Stelle gemieden."
+      ],
+      "choices": [
+        "Weiter"
+      ]
+    },
+    {
+      "id": "ablaufgraben",
+      "title": "Ablaufgraben",
+      "art": "ditch",
+      "portrait": null,
+      "lines": [
+        "Der Graben läuft gerade. Zu gerade für Wasser, das sich seinen Weg sucht. An den Rändern steht das Gras kürzer, niedergetreten, nicht vom Regen.",
+        "Der Boden darin ist glatt. Jemand hat hier mehr als einmal mit einem Eimer entlanggeschliffen. Die Ränder tragen Kratzspuren, die nicht von Wurzeln stammen.",
+        "Er endet an einer halb überwucherten Zisterne. Das Mauerwerk ist alt. Die Fugen sind es nicht. Jemand hat sie nachgestrichen, hell, noch nicht vom Moos genommen.",
+        "Im Dorf husten die Kinder. Hier hält jemand ein Becken instand, das sie nicht zu sehen bekommen.",
+        "Der Graben läuft zu gerade für wildes Wasser. Er zeigt zum Wald. Ohne hinzusehen findest du ihn später im Unterholz."
+      ],
+      "choices": [
+        "Weiter"
+      ]
+    }
+  ]
+}

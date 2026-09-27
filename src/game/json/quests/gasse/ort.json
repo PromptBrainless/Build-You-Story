@@ -1,0 +1,24 @@
+{
+  "id": "ort",
+  "titel": "Gerbereigasse",
+  "quest": "gasse",
+  "datei": "gasse/ort.json",
+  "szenen": [
+    {
+      "id": "gerbereigasse",
+      "title": "Gerbereigasse",
+      "art": "gate",
+      "portrait": null,
+      "lines": [
+        "Die Gerbereigasse ist eng genug, dass zwei Leute sich entschuldigen müssten, wenn noch jemand wohnte. Es wohnt niemand.",
+        "An den Türstöcken sind Kratzer in Höhe von Kinderschultern. Die Fensterbretter tragen Ringe, wo Töpfe standen. Der Geruch von Gerberlohe ist alt und trotzdem der jüngste, der hier geblieben ist.",
+        "Am Ende der Gasse liegt eine Kate, deren Türangel nicht rostet, als ginge noch jemand ein und aus, der nicht gesehen werden will.",
+        "Die Gerbereigasse riecht nach Lauge und nach etwas Älterem, das die Lauge nicht mehr überdeckt.",
+        "Die Häuser haben Läden, die von innen verriegelt sind. In einem Fenster fehlt das Glas. Niemand hat es ersetzt."
+      ],
+      "choices": [
+        "Weiter"
+      ]
+    }
+  ]
+}

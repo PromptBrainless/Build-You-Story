@@ -1,0 +1,26 @@
+{
+  "id": "wald",
+  "titel": "Wald",
+  "quest": "wald",
+  "datei": "wald/wald.json",
+  "szenen": [
+    {
+      "id": "wald",
+      "title": "Wald",
+      "art": "forest",
+      "portrait": null,
+      "lines": [
+        "Der Wald von Lindendorf ist kein Märchenwald.",
+        "Nasses Laub. Krähen. Ein Pfad, der sich entscheidet, kein Pfad mehr zu sein.",
+        "Irgendwo voraus liegt der Steinbruch. Dazwischen: Spuren, ein Hindernis, vielleicht Beute.",
+        "Die Bäume wachsen eng genug, dass ihre Kronen den Himmel in schmale Streifen teilen. Zwischen diesen Streifen hängt ein fahles Licht, das weder Tag noch Abend sein will.",
+        "Der Boden gibt nach, wo vor dir jemand stehen geblieben ist, und hält, wo niemand mehr hingetreten hat. Es riecht nach nassem Holz und nach Rauch, der nicht von einem Herd kommt.",
+        "Im Unterholz liegen zerbrochene Pfeile, ein Kinderlöffel und die Hälfte eines Wagenschilds. Der Wald sammelt alles, was Menschen zurücklassen, aber nichts davon wird leichter.",
+        "Der Wald zwischen Hang und Steinbruch ist der alte Transport. Salz, Mehl, und was man nicht zählen wollte. Die Banditen bewachen ihn nicht für sich allein."
+      ],
+      "choices": [
+        "Weiter"
+      ]
+    }
+  ]
+}

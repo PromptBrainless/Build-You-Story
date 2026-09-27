@@ -1,0 +1,87 @@
+Willkommen in Lindendorf
+
+Du reist durch ein abgelegenes Dorf, dessen Bewohner von seltsamen Ereignissen verunsichert sind. Sprich mit den Menschen, untersuche Orte und sammle Hinweise, um herauszufinden, was wirklich geschehen ist. Deine Entscheidungen bestimmen, welche Informationen du erhältst, welche Wege offenstehen und wie andere auf dich reagieren.
+
+Spielsteuerung
+
+Das Spiel besteht aus Szenen. Lies den Text und wähle anschließend eine der angebotenen Entscheidungen aus. Klicke auf die gewünschte Option oder die entsprechende Zahl, um fortzufahren.
+
+Jede Entscheidung kann Folgen haben. Manche eröffnen neue Wege, andere verändern die Reaktionen von Figuren, gewähren Gegenstände oder führen zu Risiken.
+
+HUD
+
+Im oberen Bereich des Bildschirms befindet sich das HUD. Dort findest du jederzeit die wichtigsten Informationen über deinen aktuellen Spielstand.
+
+Lebenspunkte (LP)
+
+Lebenspunkte zeigen, wie viel Schaden oder Belastung du noch aushalten kannst.
+
+- Startwert: 10 LP
+- Bei 0 LP endet das Abenteuer
+
+Attribute
+
+Deine Erfolgschancen bei Proben hängen von drei Attributen ab:
+
+- Stärke – körperliche Kraft, Durchsetzung und Kampf
+- Geschicklichkeit – Schleichen, Suchen, Ausweichen und Präzision
+- Charisma – Überzeugen, Verhandeln und Menschenkenntnis
+
+Der angezeigte Wert enthält bereits alle aktiven Boni und Mali.
+
+Gunst und Last
+
+Im Verlauf der Geschichte kannst du Gunst oder Last erhalten.
+
+- Gunst verbessert ein Attribut.
+- Last verschlechtert ein Attribut.
+
+Diese Zustände entstehen durch Ereignisse und Entscheidungen. Ihre Auswirkungen werden automatisch bei allen zukünftigen Proben berücksichtigt.
+
+Inventar
+
+Hier werden wichtige Gegenstände angezeigt, die du gefunden hast.
+
+Dazu gehören unter anderem:
+
+- Heiltränke
+- Schlüssel
+- Gold
+- besondere Hinweise
+
+Manche Entscheidungen oder Orte werden erst verfügbar, wenn du den passenden Gegenstand besitzt.
+
+Speichern und Laden
+
+Über die Schaltflächen Speichern und Laden kannst du deinen Fortschritt jederzeit sichern oder fortsetzen.
+
+Beim Laden bleiben alle bisherigen Entscheidungen, Gegenstände und Zustände erhalten.
+
+Proben
+
+Einige Entscheidungen erfordern eine Probe.
+
+Dabei gilt:
+
+W10 + passendes Attribut ≥ Schwierigkeit
+
+Schwierigkeitsstufen:
+
+- Leicht: 8
+- Mittel: 12
+- Schwer: 15
+
+Ein Erfolg kann neue Informationen, Belohnungen oder Wege eröffnen. Ein Misserfolg kann Nachteile verursachen, alternative Ergebnisse auslösen oder Lebenspunkte kosten.
+
+Hinweise zum Spielen
+
+- Sprich mit verschiedenen Bewohnern.
+- Untersuche auffällige Orte.
+- Lies Texte aufmerksam.
+- Merke dir wichtige Informationen.
+- Nicht jede Figur kennt die Wahrheit.
+- Nicht jede Figur sagt die Wahrheit.
+
+Oft gibt es mehrere Wege zum Ziel. Manche Probleme lassen sich durch Stärke lösen, andere durch Geschicklichkeit, Charisma oder aufmerksames Beobachten.
+
+Wer Hinweise miteinander verbindet und seine Entscheidungen sorgfältig abwägt, wird mehr entdecken als jemand, der nur den direkten Weg sucht.

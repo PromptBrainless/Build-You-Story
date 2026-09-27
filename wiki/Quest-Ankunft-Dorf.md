@@ -1,0 +1,23 @@
+# Lindendorf
+
+Häuser drücken sich aneinander, als könnten sie so wärmer bleiben, ihre Dächer tief gezogen wie Kapuzen über gesenkte Köpfe.
+
+Am Brunnen halten Frauen die Arme vor der Brust verschränkt und sehen dir nach, bis du vorbei bist — nicht neugierig, sondern prüfend, wie man ein Wetter prüft, das umschlagen könnte.
+
+In der Taverne bläst jemand hastig eine Lampe aus, als koste jede Flamme mehr, als sie an Licht zurückgibt.
+
+Auch über der Rathaustür klebt ein Zeichen aus rotem Wachs, wie du es schon am Hang gesehen hast. Hier ist es alt und unversehrt, ein Siegel, das noch niemand zu brechen wagte.
+
+Ein Gerber deckt seine Ware mit einer zu kleinen Plane ab; ein Teil des Leders bleibt im Regen liegen. Er sieht kurz hin und wendet sich ab — es lohnt sich längst nicht mehr, es zu retten.
+
+Hinter einem offenen Fenster hustet ein alter Mann. Eine Stimme zählt dahinter Münzen, so leise, als könnte lautes Zählen sie kosten.
+
+Lindendorf wirkt nicht verlassen. Es wirkt schlimmer: bewohnt von Menschen, die sich daran gewöhnt haben, dass niemand kommt — und die sich jetzt fragen, was es bedeutet, dass doch jemand gekommen ist.
+
+## Handlungen
+
+1. Weiter
+
+## Wissenstafel `intro-lindendorf`
+
+Häuser drücken sich aneinander. Frauen am Brunnen sehen dir nach, nicht neugierig, sondern prüfend. Über dem Rathaus klebt dasselbe rote Wachs.

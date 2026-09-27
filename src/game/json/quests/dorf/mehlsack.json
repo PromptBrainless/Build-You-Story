@@ -1,0 +1,28 @@
+{
+  "id": "mehlsack",
+  "titel": "Der fremde Mehlsack",
+  "quest": "dorf",
+  "datei": "dorf/mehlsack.json",
+  "szenen": [
+    {
+      "id": "mehlsack-am-brunnen",
+      "title": "Der fremde Mehlsack",
+      "art": "mill",
+      "portrait": "miller",
+      "lines": [
+        "Hinter dem Mühlstein steht ein Mehlsack, der nicht nach Mehl riecht.",
+        "Das Tuch ist grob. Die Naht wurde mit schwarzem Garn geschlossen.",
+        "Die Müllerin sieht dich an. „Der war gestern noch nicht da.“",
+        "Der Sack steht dort, wo am Morgen die erste Ration für die Backstube liegen sollte. Seine Unterseite ist trocken, obwohl der Boden nass ist.",
+        "Auf dem Tuch wurde das Mühlenzeichen nachgemalt. Der Kreis ist richtig, aber die drei Kerben darin zeigen in die falsche Richtung.",
+        "„Jemand will, dass wir ihn öffnen“, sagt die Müllerin. „Die Frage ist nur, wer danach zusieht.“",
+        "Der Sack hinter dem Mühlstein riecht nicht nach Mehl. Das Mühlenzeichen ist nachgemalt. Die Kerben zeigen falsch. Die Müllerin sagt, er sei gestern noch nicht da gewesen."
+      ],
+      "choices": [
+        "Die Naht untersuchen (Geschick, mittel)",
+        "Den Sack zum Bürgermeister bringen (Charisma, leicht)",
+        "Die Müllerin nicht hineinziehen"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "id": "gewoelbe",
+  "titel": "Gewölbe",
+  "quest": "gasse",
+  "datei": "gasse/gewoelbe.json",
+  "szenen": [
+    {
+      "id": "kirchengewoelbe",
+      "title": "Kirchengewölbe",
+      "art": "chapel",
+      "portrait": null,
+      "lines": [
+        "Unter der Kirche führt ein Gang, den man nicht von der Kanzel aus erklärt. Die Stufen sind abgetreten von Leuten, die keine Messe suchten.",
+        "Feuchte Luft, Stein, der nach altem Wasser schmeckt. An der Wand rußige Striche, wo jemand Licht gespart und trotzdem gesehen hat, was er tun musste.",
+        "Grete hat den Weg genannt, ohne ihn zu beschreiben. Der Stein beschreibt ihn selbst: hierhin trägt man, was oben nicht bleiben darf.",
+        "Die Stufen nach unten sind aus anderem Stein als die Kirche darüber. Jemand hat sie später gesetzt.",
+        "Es zieht kalt herauf, und mit der Kälte ein Geruch, den der Weihrauch oben nicht zudeckt.",
+        "Der Pfarrer lässt dich leichter hinunter, wenn das Silber vom Weg dabei ist. Nachts geht es auch ohne ihn. Der Küster merkt sich Gesichter."
+      ],
+      "choices": [
+        "Weiter"
+      ]
+    },
+    {
+      "id": "unter-der-kirche",
+      "title": "Unter der Kirche",
+      "art": "chapel",
+      "portrait": null,
+      "lines": [
+        "Die Kirche steht kälter als der Platz. Kerzenwachs ist an den Bänken heruntergelaufen und wieder hart geworden.",
+        "Die Treppe zum Gewölbe liegt hinter einem Vorhang, den niemand zur Seite schiebt. Der Stoff ist dunkel genug, dass man ihn für eine Wand halten kann.",
+        "Unten am Platz hat jemand Gretes Stimme gehört. Oben steht der Pfarrer steifer als sonst.",
+        "Der Küster hat dich einmal gesehen. Die Tür quietscht, und der Riegel sitzt einen Fingerbreit fester.",
+        "Unten liegen die, die man ohne Namen begräbt. Oben redet niemand davon.",
+        "Der Pfarrer hat das Silber gesehen, das du trägst. Er sieht dich anders an als die, die nur fragen.",
+        "Der Pfarrer steht am Altar und tut, als gehörte die Treppe nicht zu seiner Kirche.",
+        "Unter der Kirche ist die Luft kalt und süß. Nicht Weihrauch. Etwas, das lange gelegen hat. Der dritte Stein von links, Rücken zur Treppe, riecht nach Gerberlohe, nicht nach Kalk."
+      ],
+      "choices": [
+        "Weiter"
+      ]
+    },
+    {
+      "id": "im-gewoelbe",
+      "title": "Im Gewölbe",
+      "art": "evidence",
+      "portrait": null,
+      "lines": [
+        "Im Gewölbe stehen Kisten, die keine Schätze halten. Tuch, Bindfaden, eine Schachtel mit Kohle, zum Schreiben, nicht zum Heizen.",
+        "An einer Stelle ist der Boden weniger staubig. Dort hat jemand gekniet, oft, lange genug, dass der Stein sich daran erinnert.",
+        "Du hörst die Kirche über dir, gedämpft, als sei das Gebet eine Decke, unter der man Namen verstecken kann.",
+        "Die Luft unter der Kirche ist kalt und süß. Nicht Weihrauch. Etwas, das lange gelegen hat.",
+        "Deine Lampe findet Kalk, dann Stoff, dann eine Stelle, an der der Boden neuer ist als die Mauern.",
+        "Im Gewölbe stehen Kisten ohne Schatz. Tuch, Bindfaden, Kohle zum Schreiben. An einer Stelle ist der Boden weniger staubig. Dort hat jemand oft gekniet. Die Kirche hält, was das Amt nicht zählen will."
+      ],
+      "choices": [
+        "Weiter"
+      ]
+    },
+    {
+      "id": "hinter-dem-stein",
+      "title": "Hinter dem Stein",
+      "art": "evidence",
+      "portrait": null,
+      "lines": [
+        "Hinter einem Stein, der nicht tragend ist und trotzdem schwer, liegt ein Paket in Wachstuch. Die Schnur ist fest, die Knoten von einer Hebamme, die weiß, wann etwas halten muss.",
+        "Darin Namen. Daten. Häuser. Das Kesseljahr, in einer Schrift, die sich nicht entschuldigt.",
+        "Ilse hat die Toten nicht unter der Kirche versteckt. Sie hat verhindert, dass der Rat sie ein zweites Mal sterben lässt, indem er sie streicht.",
+        "Der Stein sitzt nicht fest. Dahinter ist eine Höhlung, gerade groß genug für ein Bündel Papier und für das, was man nicht im Kirchenbuch haben will.",
+        "Staub von Kalk. Ein Haar. Die Kälte von etwas, das hier gelegen hat, bevor du den Stein bewegt hast.",
+        "Vahls Großvater steht zuerst auf dem Papier. Daneben Stücke, die heute zur Mühle, zum Rathausplatz und zur Gerberei gehören. Die Häuser der Gasse stehen nur noch als Fläche.",
+        "Die letzte Zeile ist kurz. Wer das liest, soll nicht so tun, als wäre niemand gezählt worden.",
+        "Hinter dem Stein liegt Wachstuch. Darin Namen, Daten, Häuser. Vahl, Dennek und Holm stehen bei der Aufteilung. Wer sich wehrte, hat keinen Eintrag. Andere kamen in die Mühle, in den Steinbruch, in die Lagerhäuser am Fluss. Ilse hat verhindert, dass der Rat sie ein zweites Mal streicht."
+      ],
+      "choices": [
+        "Weiter"
+      ]
+    }
+  ]
+}

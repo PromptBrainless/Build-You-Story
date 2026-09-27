@@ -1,0 +1,34 @@
+{
+  "id": "schacht",
+  "titel": "Schacht und Graben",
+  "quest": "brunnen",
+  "datei": "brunnen/schacht.json",
+  "szenen": [
+    {
+      "id": "brunnenschacht",
+      "title": "Brunnenschacht",
+      "art": "well",
+      "portrait": null,
+      "lines": [
+        "Frischer Mörtel klebt an einer Steinfuge, nicht älter als ein paar Nächte, glatt und hell im Gegensatz zum verwitterten Stein ringsum. Dahinter, kaum zu erkennen, ein schmaler Ablaufgraben, der aus dem Dorf hinausführt, Richtung Wald, unauffällig genug, um von jedem, der nicht genau hinsieht, für ein Werk des Regens gehalten zu werden.",
+        "Denneks Stock, das fällt einem jetzt erst auf, hat beim Rühren stets genau diese Stelle gemieden, jedes Mal, als kenne die Hand, die ihn führt, die Wahrheit besser als der Mund, der sie leugnet."
+      ],
+      "choices": [
+        "Weiter"
+      ]
+    },
+    {
+      "id": "ablaufgraben",
+      "title": "Ablaufgraben",
+      "art": "ditch",
+      "portrait": null,
+      "lines": [
+        "Der Graben endet an einer halb überwucherten Zisterne, deren Mauerwerk zwar alt ist, dessen Fugen jedoch sauber und gepflegt wirken.",
+        "Jemand hält dieses Bauwerk sorgfältig instand, während im Dorf dahinter die Kinder husten."
+      ],
+      "choices": [
+        "Weiter"
+      ]
+    }
+  ]
+}

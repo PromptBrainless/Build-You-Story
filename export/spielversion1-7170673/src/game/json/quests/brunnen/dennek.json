@@ -1,0 +1,22 @@
+{
+  "id": "dennek",
+  "titel": "Ratsherr Dennek",
+  "quest": "brunnen",
+  "datei": "brunnen/dennek.json",
+  "szenen": [
+    {
+      "id": "ratsherr-dennek",
+      "title": "Ratsherr Dennek",
+      "art": "well",
+      "portrait": null,
+      "lines": [
+        "Dennek rührt weiter im Eimer, mechanisch, ohne Überzeugung, und das Wasser wird dadurch um keinen Deut klarer. „Trockenes Jahr“, sagt er, mit der glatten Sicherheit eines Mannes, der diesen Satz schon oft geübt hat. „Der Brunnen gibt, was er kann. Mehr zu verlangen wäre schon Klage.“"
+      ],
+      "choices": [
+        "Nach dem trockenen Jahr fragen (Charisma, schwer)",
+        "Ihn an die Mauer drücken (Stärke, mittel)",
+        "Ihn am Eimer lassen"
+      ]
+    }
+  ]
+}

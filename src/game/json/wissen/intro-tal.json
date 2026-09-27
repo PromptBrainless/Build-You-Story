@@ -1,0 +1,10 @@
+{
+  "id": "intro-tal",
+  "title": "Das Tal",
+  "bild": "/art/wissen/intro-tal.jpg",
+  "offen": false,
+  "lines": [
+    "Der Rauch im Tal steht senkrecht. Kein Wind fasst ihn an.",
+    "Ein Kinderschuh im Schlamm, Zäune, die niemand mehr richtet. Hier stellt man Fragen leise."
+  ]
+}

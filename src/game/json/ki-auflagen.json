@@ -1,0 +1,1215 @@
+{
+  "ablaufgraben": {
+    "title": "Ablaufgraben",
+    "art": "ditch",
+    "lines": [
+      "Der Graben läuft gerade. Zu gerade für Wasser, das sich seinen Weg sucht. An den Rändern steht das Gras kürzer, niedergetreten, nicht vom Regen.",
+      "Der Boden darin ist glatt. Jemand hat hier mehr als einmal mit einem Eimer entlanggeschliffen. Die Ränder tragen Kratzspuren, die nicht von Wurzeln stammen.",
+      "Er endet an einer halb überwucherten Zisterne. Das Mauerwerk ist alt. Die Fugen sind es nicht. Jemand hat sie nachgestrichen, hell, noch nicht vom Moos genommen.",
+      "Im Dorf husten die Kinder. Hier hält jemand ein Becken instand, das sie nicht zu sehen bekommen.",
+      "Der Graben läuft zu gerade für wildes Wasser. Er zeigt zum Wald. Ohne hinzusehen findest du ihn später im Unterholz."
+    ],
+    "choices": [
+      "Weiter"
+    ],
+    "portrait": null
+  },
+  "an-der-zisterne": {
+    "title": "An der Zisterne",
+    "art": "ditch",
+    "lines": [
+      "Dornen stehen dicht vor dem Becken. Nicht gewachsen, gelegt. Die Zweige sind an den Schnittstellen hell.",
+      "Dahinter bewegt sich eine Hand über Wasser. Flach. Ohne Eile. Das Wasser ist klar bis auf den Stein. Im Dorf hat der Eimer diese Farbe seit Tagen nicht mehr.",
+      "Der Geruch ist Stein und nasses Holz, nicht Eisen. Wer hier schöpft, schöpft nicht aus dem Brunnen.",
+      "Die Dornen sind gelegt, nicht gewachsen. Die Schnittstellen sind hell.",
+      "Hinter ihnen liegt eine Hand auf Wasser, das klarer ist als der Eimer im Dorf. Es riecht nach Stein, nicht nach Eisen.",
+      "Die Zisterne am Waldrand ist alt. Die Fugen sind es nicht. Die Dornen sind gelegt, nicht gewachsen. Das Wasser darin ist klar."
+    ],
+    "choices": [
+      "Sich durch das Gestrüpp zwängen (Stärke, leicht)",
+      "Sich unbemerkt nähern (Geschick, mittel)",
+      "Umkehren"
+    ],
+    "portrait": null
+  },
+  "bei-witwe-kern": {
+    "title": "Bei Witwe Kern",
+    "art": "apothecary",
+    "portrait": "kern",
+    "lines": [
+      "Kern hat die Ärmel hochgekrempelt, wie eine Frau, die sich auf eine lange Arbeit einstellt. Auf der Waage vor ihr liegt dieselbe Kräutermischung, die sie schon seit Tagen abwiegt und die trotzdem nie zu reichen scheint, gleich wie oft sie die Schale neu füllt.",
+      "„Bauchschmerzen. Fieber. Ein metallischer Geschmack im Mund, den man nicht wegspülen kann.“ Sie zählt die Symptome auf, als lese sie eine Liste, die sie längst auswendig kennt. „Die Kinder zuerst, dann die Alten. So ist es immer, wenn etwas von unten kommt und nicht von oben.“",
+      "Lohn bietet sie dir nicht an. „Etwas Fremdes ist im Wasser“, sagt sie, mit der Bestimmtheit einer Frau, die sich nicht zum ersten Mal irrt, wenn sie ihrem eigenen Urteil vertraut. „Nicht Krankheit allein. Jemand hat den Brunnen angefasst.“",
+      "Unter den Krankenzetteln an ihrer Wand sind zwei ganz frisch, die Tinte kaum trocken. Beide nennen Häuser, die nah am Brunnen liegen — zu nah, um Zufall zu sein."
+    ],
+    "choices": [
+      "Weiter"
+    ]
+  },
+  "bei-witwe-kern-dorf": {
+    "title": "Bei Witwe Kern",
+    "art": "apothecary",
+    "portrait": "kern",
+    "lines": [
+      "Witwe Kern hat ihre Apotheke geöffnet, obwohl niemand hereinkommt.",
+      "Eine Schublade klemmt. Darauf liegt ein sauber gefaltetes Tuch.",
+      "„Der Restbestand ist kleiner geworden“, sagt sie. „Nicht durch Verkauf.“",
+      "An den Wänden hängen Bündel aus Schafgarbe, Wacholder und dunklen Blättern, deren Namen du nicht kennst. Unter jedem Bündel steht mit Kohle ein Datum.",
+      "Kern trägt die Ärmel hochgekrempelt. Auf ihren Unterarmen liegen alte Brandnarben. Ihre Hände riechen nach Alkohol und Eisen.",
+      "„Verband verschwindet nicht allein“, sagt sie. „Und wer ihn stiehlt, rechnet mit Wunden.“",
+      "Kern wiegt Kräuter, noch nicht den Brunnen. Auf dem Platz ist sie die Heilerin. Die Befragung des Wassers beginnt erst am Eimer."
+    ],
+    "choices": [
+      "Weiter"
+    ]
+  },
+  "beim-schmied": {
+    "title": "Beim Schmied",
+    "art": "smithy",
+    "portrait": "smith",
+    "lines": [
+      "Hinter dem Haus schlägt jemand auf Eisen, das den Schlag nicht mehr verdient.",
+      "Der Schmied hält eine stumpfe Hacke gegen das Licht.",
+      "„Damit gräbt man keinen Steinbruch frei. Damit macht man nur Lärm.“",
+      "Die Esse glimmt schwach. Auf dem Kohlehaufen liegt eine Decke, damit der Regen nicht nimmt, was das Dorf noch wärmen kann.",
+      "An der Wand hängen drei unbeschlagene Hufeisen. Im Stall nebenan steht kein Pferd.",
+      "Der Schmied trägt eine Lederschürze voller heller Schnitte. „Eisen ist nicht knapp“, sagt er. „Zeit ist knapp. Kohle ist knapp. Hände sind knapp.“",
+      "Eisen schlägt auf Eisen. Der Schmied hat hier keine eigene Rechnung und keinen eigenen Ausgang. Wer Hilfe sucht, muss woanders bluten oder fiebern."
+    ],
+    "choices": [
+      "Weiter"
+    ]
+  },
+  "bertok-am-mahlwerk": {
+    "title": "Bertok am Mahlwerk",
+    "art": "mill",
+    "portrait": "miller",
+    "lines": [
+      "Feuchte Kälte steigt vom Boden und mischt sich mit dem Geruch alten Mehls, das in den Ritzen des Mahlwerks klebt. Bertok prüft den Stein, obwohl er längst justiert ist. Seine Finger fahren über die kalte Oberfläche, als könnten sie eine Schuld finden, die der Stein nicht trägt.",
+      "„Kein Mehl heute. Kein Mehl seit zwei Wochen.“ Er sagt es, bevor du fragst. Schlechtes Korn, niedriges Wasser, Ärger mit der Lieferung — Namen nennt er nicht. Seine Hand auf dem Mahlstein zittert trotzdem, ein feines Zittern, das er nicht erklären will, solange du nur dastehst."
+    ],
+    "choices": [
+      "Vertrauen gewinnen",
+      "Druck machen",
+      "Zurück in die Mühle"
+    ]
+  },
+  "brunnen-hub": {
+    "title": "Trübes Wasser",
+    "art": "well",
+    "lines": [
+      "Das Wasser im Eimer bleibt trüb bis auf den Grund. Sobald der Wind vom Wald herüberzieht, schmeckt es nach Eisen.",
+      "Kerns Tür steht einen Spalt offen, als warte sie auf jemanden, der endlich hineingeht, statt nur vorbeizulaufen. Dennek trommelt derweil mit den Fingern auf die Brunnenmauer, ein unruhiges, kleines Geräusch, das nicht zum Rühren im Eimer passen will — die Hände eines Mannes, der etwas weiß, das seine Zunge noch nicht hergeben will.",
+      "Das Wasser bleibt trüb bis auf den Grund. Wenn der Wind vom Wald kommt, schmeckt es nach Eisen.",
+      "Kerns Tür steht einen Spalt offen. Dennek trommelt auf die Mauer, nicht im Takt des Rührens. Die Hände wissen mehr als der Mund.",
+      "Der Eimer bleibt grau. Dennek rührt. Die Kinder husten zuerst. Niemand sagt, wer den Brunnen angefasst hat."
+    ],
+    "choices": [
+      "Mit Witwe Kern über das Wasser sprechen",
+      "Mit Ratsherr Dennek sprechen",
+      "Den Brunnen selbst untersuchen",
+      "Den Graben am Brunnenrand verfolgen",
+      "Zurück zum Dorfplatz"
+    ],
+    "portrait": null
+  },
+  "brunnen-krug": {
+    "title": "Der bittere Krug",
+    "art": "well",
+    "lines": [
+      "Der Wassereimer am Brunnen steht halb voll, so wie ihn die Nacht zurückgelassen hat — niemand hat ihn heute Morgen geleert und neu gefüllt, wie es sonst die erste Pflicht des Tages ist. Das Wasser darin hat die falsche Farbe: ein trübes Graubraun, das eher an aufgewühlten Teichgrund erinnert als an das, was aus der Tiefe kommen sollte.",
+      "Vor der Apotheke hustet ein Kind, trocken und hart. Die Mutter hält es fester, als das Husten allein verlangt. Am Brunnenrand rührt Ratsherr Dennek mit einem Stock im Eimer, im Kreis, immer wieder, als ließe sich die Frage glattstreichen. Er sieht dabei niemanden an."
+    ],
+    "choices": [
+      "Weiter"
+    ],
+    "portrait": null
+  },
+  "brunnen-und-dorfplatz": {
+    "title": "Brunnen und Dorfplatz",
+    "lines": [
+      "Der Dorfplatz ist klein genug, dass jedes Gespräch einen Zeugen findet.",
+      "Am Brunnen tropft Wasser auf den Stein. Hinter dem Trog wartet ein Junge mit einer roten Schnur.",
+      "Der Eimer am Brunnen ist nicht mehr der, den man stehen lässt.",
+      "Der Eimer am Brunnen steht halb voll. Das Wasser darin ist trüb und leicht bitter.",
+      "Neben der Mauer stehen drei leere Körbe. Auf jedem ist mit Kreide ein Familienname geschrieben. Der Regen hat zwei davon fast ausgelöscht.",
+      "Ein Schwein wühlt zwischen den Rinnen des Platzes. Niemand scheucht es fort. Was es findet, muss später niemand wegtragen.",
+      "Vom Platz hörst du den Eimer, bevor du ihn siehst. Das Wasser schmeckt nach Eisen. Die Frauen am Rand zählen, wer trinkt."
+    ]
+  },
+  "brunnenschacht": {
+    "title": "Brunnenschacht",
+    "art": "well",
+    "lines": [
+      "Frischer Mörtel klebt an einer Steinfuge, nicht älter als ein paar Nächte, glatt und hell im Gegensatz zum verwitterten Stein ringsum. Dahinter, kaum zu erkennen, ein schmaler Ablaufgraben, der aus dem Dorf hinausführt, Richtung Wald, unauffällig genug, um von jedem, der nicht genau hinsieht, für ein Werk des Regens gehalten zu werden.",
+      "Denneks Stock, das fällt einem jetzt erst auf, hat beim Rühren stets genau diese Stelle gemieden, jedes Mal, als kenne die Hand, die ihn führt, die Wahrheit besser als der Mund, der sie leugnet.",
+      "Frischer Mörtel klebt an einer Steinfuge. Dahinter führt ein Ablauf aus dem Dorf. Denneks Stock hat diese Stelle gemieden."
+    ],
+    "choices": [
+      "Weiter"
+    ],
+    "portrait": null
+  },
+  "der-fremde-am-weg": {
+    "title": "Der Fremde am Weg",
+    "art": "stranger",
+    "lines": [
+      "Du packst den mageren Mann am nassen Mantel und entreißt ihm das Artefakt. Der Riemen spannt sich, dann reißt der Stoff mit einem trockenen, hässlichen Laut.",
+      "Er stolpert zurück, die Hände tasten über die abgerissene Stelle am Riemen und finden nur nasse Kante. Der Nebel nimmt ihn auf, bis nur noch der Geruch von nassem Tuch und Metall in der Luft hängt.",
+      "Das Silber liegt schwer und kalt in deiner Hand. In Lindendorf wird jemand wissen, woher es stammt."
+    ],
+    "choices": [
+      "Weiter"
+    ],
+    "portrait": null
+  },
+  "die-kapellenglocke": {
+    "title": "Die Kapellenglocke",
+    "art": "chapel",
+    "lines": [
+      "Die Glocke ist klein. Ihr Ton wäre es nicht.",
+      "Das Seil wurde an einer Stelle neu geknotet. Die Fasern sind dort heller als der Rest. Jemand benutzt sie regelmäßig, und nicht bei Sturm.",
+      "Der Knoten besteht aus drei verschiedenen Fasern: Hanf, roter Wolle und etwas, das unter deinen Fingern kalt bleibt, obwohl es trocken ist.",
+      "Auf der Innenseite der Glocke sind Namen eingeritzt. Einige wurden abgeschabt, bis das Metall blank ist. Der letzte ist noch lesbar: kein Name, nur ein Datum.",
+      "Unter der Glocke liegt Asche, die der Regen nicht erreicht. Jemand hat hier etwas verbrannt, das klein genug war, um in eine Faust zu passen.",
+      "Die Glocke ist klein. Ihr Ton wäre es nicht. Das Seil wurde neu geknotet. Auf der Innenseite sind Namen eingeritzt. Einige wurden abgeschabt. Unter der Kapelle liegt keine geweihte Kammer, sondern eine ältere Grube. Ob dort etwas gebunden wurde, bleibt offen."
+    ],
+    "choices": [
+      "Weiter"
+    ],
+    "portrait": null
+  },
+  "dorf-platz": {
+    "title": "Dorfplatz",
+    "art": "village",
+    "lines": [
+      "Du stehst jetzt mitten in Lindendorf. Der Platz ist klein genug, dass jedes Gespräch einen Zeugen findet.",
+      "Vor dir liegen Rathaus, Taverne, Brunnen, die Mühle und der Weg zum Hang.",
+      "Aus dem Osten steigt Rauch. Dort liegt der alte Steinbruch.",
+      "Noch weißt du nicht, wem du glauben kannst. Du weißt nur, wo du anfangen kannst.",
+      "Der Regen hat aufgehört, aber das Wasser läuft weiter von den Dächern. Es sammelt sich in den Rillen des Platzes und trägt Stroh, Asche und etwas Dunkles zum Abfluss.",
+      "Der Platz ist klein genug, dass jedes Gespräch einen Zeugen findet. Aus dem Osten steigt Rauch. Dort liegt der alte Steinbruch.",
+      "Der Regen hat aufgehört, das Wasser läuft noch von den Dächern und trägt Stroh, Asche und etwas Dunkles zum Abfluss.",
+      "Vor dir liegen Rathaus, Taverne, Brunnen, Mühle und der Weg zum Hang. Der Platz ist klein genug, dass jedes Gespräch einen Zeugen findet. Über der Rathaustür klebt rotes Wachs. Niemand nennt es Glauben."
+    ],
+    "choices": [
+      "Weiter"
+    ],
+    "portrait": null
+  },
+  "ein-name-unter-vielen": {
+    "title": "Ein Name unter vielen",
+    "art": "village",
+    "lines": [
+      "Ein Name unter vielen ist trotzdem ein Name. Die Liste ist Asche, oder sie ist in einer Hand, die sie nicht zeigt, und die Gasse wird bebaut, als sei Asche Dünger.",
+      "Die Kinder, die hier Kratzer in Türstöcke gemacht haben, bekommen keine Tafel. Sie bekommen ein Lagerhaus und die Lüge, dass Ödland niemandem gehört hat.",
+      "Du gehst über den Platz und merkst, dass Lindendorf dich nicht fragt. Fragen wären schon ein Name.",
+      "Auf dem Papier steht ein Name zwischen anderen, und er ist nicht wichtiger geschrieben. Genau das ist die Grausamkeit.",
+      "Wer ihn laut liest, macht aus einer Liste eine Person. Das Dorf hat sich zehn Jahre lang dagegen entschieden.",
+      "Die Liste wiegt wenig in der Hand. Sobald sie den Tisch berührt, wiegt sie mehr. Ein Name unter vielen ist immer noch ein Name."
+    ],
+    "choices": [
+      "Weiter"
+    ],
+    "portrait": null
+  },
+  "ein-zweites-schweigen": {
+    "title": "Ein zweites Schweigen",
+    "art": "gate",
+    "portrait": "beggar",
+    "lines": [
+      "Die Gasse bleibt leer, und die Bretter kommen trotzdem nicht. Holm hat den Bauplatz ruhen lassen. Die Liste liegt in einer Schublade, die nur er aufzieht.",
+      "Ein zweites Schweigen ist nicht dasselbe wie das erste. Das erste war Angst. Das zweite ist eine Vereinbarung zwischen Leuten, die wissen, was in der Schublade liegt.",
+      "Fenn sitzt noch an der Mauer. Die Füße im Wasser. Er hat zugehört. Mehr schuldet ihm das Dorf nicht, sagt das Dorf.",
+      "Die Gasse bleibt zu. Nicht mit einem Schloss, mit der Übereinkunft, dass niemand mehr hingeht.",
+      "Fenn nickt dir zu, einmal. Das ist der ganze Dank, den ein zweites Schweigen hergibt.",
+      "Holm nimmt die Liste, ohne sie laut zu lesen. Der Bauplatz bleibt liegen. Die Wahrheit bleibt in der Schublade. Das Dorf nennt das Ruhe."
+    ],
+    "choices": [
+      "Weiter"
+    ]
+  },
+  "ende": {
+    "title": "Ende",
+    "art": "return",
+    "lines": [
+      "Lindendorf sieht dich früher als Holm. Dann sieht dich Holm.",
+      "Die Nachricht läuft nicht durch Rufe über den Platz. Sie läuft durch Türen, die sich öffnen, durch einen Eimer, der am Brunnen stehen bleibt, und durch Maras Hand, die mitten in einer Bewegung ruht.",
+      "Du bringst den Geruch des Steinbruchs mit: Rauch, Blut, nassen Kalk. Niemand fragt zuerst, ob du gesiegt hast.",
+      "Holm tritt aus dem Rathaus. Hinter ihm bleibt die Tür offen, als hätte selbst das Amt vergessen, vorsichtig zu sein. Das Amt hat nur die Banditen ausgesprochen. Alles andere steht in dem, was du mitbringst, oder es steht nirgends.",
+      "Der Lehm unter den Sohlen ist nass und kalt. Die Zäune sind noch unrepariert. Zwischen den Latten zieht ein Wind, der nach Moos, Mist und altem Eisen riecht. Was du getan hast, trägt das Dorf in Türen, die nicht mehr richtig schließen, und in Pausen, in denen kein Werkzeug fällt.",
+      "Ein geborstenes Joch fault an einer Wand. Ein Riegel rostet fest. Du trägst den Rest. Er sitzt in den Schultern, in den Handflächen, in der Kälte unter der Haut. Holm wartet, bis du sprichst.",
+      "Lindendorf bleibt. Die Dächer tropfen noch. Niemand fragt laut nach dem Warum. Fragen kosten Kraft, die man zum Trinken braucht. Es gibt keine Reinigung. Nur den Zustand, den du hinterlässt."
+    ],
+    "choices": [
+      "Weiter"
+    ],
+    "portrait": null
+  },
+  "fenn": {
+    "title": "Fenn",
+    "art": "chapel",
+    "portrait": "beggar",
+    "lines": [
+      "Fenn ist Teil der Mauer, ein Schatten unter Schatten, den man grüßt, ohne ihn anzuschauen. Heute nicht. Heute sieht er zuerst.",
+      "In der Tasche des geflickten Mantels hält er ein morsches Stück Lattenzaun. Zehn Winter haben das Holz glattgeschliffen. Die Nagellöcher sind Dellen, aber wer hinsieht, erkennt noch den rechten Winkel.",
+      "Er wartet nicht auf eine Antwort. Die Hand in der Tasche bleibt in Bewegung, als zähle sie etwas, das niemand mehr zählen will.",
+      "Fenn sitzt an der Kirchmauer, als gehöre der Stein ihm mehr als das Dorf. In der Tasche klappert Holz, kein Geld.",
+      "Er sieht die leere Gasse an und dich danach. Die Reihenfolge ist die Warnung.",
+      "Fenn sitzt an der Kirchmauer. Die Hand in der Tasche zählt Holz, nicht Münzen. Er sieht die leere Gasse an und dich danach. Die Frage stellt er. Das Jahr gibt er nur her, wenn du wartest."
+    ],
+    "choices": [
+      "Weiter"
+    ]
+  },
+  "fenn-an-der-kirchmauer": {
+    "title": "Fenn an der Kirchmauer",
+    "art": "chapel",
+    "portrait": null,
+    "lines": [
+      "Fenn hat seinen Platz so gewählt, dass die Kirchentür ihn nicht trifft, wenn sie aufschlägt. Die Dämmerung liegt schwer auf dem nassen Kapellendach, es riecht nach Stein und faulem Moos. Der Stein unter ihm ist zu einer flachen Mulde abgewetzt — von der Form, die ein Körper über viele Winter hinterlässt.",
+      "In der Tasche seines geflickten Mantels hält er ein morsches Stück Lattenzaun, von zehn Wintern glattgeschliffen. Die Hand bleibt in Bewegung, als zähle sie etwas, das niemand mehr zählen will.",
+      "„Weißt du, warum dort niemand mehr geht?“ Er stellt die Frage, ohne eine Antwort zu erwarten. Das Jahr, das die Gasse trägt, gibt er nur her, wenn du zuhörst statt zu drängen."
+    ],
+    "choices": [
+      "Weiter"
+    ]
+  },
+  "gasse-hub": {
+    "title": "Die leere Gasse",
+    "art": "gate",
+    "portrait": "beggar",
+    "lines": [
+      "Hinter der Gerberei liegt eine Gasse, die niemand mehr als Weg benutzt. Die Bretter an den Fenstern sind älter als die Ausreden, warum niemand dort wohnt.",
+      "Fenn bleibt an der Mauer. Vahl sitzt irgendwo im Rathaus und rechnet mit Baumannschaft. Die Kirche hält die Schwelle nass.",
+      "In einer Woche kommen Bretter, sagt man. Bretter über eine Gasse sind keine Reparatur. Sie sind ein Beschluss.",
+      "Die Gasse hinter der Gerberei ist leer, und die Leere ist gepflegt. Kein Karren, kein Kind, keine Wäsche.",
+      "Fenn bleibt an der Kirchmauer. Er sieht die Gasse an, als hätte sie einmal einen Namen gehabt, den man nicht mehr laut sagt.",
+      "Hinter der Gerberei liegt die kürzeste Strecke zum Fluss. Niemand geht sie. Bretter über den Türen sind ein Beschluss, kein Wetter."
+    ],
+    "choices": [
+      "Bei Fenn an der Kirchmauer bleiben",
+      "Ratsherr Vahl im Rathaus aufsuchen",
+      "Die Gasse hinter der Gerberei ansehen",
+      "Zurück zum Dorfplatz"
+    ]
+  },
+  "gasse-kirche": {
+    "title": "Vor der Kirche",
+    "art": "chapel",
+    "portrait": "beggar",
+    "lines": [
+      "Die Kirche von Lindendorf steht einen Schritt tiefer als der Platz davor, als hätte sie sich langsam in die Erde gesenkt, müde von allem, was ihr je gebeichtet wurde.",
+      "An der Schwelle hat der Stein eine flache Mulde geschliffen, in der das Regenwasser steht wie ein kleiner Spiegel. Niemand hat in zehn Jahren einen Abfluss geschlagen.",
+      "Im Schatten der Kirchmauer sitzt Fenn. Die nackten Füße im Wasser der Dachrinne, als sei Kälte ein alter Bekannter. Er hebt den Blick, noch bevor du an ihm vorbeigehst.",
+      "Vor der Kirche ist der Stein nass. Fenn sitzt an der Mauer, nicht du. In der Tasche hält er Lattenzaun, kein Geld."
+    ],
+    "choices": [
+      "Weiter"
+    ]
+  },
+  "gerbereigasse": {
+    "title": "Gerbereigasse",
+    "art": "gate",
+    "lines": [
+      "Die Gerbereigasse ist eng genug, dass zwei Leute sich entschuldigen müssten, wenn noch jemand wohnte. Es wohnt niemand.",
+      "An den Türstöcken sind Kratzer in Höhe von Kinderschultern. Die Fensterbretter tragen Ringe, wo Töpfe standen. Der Geruch von Gerberlohe ist alt und trotzdem der jüngste, der hier geblieben ist.",
+      "Am Ende der Gasse liegt eine Kate, deren Türangel nicht rostet, als ginge noch jemand ein und aus, der nicht gesehen werden will.",
+      "Die Gerbereigasse riecht nach Lauge und nach etwas Älterem, das die Lauge nicht mehr überdeckt.",
+      "Die Häuser haben Läden, die von innen verriegelt sind. In einem Fenster fehlt das Glas. Niemand hat es ersetzt."
+    ],
+    "choices": [
+      "Weiter"
+    ],
+    "portrait": null
+  },
+  "glockenweg": {
+    "title": "Alter Glockenweg",
+    "art": "chapel",
+    "lines": [
+      "Der alte Glockenweg steigt hinter den letzten Häusern an.",
+      "Nasser Stein. Salzstaub im Gras, in die Fugen gedrückt, nicht verstreut. Oben hängt eine kleine Kapellenglocke im Wind.",
+      "Die Stufen sind aus verschiedenen Steinen gesetzt. Einige tragen noch Meißelspuren, andere dunkle Flecken, die der Regen nicht aus dem porösen Gestein bekommt.",
+      "Auf halber Höhe steht eine verwitterte Figur ohne Gesicht. Jemand hat ihr einen Mantel umgelegt. Der Mantel ist neuer als die Kapelle. Der Saum ist nass, der Rücken trocken. Der Wind kommt von unten.",
+      "Zwischen zwei Stufen liegt ein Span aus schwarzem Holz. Er riecht nach kalter Asche, nicht nach dem Herd des letzten Hauses."
+    ],
+    "choices": [
+      "Weiter"
+    ],
+    "portrait": null
+  },
+  "graben": {
+    "title": "Graben",
+    "lines": [
+      "Der Pfad endet an einem Graben. Frisch ausgehoben, mit Pfählen gespickt.",
+      "Dahinter ein gestürzter Stamm, nass und glatt. Das ist Absicht, kein Sturm.",
+      "An einem Pfahl hängt ein Streifen Stoff. Darauf ist mit Kreide ein Kreis gemalt, durch den eine Linie führt. Das Zeichen aus der Taverne.",
+      "Jemand hat den Graben nicht gebaut, um dich aufzuhalten. Er hat ihn gebaut, damit du genau dort hinübergehst, wo man dich sehen kann.",
+      "Der Graben ist trocken. Die Knochen liegen in einer Reihe. Jemand hat gezählt und wollte, dass man das Zählen sieht."
+    ]
+  },
+  "grete": {
+    "title": "Grete",
+    "art": "village",
+    "portrait": "grete",
+    "lines": [
+      "Grete sieht dich nicht mit den Augen. Sie sieht dich an der Art, wie du die Schwelle nimmst, ob du sie abtrittst oder darüber nachdenkst.",
+      "„Die Gasse hat Namen gehabt“, sagt sie. „Ilse hat sie aufgeschrieben, bevor der Rat beschlossen hat, dass Namen Unordnung sind.“",
+      "Ihre Hände suchen den roten Strick an der Wand und finden ihn, ohne zu tasten. Blinde Frauen in diesem Tal verlieren nicht, was sie einmal gehalten haben.",
+      "Grete spricht leise, weil die Wände der Kate dünner sind als ihr Schweigen. Sie kennt die Namen und sagt sie nicht beim ersten Satz.",
+      "Auf dem Tisch liegt Brot für eine Person. Die zweite Schüssel ist sauber und unbenutzt.",
+      "Grete sieht fast nichts. Sie hört, ob du Zeit mitbringst oder nur eine Frage, deren Antwort du schon kennst. Drängen sperrt sie."
+    ],
+    "choices": [
+      "Weiter"
+    ]
+  },
+  "gretes-kate": {
+    "title": "Gretes Kate",
+    "art": "village",
+    "lines": [
+      "Gretes Kate steht, wo die Gasse aufhört, ein Weg zu sein. Innen ist es dunkler als der Abend draußen, und es riecht nach kalter Asche und altem Tuch.",
+      "Die Schwelle ist abgetreten von Füßen, die nicht mehr kommen. An der Wand hängt ein Strick, rot, verblasst, zu kurz für ein Seil und zu lang für eine Erinnerung, die man wegwerfen könnte.",
+      "Jemand hat hier gewartet. Das Warten hat Möbel hinterlassen und eine Stille, die nicht leer ist.",
+      "Die Kate steht so, dass man sie vom Platz aus nicht sieht. Das Dach ist geflickt, die Tür nicht.",
+      "Vor der Schwelle ist der Boden festgetreten. Hier geht jemand oft, und nie am hellen Tag.",
+      "Die Kate steht zu nah an den anderen Häusern. Deshalb wollte sie niemand. Grete hat Ilse geholfen, die Namen zu verbergen. Den Stein nennt sie nur, wenn du wartest."
+    ],
+    "choices": [
+      "Weiter"
+    ],
+    "portrait": null
+  },
+  "grovins-zisterne": {
+    "title": "Grovins Zisterne",
+    "art": "ditch",
+    "portrait": "grovin",
+    "lines": [
+      "Das Wasser in der Zisterne ist klar bis auf den steinigen Grund. Grovin blickt zuerst hinunter darauf, dann erst zu dir hinüber.",
+      "„Ich habe dem Dorf diesen Brunnen gebaut“, sagt er, „und es hat mich dafür nicht bezahlt. Also nimmt sich das Wasser, was mir zusteht, und ich helfe ihm dabei nach.“",
+      "Das Becken ist bis auf den Stein klar. Grovins Hand bleibt auf dem Wasser, als lese er daran, ob du fragst oder nimmst.",
+      "Die Grabegabel, wenn sie zwischen euch steht, tropft nicht vom Regen.",
+      "Er sagt den Satz über den unbezahlten Brunnen ohne Eile. Die Zisterne hat Zeit. Das Dorf nicht.",
+      "Grovin blickt zuerst ins Wasser, dann zu dir. „Ich habe dem Dorf diesen Brunnen gebaut“, sagt er. „Es hat mich nicht bezahlt. Also nimmt sich das Wasser, was mir zusteht.“ Er könnte mehr nehmen. Er wartet, ob du die Rechnung hörst."
+    ],
+    "choices": [
+      "Die Sperre gewaltsam brechen (Stärke, mittel)",
+      "Die Sperre unbemerkt umlegen (Geschick, schwer)",
+      "Die Zisterne verlassen"
+    ]
+  },
+  "hinter-dem-brunnen": {
+    "title": "Hinter dem Brunnen",
+    "lines": [
+      "Die rote Schnur führt nur bis zu einem Zaunpfahl.",
+      "Dort beginnt ein schmaler Weg nach Osten. Der Junge hatte recht.",
+      "Zwischen den Halmen entdeckst du grauen Steinmehlstaub und den Abdruck eines schmalen Stiefels. Der Pfad wird benutzt, aber nie bei Tageslicht.",
+      "Er nimmt die Schnur ab. „Jetzt findest du ihn auch ohne mich.“",
+      "Den letzten Knoten löst er nicht. Er steckt die Schnur ein und läuft zurück, bevor du fragen kannst, für wen er ihn aufbewahrt.",
+      "Hinter dem Brunnen ist der Boden nasser als der Platz. Das Wasser sucht sich einen Weg, den der Eimer nicht kennt."
+    ]
+  },
+  "hinter-dem-stein": {
+    "title": "Hinter dem Stein",
+    "art": "evidence",
+    "lines": [
+      "Hinter einem Stein, der nicht tragend ist und trotzdem schwer, liegt ein Paket in Wachstuch. Die Schnur ist fest, die Knoten von einer Hebamme, die weiß, wann etwas halten muss.",
+      "Darin Namen. Daten. Häuser. Das Kesseljahr, in einer Schrift, die sich nicht entschuldigt.",
+      "Ilse hat die Toten nicht unter der Kirche versteckt. Sie hat verhindert, dass der Rat sie ein zweites Mal sterben lässt, indem er sie streicht.",
+      "Der Stein sitzt nicht fest. Dahinter ist eine Höhlung, gerade groß genug für ein Bündel Papier und für das, was man nicht im Kirchenbuch haben will.",
+      "Staub von Kalk. Ein Haar. Die Kälte von etwas, das hier gelegen hat, bevor du den Stein bewegt hast.",
+      "Vahls Großvater steht zuerst auf dem Papier. Daneben Stücke, die heute zur Mühle, zum Rathausplatz und zur Gerberei gehören. Die Häuser der Gasse stehen nur noch als Fläche.",
+      "Die letzte Zeile ist kurz. Wer das liest, soll nicht so tun, als wäre niemand gezählt worden.",
+      "Hinter dem Stein liegt Wachstuch. Darin Namen, Daten, Häuser. Vahl, Dennek und Holm stehen bei der Aufteilung. Wer sich wehrte, hat keinen Eintrag. Andere kamen in die Mühle, in den Steinbruch, in die Lagerhäuser am Fluss. Ilse hat verhindert, dass der Rat sie ein zweites Mal streicht."
+    ],
+    "choices": [
+      "Weiter"
+    ],
+    "portrait": null
+  },
+  "hinter-der-nische": {
+    "title": "Hinter der Nische",
+    "art": "mill",
+    "lines": [
+      "Die hintere Wand gibt nach. Dahinter sitzt ein Mann mit einem zerbrochenen Hofwerkzeug in der Faust.",
+      "Zwei Kinder halten sich an seinem Ärmel. Lene stellt sich davor, zu spät.",
+      "„Yorwin“, sagt sie. „Meine Schwester ist tot. Die Kinder nicht. Rennik weiß das. Deshalb mahlt hier nichts.“",
+      "Yorwin sieht nicht dich an, sondern die Tür. „Wenn das Dorf uns findet, zahlt Bertok mit uns.“",
+      "Die Nische ist zu sauber für eine Mühle, in der sonst Mehl in jede Fuge kriecht.",
+      "Dahinter atmet jemand flach. Nicht eine Person. Mehrere, und sie versuchen, es wie Säcke klingen zu lassen."
+    ],
+    "choices": [
+      "Weiter"
+    ],
+    "portrait": null
+  },
+  "hinter-der-taverne": {
+    "title": "Hinter der Taverne",
+    "lines": [
+      "Die Markierung ist kein Zeichen. Sie ist eine Kerbe im Holz, frisch und tief genug für einen Daumennagel.",
+      "Unter dem losen Türstein findest du eine zusammengerollte Schnur und den Abdruck eines Stiefels.",
+      "Mara nimmt beides an sich. „Dann wissen sie wenigstens, dass ich hinschaue.“",
+      "Sie zeigt dir den schmalen Pfad hinter dem Haus. Er führt später näher an den Steinbruch, als dir lieb ist.",
+      "Im Lehm erkennst du eine zweite Spur, kleiner und älter. Jemand hat versucht, sie mit Asche zu verwischen.",
+      "Mara sieht nicht auf den Pfad, sondern auf deine Hand. „Wenn du dort hinausgehst, geh nicht nach dem ersten Geräusch. Das erste Geräusch will, dass du ihm folgst.“"
+    ]
+  },
+  "im-gewoelbe": {
+    "title": "Im Gewölbe",
+    "art": "evidence",
+    "lines": [
+      "Im Gewölbe stehen Kisten, die keine Schätze halten. Tuch, Bindfaden, eine Schachtel mit Kohle, zum Schreiben, nicht zum Heizen.",
+      "An einer Stelle ist der Boden weniger staubig. Dort hat jemand gekniet, oft, lange genug, dass der Stein sich daran erinnert.",
+      "Du hörst die Kirche über dir, gedämpft, als sei das Gebet eine Decke, unter der man Namen verstecken kann.",
+      "Die Luft unter der Kirche ist kalt und süß. Nicht Weihrauch. Etwas, das lange gelegen hat.",
+      "Deine Lampe findet Kalk, dann Stoff, dann eine Stelle, an der der Boden neuer ist als die Mauern.",
+      "Im Gewölbe stehen Kisten ohne Schatz. Tuch, Bindfaden, Kohle zum Schreiben. An einer Stelle ist der Boden weniger staubig. Dort hat jemand oft gekniet. Die Kirche hält, was das Amt nicht zählen will."
+    ],
+    "choices": [
+      "Weiter"
+    ],
+    "portrait": null
+  },
+  "intro-ankunft": {
+    "title": "Ankunft",
+    "art": "village",
+    "lines": [
+      "Du bleibst am Rand des Platzes stehen. Niemand fragt, wer du bist.",
+      "Das ist zunächst höflich. Dann merkst du, dass es Vorsicht ist — eine Höflichkeit, die man sich antrainiert, wenn Fragen in der Vergangenheit selten gut ausgegangen sind.",
+      "Du könntest weitergehen. Der Weg nach Osten führt am Steinbruch vorbei, und aus dem Steinbruch steigt Rauch, der so gerade steht wie der im Tal.",
+      "In Lindendorf wartet niemand auf einen Helden. Trotzdem beginnt hier dein Weg, in einem Dorf, das sich längst entschieden hat, keine Wunder mehr zu erwarten.",
+      "Hinter dir schließt sich das Tal wie ein nasser Kragen. Vor dir liegen Türen, hinter denen jeder etwas verloren hat und nicht jeder bereit ist, es beim Namen zu nennen.",
+      "Du spürst die Blicke erst, als sie aufhören. Die Leute hier sehen Fremde nicht lange an; sie wissen, dass man von Gesichtern allein nicht satt wird.",
+      "Am Brunnen schlägt ein Tropfen auf Stein. Dann noch einer. So beginnt in diesem Dorf vieles: nicht mit einem Ruf, sondern mit etwas, das nicht aufhört."
+    ],
+    "choices": [
+      "Weiter"
+    ],
+    "portrait": null
+  },
+  "intro-fremder-am-weg": {
+    "title": "Der Fremde am Weg",
+    "art": "stranger",
+    "lines": [
+      "Etwa fünfzig Schritt voraus tritt eine Gestalt aus dem Regen. Ein Mann, mager genug, dass der Wind an seinem Mantel zerren kann, als gehöre der Stoff eher dem Wetter als ihm.",
+      "Sein Gang ist ungleichmäßig — nicht das Hinken eines Verletzten, eher das Stolpern eines Menschen, der zu lange wach geblieben ist oder zu viel verloren hat, um noch auf seine eigenen Füße zu vertrauen.",
+      "Nasses Haar klebt an seiner Stirn. Der linke Ärmel ist dunkel verfärbt, das Blut darauf längst getrocknet und schwarz geworden wie altes Harz.",
+      "Als er kurz ins Straucheln gerät, schlägt der Mantel auseinander, und etwas Silbernes blitzt darunter hervor — klein, handtellergroß, doch selbst auf diese Entfernung erkennst du das Zeichen: ein offenes Auge über drei eingeritzten Linien.",
+      "Kirchensilber.",
+      "Du hast das Symbol schon einmal gesehen, am Nordpass, vor Jahren, in einen Grenzstein geschlagen und halb unter Eis verborgen. Händler spuckten damals darüber und bekreuzigten sich, ohne zu erklären, warum.",
+      "Heute gibt es keinen Schnee. Nur Regen, Schlamm, und einen Fremden, der etwas bei sich trägt, das ihm kaum gehören dürfte.",
+      "Der Mann hat dich noch nicht bemerkt. Hinter ihm verschluckt der Nebel den Weg, vor ihm liegt Lindendorf, und zwischen euch stehen nur wenige Schritte, schlechtes Wetter und die Frage, wem das Blut auf seinem Ärmel eigentlich gehört."
+    ],
+    "choices": [
+      "(Stärke – mittel) Der Mann wirkt geschwächt. Falls er Widerstand leistet, dürfte der Kampf kurz sein. Dennoch tragen auch Sterbende Messer.",
+      "(Geschick – schwer) Der Regen dämpft Geräusche. Der Nebel verbirgt Bewegungen. Doch Kirchenartefakte werden selten achtlos getragen.",
+      "(Charisma – mittel) Vielleicht ist er verängstigt. Vielleicht verletzt. Vielleicht sucht er Hilfe mehr als Streit.",
+      "Vorübergehen - Manche Dinge bringen Unglück, lange bevor man sie berührt."
+    ],
+    "portrait": null
+  },
+  "intro-hang": {
+    "title": "Am Hang",
+    "art": "chapel",
+    "lines": [
+      "Oberhalb des Dorfes schneidet ein alter Weg den Hang, hart und schmal. Der Schotter unter deinen Sohlen knirscht nass und gibt bei jedem Schritt ein wenig nach, als traue er deinem Gewicht nicht.",
+      "Dort oben steht eine Kapelle, ihr Dach dunkler als der Himmel darüber, als hätte man das Holz eigens gegen das Licht gewählt.",
+      "Eine kleine Glocke bewegt sich einmal über dem Geröll. Du kennst den Weg noch nicht. Du merkst dir nur den Ton.",
+      "Über dem Türsturz klebt ein Streifen rotes Wachs, frisch gebrochen — dasselbe Zeichen, das du unten im Dorf wiederfinden wirst. Jemand markiert in dieser Gegend Türen, die niemand öffnen soll.",
+      "Die Glocke schweigt wieder. Trotzdem hast du das Gefühl, dass etwas im Tal jetzt weiß, dass du angekommen bist, und dass es diese Kenntnis nicht vergessen wird, nur weil du weitergehst."
+    ],
+    "choices": [
+      "Weiter"
+    ],
+    "portrait": null
+  },
+  "intro-lindendorf": {
+    "title": "Lindendorf",
+    "art": "village",
+    "lines": [
+      "Häuser drücken sich aneinander, als könnten sie so wärmer bleiben, ihre Dächer tief gezogen wie Kapuzen über gesenkte Köpfe.",
+      "Am Brunnen halten Frauen die Arme vor der Brust verschränkt und sehen dir nach, bis du vorbei bist — nicht neugierig, sondern prüfend, wie man ein Wetter prüft, das umschlagen könnte.",
+      "In der Taverne bläst jemand hastig eine Lampe aus, als koste jede Flamme mehr, als sie an Licht zurückgibt.",
+      "Auch über der Rathaustür klebt ein Zeichen aus rotem Wachs, wie du es schon am Hang gesehen hast. Hier ist es alt und unversehrt, ein Siegel, das noch niemand zu brechen wagte.",
+      "Ein Gerber deckt seine Ware mit einer zu kleinen Plane ab; ein Teil des Leders bleibt im Regen liegen. Er sieht kurz hin und wendet sich ab — es lohnt sich längst nicht mehr, es zu retten.",
+      "Hinter einem offenen Fenster hustet ein alter Mann. Eine Stimme zählt dahinter Münzen, so leise, als könnte lautes Zählen sie kosten.",
+      "Lindendorf wirkt nicht verlassen. Es wirkt schlimmer: bewohnt von Menschen, die sich daran gewöhnt haben, dass niemand kommt — und die sich jetzt fragen, was es bedeutet, dass doch jemand gekommen ist."
+    ],
+    "choices": [
+      "Weiter"
+    ],
+    "portrait": null
+  },
+  "intro-tal": {
+    "title": "Das Tal",
+    "art": "forest",
+    "lines": [
+      "Der Wald steht dicht an den Hängen, so eng, dass sich die Stämme beinahe berühren und der Weg zu einem schmalen Streifen nasser Erde wird, der sich zwischen ihnen hindurchzwängt wie ein zögerlicher Gedanke.",
+      "Zwischen den Bäumen hängen Nebelfetzen, die sich nicht auflösen wollen, so als hielte sie etwas dort fest, das keinen Namen trägt.",
+      "Weiter unten steigt Rauch, senkrecht und ohne Neigung — kein Wind fasst ihn an, und ein Rauch, der so gerade steht, ist selten ein gutes Zeichen.",
+      "Jemand hat die Felder abgeerntet. Jemand anderes hat vergessen, die Zäune danach zu reparieren, als hätte die Ernte alle Kraft verbraucht, die für die Zukunft übrig gewesen wäre.",
+      "Am Waldrand liegen Bündel aus nassem Reisig, sorgfältig geschichtet und doch unberührt, als habe jemand mit dem Sammeln begonnen und mitten im Werk den Grund dafür vergessen. Daneben steckt ein einzelner Kinderschuh im Schlamm.",
+      "Kein Vogel ruft. Weit oberhalb des Weges bricht ein Ast, und danach wartet das Tal wieder — geduldig, fast höflich — auf ein Geräusch von dir.",
+      "Du verstehst noch nicht, was hier geschehen ist. Aber du erkennst die Handschrift einer Gegend, in der Menschen gelernt haben, ihre Fragen leise zu stellen, aus Angst, eine Antwort könnte lauter zurückkommen als die Frage selbst."
+    ],
+    "choices": [
+      "Weiter"
+    ],
+    "portrait": null
+  },
+  "intro-weg": {
+    "title": "Der Weg nach Lindendorf",
+    "art": "road",
+    "lines": [
+      "Der Weg ins Tal ist alt, älter als die Furchen, die ihn noch halten, und so schmal, dass sich zwei Wagen nur begegnen, wenn einer weicht — meistens der Schwächere.",
+      "Du gehst allein.",
+      "Der Regen hat in der Nacht aufgehört, doch er hängt noch in der Luft wie ein Versprechen, das niemand eingelöst hat. Er sammelt sich in den Fugen des Steins, sucht sich einen Weg unter deine Sohlen, bis die Kälte in den Nähten deiner Stiefel wohnt und dort bleibt, gleichgültig gegen jeden Schritt, der folgt.",
+      "Auf der Karte war Lindendorf kaum mehr als ein Tintenfleck am Rand des Tals, ein Name, zwischen Hügel und Wald gequetscht, als hätte selbst der Kartenschreiber gehofft, niemand müsse jemals dorthin.",
+      "In der Dämmerung wirkt es größer. Oder näher. Als hätte die Dunkelheit hier ein zweites Dorf über das erste gelegt, eines, das man auf keiner Karte einträgt.",
+      "Unter deinen Sohlen lockern sich die Steine. Schwarzes Gras wächst aus den Fugen, niedergetreten von Rädern und Hufen, deren Spuren älter wirken, als die Jahreszeit erlaubt.",
+      "Seit Tagen, glaubst du, hat niemand diesen Weg benutzt. Kein Händler. Kein Bauer. Nicht einmal ein Bettler — und Bettler gehen für gewöhnlich überallhin, wo andere sich fürchten zu gehen.",
+      "Nur der Wind bewegt sich mit dir. Er streicht über die Hänge, trägt den Geruch von nassem Holz — und darunter etwas Süßliches, das du kennst, ohne es benennen zu wollen.",
+      "Du bleibst nicht stehen. Umkehren ist keine Richtung. Es ist nur die Entscheidung, dieselbe Strecke ein zweites Mal zu gehen, mit demselben Regen in denselben Nähten.",
+      "Also setzt du einen Fuß vor den anderen. Manchmal besteht der einzige Unterschied zwischen Mut und Gewohnheit darin, dass niemand mehr weiß, warum er überhaupt weiterläuft."
+    ],
+    "choices": [
+      "Weiter"
+    ],
+    "portrait": null
+  },
+  "jorren-im-geroell": {
+    "title": "Jorren im Geröll",
+    "art": "chapel",
+    "portrait": "jorren",
+    "lines": [
+      "Jorren kniet neben einem aufgerissenen Sack. Das Salz an der Unterseite ist nass, oben noch trocken. Der Sack hat nicht lange hier gelegen.",
+      "„Salz für drei Wochen“, sagt er. „Wenn der Berg es frisst, zahlen am Ende wieder die Falschen.“",
+      "Seine Hände sind weiß bis zu den Handgelenken. In den Rissen der Haut sitzt Salz wie Frost. Er sieht nicht zur Glocke hinauf, obwohl sie über ihm hängt.",
+      "Im Geröll liegt ein Stück schwarzes Holz. Es stammt nicht vom Wagen und nicht von der Kapelle. Jorren sieht es an, als wäre es ein weiterer Verlust, den er nicht erklären will.",
+      "Jorren liegt im Geröll. Der Atem ist flach. Neben ihm eine Ledertasche, leer. Wer hier Salz trägt, trägt es nicht für die Küche."
+    ],
+    "choices": [
+      "Weiter"
+    ]
+  },
+  "kirchengewoelbe": {
+    "title": "Kirchengewölbe",
+    "art": "chapel",
+    "lines": [
+      "Unter der Kirche führt ein Gang, den man nicht von der Kanzel aus erklärt. Die Stufen sind abgetreten von Leuten, die keine Messe suchten.",
+      "Feuchte Luft, Stein, der nach altem Wasser schmeckt. An der Wand rußige Striche, wo jemand Licht gespart und trotzdem gesehen hat, was er tun musste.",
+      "Grete hat den Weg genannt, ohne ihn zu beschreiben. Der Stein beschreibt ihn selbst: hierhin trägt man, was oben nicht bleiben darf.",
+      "Die Stufen nach unten sind aus anderem Stein als die Kirche darüber. Jemand hat sie später gesetzt.",
+      "Es zieht kalt herauf, und mit der Kälte ein Geruch, den der Weihrauch oben nicht zudeckt.",
+      "Der Pfarrer lässt dich leichter hinunter, wenn das Silber vom Weg dabei ist. Nachts geht es auch ohne ihn. Der Küster merkt sich Gesichter."
+    ],
+    "choices": [
+      "Weiter"
+    ],
+    "portrait": null
+  },
+  "klares-wasser": {
+    "title": "Klares Wasser",
+    "art": "well",
+    "portrait": "kern",
+    "lines": [
+      "Am nächsten Morgen ist der Eimer am Brunnen wieder klar bis auf den Grund. Kern braut zum ersten Mal seit vielen Tagen wieder etwas anderes als bloßes Fiebermittel.",
+      "Niemand im Dorf fragt laut nach dem Warum. Fragen kosten hier Kraft, die man zum Trinken braucht.",
+      "Am nächsten Morgen ist der Eimer klar bis auf den Grund. Kern braut zum ersten Mal seit Tagen etwas anderes als Fiebermittel.",
+      "Niemand fragt laut nach dem Warum. Das Wasser schmeckt nach Stein, nicht nach Metall.",
+      "Die Kinder trinken. Das reicht dem Platz als Urteil, solange niemand mehr hustet.",
+      "Der Eimer ist klar bis auf den Grund. Kern braut etwas anderes als Fiebermittel. Das Dorf nennt das genug. Die Rechnung steht noch irgendwo."
+    ],
+    "choices": [
+      "Weiter"
+    ]
+  },
+  "kornkammer": {
+    "title": "Kornkammer",
+    "art": "mill",
+    "lines": [
+      "Die Kornkammer riecht nach Mehl, das älter ist als die letzte Lieferung. Säcke stehen in Reihen, zu ordentlich für ein Haus, das angeblich nichts mehr hat.",
+      "Eine Frau zählt. Immer dieselben Zahlen. Die Finger bleiben an einem Sack hängen, der hohl klingt.",
+      "Die hintere Wand ist dunkler als die anderen. Nicht vom Schimmel. Vom Schatten, den jemand braucht.",
+      "Die Kammer riecht nach altem Korn und nach Menschen, die hier geschlafen haben, ohne dass die Säcke weniger wurden.",
+      "Zwischen den Stapeln ist eine Lücke, zu gerade für Ratten. Jemand hat sie mit Säcken zugelegt und das nicht sorgfältig genug.",
+      "Die Kammer riecht nach altem Mehl und nach Leuten, die sich nicht zeigen. Lene steht so, dass du die hintere Wand nicht gerade ansiehst."
+    ],
+    "choices": [
+      "Weiter"
+    ],
+    "portrait": null
+  },
+  "lager-hub": {
+    "title": "Banditenlager",
+    "art": "camp",
+    "portrait": "kess",
+    "lines": [
+      "Der Steinbruch ist eine Wunde im Hügel.",
+      "Drei Zelte. Ein Feuer. Eine Kiste mit dem Siegel der Kirche von Lindendorf.",
+      "Ein Mann mit einer Narbe über der Lippe — das wird Kess sein — würfelt mit zwei anderen.",
+      "Ein vierter steht oben auf dem Felsen und schaut den Weg entlang, den du gekommen bist.",
+      "Die Felswand trägt noch die schwarzen Streifen der alten Sprengungen. Zwischen ihnen wachsen dünne weiße Pilze, die im Feuerlicht wie Zähne aussehen.",
+      "Neben der Kiste liegt ein Kinderumhang. Er ist zu klein für jeden Menschen hier. Niemand tritt darauf. Niemand hebt ihn auf.",
+      "Kess würfelt mit zwei stumpfen Knochen. Einer der Männer lacht zu laut. Der andere hält die Hand auf der Tasche, in der vermutlich das Geld liegt, das dem Dorf fehlt.",
+      "Kess würfelt mit stumpfen Würfeln. Kein Wappen. Drei Zelte, ein Feuer, eine Kiste mit dem Siegel der Kirche. Sie bewachen den Weg für jemanden im Dorf. Unter dem Silber liegen Listen. Neben manchen Namen steht nur ein Kreuz."
+    ],
+    "choices": [
+      "Anschleichen (Geschick)",
+      "Heraustreten und reden (Charisma)",
+      "Angreifen (Stärke)",
+      "Mit dem Schlüssel das Seitentor nutzen"
+    ]
+  },
+  "lager-kampf": {
+    "title": "Steinbruch",
+    "art": "combat",
+    "lines": [
+      "Kein Duell. Ein Gedränge aus Stahl, Feuerlicht und schlechtem Boden.",
+      "Der erste Schlag trifft nicht dort, wo du ihn erwartest. Jemand rutscht im Schlamm aus, ein Zelt kippt, und plötzlich kämpfen alle in einem Raum, der für keinen von euch groß genug ist.",
+      "Kess trägt kein Wappen. Er trägt eine Narbe, einen stumpfen Säbel und die Gewissheit, dass derjenige gewinnt, der nach dem Lärm noch zählen kann.",
+      "Hinter dir steht die Kirchenkiste. Vor dir stehen Männer, die wissen, dass sie ohne sie nichts mehr haben, was ein Dorf zurückkaufen würde.",
+      "Der Steinbruch ist ein Knoten zwischen Mühle, Fluss und Hang. Wer hier steht, steht im Transport, nicht nur im Dreck."
+    ],
+    "choices": [
+      "Weiter"
+    ],
+    "portrait": null
+  },
+  "lager-reden": {
+    "title": "Banditenlager",
+    "art": "camp",
+    "portrait": "kess",
+    "lines": [
+      "Kess hat eine Stimme wie ein stumpfer Säbel.",
+      "„Lindendorf schickt keine Wache. Lindendorf schickt... dich.“",
+      "Er spricht deinen Namen nicht aus. Er hat ihn vielleicht nie gehört. Trotzdem liegt in seiner Pause die Art von Sicherheit, die Menschen nur zeigen, wenn sie vorbereitet sind.",
+      "Hinter ihm brennt das Feuer niedrig. Im Rauch hängt der Geruch von nassem Leder und gekochtem Knochen.",
+      "Kess hört zu, ohne die Hand vom Messer zu nehmen. Das Lagerfeuer macht die Gesichter rot und die Ausreden dünn.",
+      "Was sie genommen haben, liegt in Säcken hinter ihr. Sie bietet dir einen Anteil oder einen Weg. Beides kostet.",
+      "Sie reden nicht wie Räuber. Sie reden wie Leute mit einem Auftrag. Jemand zahlt, damit sie nicht fragen, woher das Salz kommt. Kess glaubt an Galgen, nicht an Helden."
+    ],
+    "choices": [
+      "Drohen: Das Dorf hat genug (Charisma)",
+      "Handel: Abzug gegen Gold und eine Nacht Vorsprung",
+      "Lügen: Hinter dir kommt die Stadtwache"
+    ]
+  },
+  "lager-schleich": {
+    "title": "Schleichen",
+    "art": "sneak",
+    "lines": [
+      "Du nimmst das Kirchensilber, zwei Säcke Getreide markierst du dir nur im Kopf.",
+      "Kess würfelt eine Acht und flucht über das Glück, das nicht seines ist.",
+      "Du bist schon im Gestrüpp, als der Posten endlich blinzelt.",
+      "Die Kiste ist schwerer, sobald du sie trägst. Nicht wegen des Silbers, sondern wegen der Namen, die in Lindendorf daran hängen.",
+      "Hinter dir lacht einer der Männer über einen schlechten Wurf. Er weiß noch nicht, dass der Einsatz bereits verschwunden ist.",
+      "Du bleibst im Schatten der Bruchwand. Das Lager zählt Köpfe am Feuer, nicht im Dunkel dahinter.",
+      "Ein Sack raschelt, wo kein Wind ist. Wenn du jetzt trittst, hört man den Stein unter der Sohle lauter als das Feuer.",
+      "Du nimmst, was die Kirche vermisst. Hinter dir lacht einer über einen Wurf. Er weiß noch nicht, dass der Einsatz schon fort ist."
+    ],
+    "choices": [
+      "Jetzt reden",
+      "Jetzt kämpfen"
+    ],
+    "portrait": null
+  },
+  "lager-tor": {
+    "title": "Seitentor",
+    "art": "gate",
+    "portrait": "kess",
+    "lines": [
+      "Der Schlüssel dreht sich schwer in deiner Faust. Rost redet mit, knirscht und splittert, gibt aber nach. Das Metall ist kalt und rau, die Zähne greifen, das Schloss gibt einen dumpfen Klick. Feuchtigkeit tropft vom steinernen Torbogen in den nassen Durchgang, rinnt dir am Handgelenk hinab, riecht nach Eisen und altem Schmutz.",
+      "Du kommst hinter dem Holzstapel raus — näher an der Kiste als am Feuer. Das Holz ist nass und schwer, die Rinde schwarz, die Spalten eng. Dein Atem hängt weiß in der Luft. Die Kiste drückt kalt gegen deine Hüfte, das Feuer liegt weiter weg, wirft nur einen schwachen Streifen Licht über den Boden.",
+      "Der Gang hinter dem Tor ist niedrig und riecht nach Moder. Die Decke drückt, Stein reibt an deinen Schultern. An der Wand stehen Zahlen, mit Kreide geschrieben und immer wieder durchgestrichen. Die Striche sind grau und fett, manche verwischt von Nässe, manche neu und hart. Der Moder steigt aus den Fugen, schwer und süßlich faul, legt sich auf die Zunge.",
+      "Unter deinen Stiefeln liegen alte Lederriemen und ein verrosteter Meißel. Das Leder ist steif und rissig, knackt, wenn du darauf trittst. Der Meißel ist stumpf, der Rost blättert ab und bleibt an der Sohle haften. Der Steinbruch war einmal ein Arbeitsplatz. Das Lager hat nur gelernt, seine Knochen zu benutzen. Alles hier ist abgenutzt, kalt, schwer von Gebrauch und Vergessen.",
+      "Durch die Spalten des Holzstapels siehst du Kess am Feuer. Die Flammen sind klein, rauchen, werfen ihm Licht auf die Hände. Er würfelt nicht mehr. Die Würfel liegen still neben ihm im Dreck. Er wartet. Sein Atem geht ruhig, die Schultern gesenkt, der Blick fest auf den Durchgang gerichtet, als hätte er die Zeit und das Gewicht des Steins längst akzeptiert.",
+      "Das Seitentor braucht den Schlüssel vom Fluss. Kess bittet um sein Leben und sagt, sein Tod gebe dem Dorf nichts zurück."
+    ],
+    "choices": [
+      "Nur die Beute nehmen und verschwinden (Geschick, leicht)",
+      "Die Seile der Zelte kappen und Chaos nutzen (Geschick, mittel)",
+      "Kess von hinten stellen (Stärke, mittel)"
+    ]
+  },
+  "lagerhaus-am-fluss": {
+    "title": "Lagerhaus am Fluss",
+    "art": "mill",
+    "lines": [
+      "Das Lagerhaus am Fluss hat ein Schloss, das neuer ist als die Tür. Durch eine Spalte siehst du Säcke, die die Mühle angeblich nicht mehr füllen kann.",
+      "Ein Wächter sitzt im Schatten, nicht schlafend. Er wartet auf Geräusche, nicht auf Gründe.",
+      "An der Schwelle klebt Matsch in einem Muster, das zum Uferpfad passt. Jemand trägt hierher, was unten fehlen soll.",
+      "Das Lagerhaus steht auf Pfählen. Das Wasser darunter ist schneller als der Blick durch die Ritzen.",
+      "An einem Balken hängt ein Siegel, nicht Holms. Die Kisten darunter sind zu leicht für Korn und zu schwer für leeres Holz.",
+      "Das Lagerhaus ist zu gut für dieses Ufer. Die Waage darin gehört nicht dem, der sie benutzt."
+    ],
+    "choices": [
+      "Weiter"
+    ],
+    "portrait": null
+  },
+  "lene-in-der-kornkammer": {
+    "title": "Lene in der Kornkammer",
+    "art": "mill",
+    "portrait": "miller",
+    "lines": [
+      "Lene zählt, als könnte Zählen eine Tür verschließen. Am Brunnen nennt man sie die Müllerin. Hier ist sie jemand, der nicht will, dass du die hintere Wand ansiehst.",
+      "Ihre Finger bleiben an einem Sack hängen, der hohl klingt. Sie hat Bertoks Stimme gehört, oder sie tut so. Seither redet sie, als läge in jedem Satz ein Preis.",
+      "„Nicht heute“, sagt sie, ohne dich anzusehen, und das Zählen geht weiter, leiser, als wolle es sich vor dir verstecken.",
+      "Lene zählt die Säcke, als könnte Zählen eine Tür verschließen. Am Brunnen nennt man sie die Müllerin. Hier will sie nicht, dass du die hintere Wand ansiehst.",
+      "Ihre Stimme bleibt ruhig. Die Hände nicht. Sie legt sich immer vor denselben Stapel."
+    ],
+    "choices": [
+      "Warten und zuhören",
+      "Die Kammer durchsuchen",
+      "Zurück zum Mahlwerk"
+    ]
+  },
+  "lindendorf": {
+    "title": "Lindendorf",
+    "art": "village",
+    "lines": [
+      "Du stehst mitten im Dorf. Der Boden ist aufgeweicht, Matsch klebt schwer an den Schuhen. Es regnet fein und unablässig; das Wasser läuft dir im Nacken hinunter und sammelt sich im Kragen.",
+      "Vor dir steht das Rathaus, Fachwerk dunkel vom Nassen. Daneben die Taverne, Tür geschlossen, ein dumpfer Geruch von abgestandenem Bier zieht durch die Fugen. Der Brunnen in der Mitte trägt einen Ring aus Moos, das Wasser darin ist trüb. Weiter die Mühle, das Rad hängt schwer im nassen Gang. Dahinter der Weg zum Hang.",
+      "Häuser drücken sich aneinander. Frauen am Brunnen sehen dir nach, nicht neugierig, sondern prüfend. Über dem Rathaus klebt dasselbe rote Wachs wie am Hang."
+    ],
+    "choices": [
+      "Mit dem Bürgermeister sprechen",
+      "Die Taverne besuchen",
+      "Brunnen und Dorfplatz",
+      "Zur Mühle gehen",
+      "Zur Gerbereigasse gehen",
+      "Schmiede und Apotheke",
+      "Nach dem roten Wachs fragen",
+      "Den Weg zum Hang erkunden",
+      "Richtung Wald aufbrechen",
+      "Warten, bis die Zeit sich wendet"
+    ],
+    "portrait": null
+  },
+  "mehl-mit-rauen-haenden": {
+    "title": "Mehl mit rauen Händen",
+    "art": "mill",
+    "portrait": "miller",
+    "lines": [
+      "Mehlstaub steht wieder in der Luft. Bertok bedankt sich knapp und schließt die Tür einen Spalt früher als nötig.",
+      "Am Steg klebt noch etwas Dunkles am Holz. Der Regen holt es nicht ganz runter.",
+      "Das Rad mahlt. Die Hände, die das durchgesetzt haben, bleiben rau, auch wenn das Dorf wieder Brot hat.",
+      "Das Mehl ist wieder da. An den Händen, die es tragen, klebt mehr als Mehl: Schürfwunden, Mehlstaub in den Rissen, und ein Blick, der nicht dankt.",
+      "Bertok sagt den Preis nicht. Du siehst ihn an den Knöcheln.",
+      "Mehlstaub steht wieder in der Luft. Am Steg klebt noch etwas Dunkles am Holz. Das Rad mahlt. Die Hände, die das durchgesetzt haben, bleiben rau."
+    ],
+    "choices": [
+      "Weiter"
+    ]
+  },
+  "morscher-steg": {
+    "title": "Morscher Steg",
+    "art": "ditch",
+    "lines": [
+      "Der Steg ist morsch. Die Bretter geben nach, nicht auf einmal, sondern in dem Maß, in dem du Gewicht darauf lässt.",
+      "Darunter steht das Wasser dunkel. Ein Pfahl trägt eine Kerbe, frisch, als hätte jemand abgezählt, wie viel das Holz noch trägt, bevor es jemanden verrät.",
+      "Wer hier stürzt, stürzt nicht weit. Weit genug, dass das Dorf es als Unfall verkaufen kann.",
+      "Die Bohlen geben nach, eine mehr als die andere. Unter dir läuft der Fluss gegen die Pfähle, und einer davon ist frisch abgesägt.",
+      "Wer hier nachts geht, will nicht gesehen werden. Die Spuren im Schlamm führen nicht zum Dorf.",
+      "Der Steg ist morsch. Wer einbricht, fällt ins kalte Wasser und warnt den Mann am Lagerhaus."
+    ],
+    "choices": [
+      "Weiter"
+    ],
+    "portrait": null
+  },
+  "muehle-hub": {
+    "title": "Mühle",
+    "art": "mill",
+    "portrait": "miller",
+    "lines": [
+      "Das Rad schlägt gegen das Wasser und mahlt nichts. Der Schlag ist regelmäßig wie ein Vorwurf, den niemand laut ausspricht.",
+      "Bertok bleibt am Mahlwerk, die Hände mehlweiß, obwohl seit Tagen kein Stein gearbeitet hat. Aus der Kornkammer kommt das leise Klicken gezählter Säcke.",
+      "Hinter dem Haus fällt der Boden zum Fluss ab. Wer lange genug hinunterhorcht, hört mehr als Wasser.",
+      "Das Rad schlägt und mahlt nichts. Der Schlag ist regelmäßig wie ein Vorwurf.",
+      "Bertoks Hände sind mehlweiß, obwohl der Stein kalt ist. Aus der Kornkammer kommt das Klicken gezählter Säcke, und hinter dem Haus fällt der Boden zum Fluss.",
+      "Das Rad schlägt. Es mahlt nichts. Lene zählt in der Tür, als könnte Zählen eine Wand sein."
+    ],
+    "choices": [
+      "Mit Bertok am Mahlwerk sprechen",
+      "Zu Lene in die Kornkammer gehen",
+      "Das Wasserrad und den Uferweg ansehen",
+      "Die Mühle verlassen"
+    ]
+  },
+  "muehle-stumm": {
+    "title": "Die stumme Mühle",
+    "art": "mill",
+    "portrait": "miller",
+    "lines": [
+      "Das Wasserrad schlägt schwer gegen das Wasser und mahlt nichts. Kein Mehlstaub steht in der Luft, nur der Geruch von nassem Stein und altem Fett. Die Steine liegen kalt und stumm unter einer Haut aus Feuchtigkeit.",
+      "Bertok bleibt am Mahlwerk. Seine Hände sind mehlweiß, obwohl seit Tagen kein Korn mehr durch die Mühle gelaufen ist. Aus der Kornkammer dringt das leise Klicken gezählter Säcke — ein Geräusch wie ein Echo aus besseren Zeiten.",
+      "Hinter dem Haus fällt der Boden zum Fluss ab. Fenn hat vom Kesseljahr erzählt, als das Land unter den Höfen aufgeteilt wurde. Die Mühle steht auf diesem Grund, und Bertok mahlt, als gehörte er ihm — auch wenn das stille Rad ihn Lügen straft.",
+      "Das Rad schlägt gegen das Wasser und mahlt nichts. Bertoks Hände sind mehlweiß, obwohl seit Tagen kein Stein gearbeitet hat. Die Stille ist die Decke. Was darunter liegt, sagt er nicht beim ersten Satz."
+    ],
+    "choices": [
+      "Weiter"
+    ]
+  },
+  "rathaus": {
+    "title": "Rathaus",
+    "art": "townhall",
+    "portrait": "holm",
+    "lines": [
+      "Du stehst im holzvertäfelten Kontor. Kälte kriecht vom Boden durch die Sohlen. Kerzen flackern über den Papieren, Ruß hängt bitter in der Luft. Holm sitzt dir gegenüber, die Hände flach auf dem Tisch, als wöge er etwas Unsichtbares ab.",
+      "Hinter ihm tickt eine Uhr, obwohl du keine siehst. Jeder Schlag klingt wie ein weiterer Sack Mehl, der im Steinbruch verschwindet.",
+      "„Banditen im Steinbruch“, sagt Holm. „Das Dorf soll schlafen können, ohne an die Glocke zu denken.“ Wasser, Mehl und die leere Gasse nennt er nicht. Du kannst den Auftrag einfach annehmen — oder ihn dir verdienen."
+    ],
+    "choices": [
+      "Weiter"
+    ]
+  },
+  "ratsherr-dennek": {
+    "title": "Ratsherr Dennek",
+    "art": "well",
+    "lines": [
+      "Dennek rührt weiter im Eimer, mechanisch, ohne Überzeugung — das Wasser wird dadurch um keinen Deut klarer. „Trockenes Jahr“, sagt er, mit der glatten Sicherheit eines Mannes, der diesen Satz schon oft geübt hat. „Der Brunnen gibt, was er kann. Mehr zu verlangen wäre schon Klage.“",
+      "Der Stock kreist immer an derselben Stelle vorbei, die Fuge rechts am Rand bleibt unberührt. An seinen Stiefeln klebt hellerer Lehm als auf dem Platz — der Weg zum Wald ist kürzer, als sein Satz vom trockenen Jahr behauptet."
+    ],
+    "choices": [
+      "Nach dem trockenen Jahr fragen (Charisma, schwer)",
+      "Ihn an die Mauer drücken (Stärke, mittel)",
+      "Ihn am Eimer lassen"
+    ],
+    "portrait": null
+  },
+  "ratsherr-vahl": {
+    "title": "Ratsherr Vahl",
+    "art": "townhall",
+    "portrait": "vahl",
+    "lines": [
+      "Vahl lächelt, wie man lächelt, wenn man den Satz schon fertig hat. „Hinter der Gerberei liegt Ödland. Ödland wird nützlich, oder es bleibt eine offene Rechnung.“",
+      "Er bietet dir keinen Stuhl. Stühle sind für Leute, die bleiben sollen. Du sollst verstehen und gehen.",
+      "„Das Kesseljahr ist vorbei“, sagt er. „Wer es ausgräbt, gräbt für sich, nicht fürs Dorf.“ Die Hände bleiben ruhig. Ruhige Hände haben hier oft mehr getan als laute.",
+      "Vahl lächelt, wie man ein Amt lächelt. Der Ring seines Großvaters dreht sich, wenn von Baugrund die Rede ist.",
+      "Er fragt nicht, was du in der Gasse gesehen hast. Er wartet, bis du es selbst auf den Tisch legst.",
+      "„Hinter der Gerberei liegt Ödland“, sagt Vahl. „Ödland wird nützlich, oder es bleibt eine offene Rechnung.“ Das Kesseljahr sei vorbei. Wer es ausgräbt, gräbt für sich, sagt er. Nicht fürs Dorf."
+    ],
+    "choices": [
+      "Weiter"
+    ]
+  },
+  "renniks-kontor": {
+    "title": "Renniks Kontor",
+    "art": "mill",
+    "portrait": "rennik",
+    "lines": [
+      "Im Kontor riecht es nach nassem Papier und Kupfer. Rennik sitzt an einem Tisch, der zu gut für dieses Haus ist, und wiegt Getreide auf einer Waage, die ihm nicht gehört.",
+      "An der Wand ein Bündel Schuldscheine. Einer trägt Bertoks Zeichen, schief und zu oft gefaltet. Er sieht dich an wie eine Lieferung, die zu früh gekommen ist.",
+      "„Getreide hat einen Preis“, sagt er. „Leute, die ihn nicht zahlen, sollen nicht so tun, als gehöre ihnen das Tal. Die Mühle mahlt, wenn ich es erlaube. Das Dorf isst, wenn ich es erlaube. Du stehst dazwischen.“",
+      "Hinter ihm hängen Zettel mit Mengen, die das Dorf nicht mehr gesehen hat, seit das Rad nur noch schlägt. Die Bücher liegen offen. Die Zahlen stimmen, und genau das ist der Druck.",
+      "Das Fenster geht zum Fluss, nicht zur Mühle, obwohl die Mühle ihn bezahlt. Er spricht von Lieferung. Bertoks Namen sagt er nicht. Der Schein an der Wand sagt ihn trotzdem.",
+      "„Getreide hat einen Preis“, sagt Rennik. „Leute, die ihn nicht zahlen, sollen nicht so tun, als gehöre ihnen das Tal.“ An der Wand hängt Bertoks Zeichen. Rennik sagt den Namen nicht. Der Schein sagt ihn."
+    ],
+    "choices": [
+      "Weiter"
+    ]
+  },
+  "sanna-botin": {
+    "title": "Sanna, die Botin",
+    "lines": [
+      "Das Papier steckt unter einem nassen Stein. Die Schrift ist verschmiert, aber lesbar.",
+      "„Die Glocke nicht läuten“, steht dort. Mehr Warnung als Nachricht.",
+      "Sanna faltet den Brief. Ihre Hände zittern erst, als sie ihn wieder hat.",
+      "Unter der Warnung findet sich eine zweite Zeile, beinahe vollständig ausgewaschen: Wenn sie dich beim Namen rufen, antworte nicht.",
+      "Sanna liest sie zweimal. Dann zerreißt sie den unteren Teil des Briefes und steckt ihn ein, als könne Papier ein Geräusch behalten.",
+      "Sanna hat die Nachricht im Geröll verloren. Das Siegel ist nicht Holms Alltagswachs. Wer die Spur liest, kennt später eine Abzweigung im Wald."
+    ]
+  },
+  "sanna-die-botin": {
+    "title": "Sanna, die Botin",
+    "art": "chapel",
+    "portrait": "sanna",
+    "lines": [
+      "Sanna trägt eine Ledertasche ohne Brief. Die Schnalle, die ihn halten sollte, fehlt. An der Stelle ist das Leder heller, frisch gerissen.",
+      "„Er ist mir im Geröll aus der Hand gerutscht. Wenn ich leer zurückkomme, glaubt man mir weniger als dem Regen.“",
+      "Sie versucht zu lächeln und scheitert an der Kälte. Unter ihrer Zunge klebt noch Staub vom Hang. Ihre freie Hand bleibt am Mauerwerk, als gehöre der Stein mehr zu ihr als der Weg.",
+      "„Der Brief war versiegelt“, sagt sie. „Nicht mit dem Wachs des Bürgermeisters. Mit etwas, das darunter war.“",
+      "Sanna trägt eine Ledertasche ohne Brief. Das rote Wachs an dem, was fehlt, ist keine Andacht. Es markiert, dass etwas entfernt wurde."
+    ],
+    "choices": [
+      "Weiter"
+    ]
+  },
+  "schmiede-apotheke": {
+    "title": "Schmiede und Apotheke",
+    "art": "village",
+    "lines": [
+      "Schmiede und Apotheke teilen sich eine Mauer und sonst wenig. Auf der einen Seite schlägt Eisen auf Eisen, langsam, als spare jemand die Schläge. Auf der anderen steht die Tür einen Spalt offen, und es riecht nach Kräutern, die man nicht mehr zum Kochen verwendet.",
+      "Wer hier Hilfe sucht, muss sich entscheiden, ob er blutet oder fiebert. Manche brauchen beides und gehen trotzdem zuerst zur falschen Tür.",
+      "Zwei Türen. Hinter der einen Eisen, hinter der anderen Alkohol und trockene Blätter.",
+      "In der Rinne dazwischen schwimmen Kohlenstaub, welke Blätter und ein Stück blutiger Wolle. Über Kerns Tür hängt nichts. Wer sie braucht, weiß, wo sie wohnt.",
+      "Auf der einen Seite schlägt Eisen auf Eisen. Auf der anderen riechen Kräuter, die man nicht mehr zum Kochen verwendet. Wer hier Hilfe sucht, entscheidet, ob er blutet oder fiebert."
+    ],
+    "choices": [
+      "Zum Schmied",
+      "Zu Witwe Kern",
+      "Zurück zum Platz"
+    ],
+    "portrait": null
+  },
+  "sicheres-mehl-leere-blicke": {
+    "title": "Sicheres Mehl, leere Blicke",
+    "art": "mill",
+    "portrait": "holm",
+    "lines": [
+      "Die Mühle hat ihren Schutzbrief. Mehl liegt wieder in den Säcken, und niemand auf dem Platz fragt laut, wohin die Leute aus der Nische gekommen sind.",
+      "Bertoks Blick ist leer. Holm nickt dir zu, wie man jemandem nickt, der eine unangenehme Arbeit erledigt hat und sie nicht wiederholen soll.",
+      "Sicheres Mehl. Leere Blicke. Das Tal nennt das Ordnung.",
+      "Die Säcke sind voll, und die Gesichter sind es nicht. Holm hat, was er wollte. Die Mühle mahlt, und niemand nennt, wen die Wache mitgenommen hat.",
+      "Auf dem Platz zählt man Brote, nicht Leute.",
+      "Mehl liegt wieder in den Säcken. Bertok grüßt knapp. Die Gesichter sind nicht voll. Holm hat, was er wollte. Wen die Wache mitgenommen hat, nennt der Platz nicht."
+    ],
+    "choices": [
+      "Weiter"
+    ]
+  },
+  "stille-rechnung": {
+    "title": "Stille Rechnung",
+    "art": "village",
+    "portrait": "beggar",
+    "lines": [
+      "Vahl hat die Baumannschaft abbestellt. Die Wahrheit bleibt zwischen euch, und zwischen euch ist ein Preis, der nicht in Holms Kasse steht.",
+      "Stille Rechnung: die Gasse bleibt leer, Vahl bleibt sitzen, und du trägst etwas, das wie ein Siegel wirkt, nur ohne Wachs.",
+      "Fenn rührt das Holz in der Tasche. Er weiß, dass Stille hier nie umsonst ist. Er sagt es nicht. Deshalb bleibt er an der Mauer.",
+      "Es wird nicht bezahlt und nicht gesagt. Vahl bleibt sitzen, die Gasse bleibt leer, und du trägst das Schweigen wie ein Siegel ohne Wachs.",
+      "Fenn rührt das Holz in der Tasche. Er weiß, dass Stille hier nie umsonst ist.",
+      "Die Namen brennen. Die Gasse wird Fläche. Fenn weiß, dass du es weißt. Seine Hand um das Zaunbrett ist still."
+    ],
+    "choices": [
+      "Weiter"
+    ]
+  },
+  "stilles-mehl": {
+    "title": "Stilles Mehl",
+    "art": "mill",
+    "portrait": "miller",
+    "lines": [
+      "Das Rad dreht sich lauter als sonst. Bertok reicht dir nichts mehr. Lene zählt keine Säcke. Sie steht in der Tür, als wäre Zählen eine Art, nicht zu reden.",
+      "Manche Schulden werden nicht bezahlt. Sie werden nur nicht mehr eingetrieben.",
+      "Das Mehl ist still, obwohl es fällt. Still heißt hier: niemand schuldet dir einen Satz darüber, warum es wieder fällt.",
+      "Das Rad schlägt nasser als zuvor. Bertok steht im Mehlstaub und spricht leiser als das Rad.",
+      "Wer fragt, warum es wieder mahlt, bekommt Mehl. Mehr gibt die Tür nicht her.",
+      "Die Mühle mahlt, leise. Die Säcke klingen hohl. Lene zählt weiter. Das Dorf nennt das Schutz."
+    ],
+    "choices": [
+      "Weiter"
+    ]
+  },
+  "uferpfad": {
+    "title": "Uferpfad",
+    "art": "ditch",
+    "lines": [
+      "Ohne klare Spur dauert der Weg länger. Nasser Lehm klebt an den Sohlen und zieht schwer an jedem Schritt, der Uferpfad knickt immer an derselben Stelle. Dornen greifen nach dem Stoff an deinen Beinen.",
+      "Schließlich der morsche Steg, das Holz weich von ständiger Nässe. Dahinter das Haus: Läden hängen schief, Fenster starren dunkel. Es will leer wirken und schafft es nicht — irgendetwas lastet darin.",
+      "Der Pfad fällt zum Fluss. Halb verhängte Fenster. Dort wiegt jemand Getreide, das hier nicht gemahlen wird."
+    ],
+    "choices": [
+      "Weiter"
+    ],
+    "portrait": null
+  },
+  "unter-der-kirche": {
+    "title": "Unter der Kirche",
+    "art": "chapel",
+    "lines": [
+      "Die Kirche steht kälter als der Platz. Kerzenwachs ist an den Bänken heruntergelaufen und wieder hart geworden.",
+      "Die Treppe zum Gewölbe liegt hinter einem Vorhang, den niemand zur Seite schiebt. Der Stoff ist dunkel genug, dass man ihn für eine Wand halten kann.",
+      "Unten am Platz hat jemand Gretes Stimme gehört. Oben steht der Pfarrer steifer als sonst.",
+      "Der Küster hat dich einmal gesehen. Die Tür quietscht, und der Riegel sitzt einen Fingerbreit fester.",
+      "Unten liegen die, die man ohne Namen begräbt. Oben redet niemand davon.",
+      "Der Pfarrer hat das Silber gesehen, das du trägst. Er sieht dich anders an als die, die nur fragen.",
+      "Der Pfarrer steht am Altar und tut, als gehörte die Treppe nicht zu seiner Kirche.",
+      "Unter der Kirche ist die Luft kalt und süß. Nicht Weihrauch. Etwas, das lange gelegen hat. Der dritte Stein von links, Rücken zur Treppe, riecht nach Gerberlohe, nicht nach Kalk."
+    ],
+    "choices": [
+      "Weiter"
+    ],
+    "portrait": null
+  },
+  "vahls-stube": {
+    "title": "Vahls Stube",
+    "art": "townhall",
+    "portrait": "vahl",
+    "lines": [
+      "Vahls Stube im Rathaus ist wärmer als der Platz. Die Wärme kommt von einem Ofen, der mehr Holz verbraucht, als ein Ratsherr zugeben würde.",
+      "Auf dem Tisch liegen Pläne, sauber, ohne die Gasse, als sei sie schon wegradiert. Ein Lineal liegt quer über Namen, die nicht mehr in der Tusche stehen.",
+      "Die Luft riecht nach Siegellack. Nicht nach dem Wachs vom Hang. Nach dem, das Beschlüsse hält, bis niemand mehr widerspricht.",
+      "Vahls Stube riecht nach Wachs und nach einem Ofen, der nur für ihn brennt. Der Ring an seiner Hand ist älter als das Amt.",
+      "Er bietet dir den Stuhl an, der zur Tür zeigt. So sieht er, wer kommt, bevor du siehst, was auf dem Tisch liegt.",
+      "Vahls Stube ist wärmer als der Platz. Die Wärme kommt von einem Ofen, der mehr Holz frisst, als ein Ratsherr zugibt. Auf dem Tisch liegt eine Baufreigabe. Die Gasse soll Fläche werden."
+    ],
+    "choices": [
+      "Weiter"
+    ]
+  },
+  "vahls-stube-abend": {
+    "title": "Vahls Stube, Abend",
+    "art": "townhall",
+    "portrait": "vahl",
+    "lines": [
+      "Abends ist Vahls Stube dunkler, und der Ofen zu warm für einen Mann, der behauptet, das Dorf habe kein Holz zu verschenken.",
+      "Die Pläne liegen noch da. Das Lineal hat sich verschoben. Darunter kommt ein Name zum Vorschein, den die Tusche nicht ganz getilgt hat.",
+      "Vahl erwartet dich nicht als Gast. Er erwartet dich als Problem, das vor der Baufreigabe noch leise bleiben soll.",
+      "Am Abend ist die Stube kleiner. Vahl hat die Lampe niedrig gestellt, als spare er Licht für etwas, das er nicht zeigen will.",
+      "Auf dem Tisch liegt die Liste, oder die Stelle, an der sie gelegen hat. Seine Hand deckt beides gleich zu.",
+      "Am Abend liegt die Liste auf dem Tisch oder sie liegt nicht. Vahl sieht Papier an, als könne es brennen. Unordnung, sagt er. In seinem Mund heißt das: Zeugen."
+    ],
+    "choices": [
+      "Weiter"
+    ]
+  },
+  "wald": {
+    "title": "Wald",
+    "art": "forest",
+    "lines": [
+      "Der Wald von Lindendorf ist kein Märchenwald.",
+      "Nasses Laub. Krähen. Ein Pfad, der sich entscheidet, kein Pfad mehr zu sein.",
+      "Irgendwo voraus liegt der Steinbruch. Dazwischen: Spuren, ein Hindernis, vielleicht Beute.",
+      "Die Bäume wachsen eng genug, dass ihre Kronen den Himmel in schmale Streifen teilen. Zwischen diesen Streifen hängt ein fahles Licht, das weder Tag noch Abend sein will.",
+      "Der Boden gibt nach, wo vor dir jemand stehen geblieben ist, und hält, wo niemand mehr hingetreten hat. Es riecht nach nassem Holz und nach Rauch, der nicht von einem Herd kommt.",
+      "Im Unterholz liegen zerbrochene Pfeile, ein Kinderlöffel und die Hälfte eines Wagenschilds. Der Wald sammelt alles, was Menschen zurücklassen, aber nichts davon wird leichter.",
+      "Der Wald zwischen Hang und Steinbruch ist der alte Transport. Salz, Mehl, und was man nicht zählen wollte. Die Banditen bewachen ihn nicht für sich allein."
+    ],
+    "choices": [
+      "Weiter"
+    ],
+    "portrait": null
+  },
+  "was-ausgegraben-bleibt": {
+    "title": "Was ausgegraben bleibt",
+    "art": "chapel",
+    "portrait": "vahl",
+    "lines": [
+      "Was ausgegraben bleibt, bleibt nicht in der Erde. Der Rat hat Ilse Brandtners Liste gehört. Vahl hat seinen Sitz verloren, nicht seine Freunde.",
+      "Die Gasse hat wieder einen Namen, den man nicht laut sagt, und trotzdem kennt ihn jetzt, wer Ohren hat.",
+      "Unter der Kirche tropft es weiter. Der Tropfen ändert sich nicht, nur wer ihn hört.",
+      "Was unter der Kirche lag, liegt nicht mehr im Dunkeln. Die Liste ist fort, die Namen nicht.",
+      "Vahl sitzt noch. Der Stein, den du bewegt hast, bleibt bewegt. Das Dorf tut, als sei der Staub nur Staub.",
+      "Vahl bleibt im Amt. Der Bau stockt. Die Liste bleibt zwischen euch. Er grüßt dich zu höflich."
+    ],
+    "choices": [
+      "Weiter"
+    ]
+  },
+  "was-die-liste-wiegt": {
+    "title": "Was die Liste wiegt",
+    "art": "evidence",
+    "portrait": "vahl",
+    "lines": [
+      "Die Liste wiegt wenig in der Hand und viel, sobald sie den Tisch berührt. Vahl sieht sie an, als könne Papier brennen, wenn man lange genug nicht blinzelt.",
+      "„Das ist Unordnung“, sagt er. Unordnung heißt in diesem Mund: Zeugen.",
+      "Du kannst sie ihm lassen, dem Rat tragen, Holm geben oder dem Feuer. Jede dieser Hände hat schon einmal Namen gehalten und sie nicht zurückgegeben.",
+      "Die Namen sind mehr wert als das Papier. Vahl weiß das. Deshalb wiegt er sie nicht in der Hand, sondern im Schweigen.",
+      "Wer die Liste behält, behält das Dorf am Kragen. Wer sie hergibt, sucht sich nur einen anderen Kragen.",
+      "Vahl verliert den Sitz, wenn die Namen laut werden. Fenn wird danach gegrüßt. Lindendorf nennt das Unordnung."
+    ],
+    "choices": [
+      "Weiter"
+    ]
+  },
+  "wasser-mit-einem-riss": {
+    "title": "Wasser mit einem Riss",
+    "art": "well",
+    "lines": [
+      "Das Wasser fließt zwar wieder, doch Grovin ist verschwunden, nicht verschwunden genug, um die Sache endgültig zu beenden.",
+      "In manchen Nächten hört man Schritte am Waldrand, die niemand im Dorf laut beim Namen nennen möchte, aus Furcht, damit etwas heraufzubeschwören, das besser dort bliebe, wo es hingehört.",
+      "Der Eimer schlägt wieder gegen den Stein. Der Klang ist der alte.",
+      "Die Zisterne am Waldrand steht noch. Ihre Fugen auch. Nachts, wenn der Wind von Osten kommt, sind dort Schritte.",
+      "Niemand im Dorf sagt den Namen zu den Schritten. Die Kinder trinken trotzdem.",
+      "Das Wasser läuft. Grovin ist für den Tag fort. In manchen Nächten hört man Schritte am Waldrand. Niemand nennt sie laut."
+    ],
+    "choices": [
+      "Weiter"
+    ],
+    "portrait": null
+  },
+  "wasserrad": {
+    "title": "Wasserrad",
+    "art": "mill",
+    "lines": [
+      "Das Wasserrad dreht sich, weil das Wasser muss, nicht weil jemand mahlen will. Schaum steht in den Schaufeln, grau, mit Mehl, das nicht mehr Mehl ist.",
+      "Am Holz sind frische Schleifspuren, nass, als hätte jemand nachts ein Fass oder einen Sack die Böschung hinuntergezogen.",
+      "Der Fluss nimmt die Spuren ein paar Schritte mit und lässt sie dann im Schlamm liegen, damit der Nächste sie findet, der nicht wegsehen will.",
+      "Das Rad dreht sich im zu niedrigen Wasser und nimmt trotzdem keine Last an. Die Schaufeln schlagen nass und leer.",
+      "Am Ufer ist der Schlamm heller als der Fluss. Jemand hat hier Säcke geschleift, nicht Korn gewaschen.",
+      "Am Rad liegen Schleifspuren eines gezogenen Sacks. Ein Kinderschuh zeigt zum Ufer. Das widerspricht dem Satz vom niedrigen Wasser."
+    ],
+    "choices": [
+      "Weiter"
+    ],
+    "portrait": null
+  },
+  "zum-letzten-fass": {
+    "title": "Zum letzten Fass",
+    "art": "tavern",
+    "portrait": "mara",
+    "lines": [
+      "In der Taverne ist die Luft dick von nassem Holz und billigem Bier. Mara wischt die Theke in einem Kreis, der schon vor deiner Ankunft begonnen hat und nicht aufhören wird, nur weil jemand eintritt.",
+      "Zwei Gäste sitzen so weit auseinander, als koste Nähe extra. Eine Lampe flackert, wird kleiner gedreht, als könntest du am Licht ablesen, wie viel das Haus noch wagt.",
+      "Mara nickt dir zu, knapp. In Lindendorf ist das bereits eine Auskunft: du darfst bleiben, solange du nicht fragst, bevor das Tuch trocken ist."
+    ],
+    "choices": [
+      "Weiter"
+    ]
+  },
+  "zwei-brunnen-ein-dorf": {
+    "title": "Zwei Brunnen, ein Dorf",
+    "art": "well",
+    "portrait": "kern",
+    "lines": [
+      "Das Wasser wird spürbar klarer. Es reicht länger. Es reicht nicht für alle. Kern braut dieselbe Mischung wie zuvor, nur seltener, und stellt die Flaschen enger, damit die Lücke nicht auffällt.",
+      "Der Eimer am Platz ist nicht mehr grau. Er ist auch nicht klar. Wer zuerst kommt, trinkt. Wer später kommt, zählt die Ringe an der Wand.",
+      "Du trägst, was wirklich geschah, allein. Dennek rührt nicht mehr. Er spricht auch nicht.",
+      "Das Wasser reicht länger. Es reicht nicht für alle. Kern stellt die Flaschen enger, damit die Lücke nicht auffällt.",
+      "Der Eimer ist nicht mehr grau und nicht klar. Wer zuerst kommt, trinkt. Du trägst den Rest allein.",
+      "Das Wasser wird klarer. Es reicht nie für alle. Wer zuerst kommt, trinkt. Du trägst den Rest allein."
+    ],
+    "choices": [
+      "Weiter"
+    ]
+  },
+  "mehlsack-am-brunnen": {
+    "title": "Der fremde Mehlsack",
+    "art": "mill",
+    "portrait": "miller",
+    "lines": [
+      "Hinter dem Mühlstein steht ein Mehlsack, der nicht nach Mehl riecht.",
+      "Das Tuch ist grob. Die Naht wurde mit schwarzem Garn geschlossen.",
+      "Die Müllerin sieht dich an. „Der war gestern noch nicht da.“",
+      "Der Sack steht dort, wo am Morgen die erste Ration für die Backstube liegen sollte. Seine Unterseite ist trocken, obwohl der Boden nass ist.",
+      "Auf dem Tuch wurde das Mühlenzeichen nachgemalt. Der Kreis ist richtig, aber die drei Kerben darin zeigen in die falsche Richtung.",
+      "„Jemand will, dass wir ihn öffnen“, sagt die Müllerin. „Die Frage ist nur, wer danach zusieht.“",
+      "Der Sack hinter dem Mühlstein riecht nicht nach Mehl. Das Mühlenzeichen ist nachgemalt. Die Kerben zeigen falsch. Die Müllerin sagt, er sei gestern noch nicht da gewesen."
+    ],
+    "choices": [
+      "Die Naht untersuchen (Geschick, mittel)",
+      "Den Sack zum Bürgermeister bringen (Charisma, leicht)",
+      "Die Müllerin nicht hineinziehen"
+    ]
+  },
+  "intro-rauch-graben": {
+    "id": "intro-rauch-graben",
+    "title": "Rauch und Graben",
+    "art": "ditch",
+    "portrait": null,
+    "choices": [
+      "Weiter"
+    ],
+    "lines": [
+      "Weiter unten steigt Rauch, senkrecht und ohne Neigung. Kein Wind fasst ihn an.",
+      "Er bleibt, wo er ist. Eine graue Säule über den Hängen. Er trägt nassen Brand und kalte Asche nicht fort.",
+      "Vom Steinbruch her, sagst du dir, obwohl du den Steinbruch noch nicht gesehen hast. Nur die Richtung. Osten.",
+      "Ein Rauch, der so gerade steht, gehört keinem Herd. Herdfeuer wackeln. Dieses tut es nicht.",
+      "Unterhalb der Kapelle klafft ein trockener Graben im Hang. Einst muss dort Wasser gelaufen sein. Die Mulde ist glatt gewaschen, jetzt staubig und tot.",
+      "Darin liegen die Knochen von Tieren, ausgebleicht und ordentlich nebeneinander gereiht, als hätte sie jemand dort abgelegt, statt sie verwesen zu lassen.",
+      "Kein Geruch von Fäulnis mehr. Nur Kalk und Kälte. Wer so legt, zählt."
+    ]
+  }
+}

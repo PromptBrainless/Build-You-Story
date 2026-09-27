@@ -1,0 +1,6 @@
+Repository: PromptBrainless/spielversion1
+Branch:     main
+Commit:     71706739cd93cb52a0bc29c12943cc373ebbfdc9
+Kurz:       7170673
+Enthalten:  src, docs, server, migrations, package.json, tsconfig, vite, README, AGENTS
+Nicht dabei: node_modules, dist, .git, public, screenshots, root-JPGs

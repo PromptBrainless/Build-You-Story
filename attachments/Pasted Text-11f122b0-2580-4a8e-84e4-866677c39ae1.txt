@@ -1,0 +1,56 @@
+Auf GitHub gibt es mehrere konkrete Optimierungsoptionen für genau diese Art App (React/TypeScript-Textabenteuer mit Namens-Slots, W10, /art, Weltwerkzeug). Unten nur das, was zu Lindendorf passt — kein Engine-Tausch, kein neuer Plot.
+Speichern (Kern 7)
+Option
+Repo
+Was sie der App bringt
+Slot + Autosave
+laruss/react-text-game
+IndexedDB-Slots, Export/Import, Autosave nach 500 ms. Name bleibt der Schlüssel, Speicher wird robuster als nur localStorage.1c7cb8
+GitHub
+Nummerierte Slots + JSON-Blob
+markarenz/mms-text-adventure
+Gesamter Spielzustand als ein Objekt, Slot über Dateiname/Nummer. Passt zu „ein Name = ein Slot“.479151
+YouTube
+Quick-Save-Tasten
+NarraLeaf localStorage-Save
+F5 speichern / F9 laden, Slot 0 als Schnellstand. Ergänzung zum HUD-Knopf.813f00
+react.narraleaf
+Tab-Sync
+colinhemphill/haversack
+localStorage-Hook mit Merge und Sync zwischen Tabs. Nützlich, wenn zwei Fenster denselben Namen öffnen.5145c2
+GitHub
+Schema + Namespace
+ultrastorage (über Standard-Schema/Zod)
+Zod prüft den Held beim Laden — ihr habt Zod schon. Verhindert kaputte Altstände.
+Empfehlung für euer System: Name-Slots behalten. Dazu Autosave + JSON-Export (saves/<name>.json) + Zod beim Laden. IndexedDB erst, wenn das Log wirklich groß wird.
+Proben / Attribute (Kern 3–4)
+Aus denselben Engines, ohne W100 und ohne neue Formel:
+Summe sichtbar machen wie in React-Text-Game / Ink-Templates: Zeile W10 + ST/GE/CH ± Gunst/Last ± Lage = Summe ≥ Schwelle.
+Stat-Balken aus RemyVim/ink-if-story-template: LP und Attribute als Balken, nicht nur Zahl.d78b55
+GitHub
+Mods nach Herkunft gruppieren (Gunst / Last / Lage getrennt) — das steht schon in eurer Optimierung; die Templates zeigen genau diese Chip-Trennung.
+Graph und Prosa (Kern 1–2)
+Option
+Risiko für Lindendorf
+inkle/ink + y-lohse/inkjs
+Snapshot/Restore des Story-States ist stark. Nicht den Graph nach Ink umziehen — Anweisung verbietet Engine-Tausch. Nur das Snapshot-Muster kopieren.675775
+GitHub
+Qualifizierte IDs (muehle.hub:schleich)
+Habt ihr schon als Soll. Ink-Tags und RTG-Passagen machen dasselbe mit Alias-Listen.
+Bilder /art (Kern 5)
+In SpielVersion1.0 werden schon alle ART/PORTRAITS vorab geladen. Git-übliche nächste Stufe:
+Preload mit Fortschritt und Abbruch, wie in react-text-game (Asset-Preload + Progress).
+Tote Keys im Prüfen-Tab markieren (steht in eurem Kern) — kein neues Asset-Framework.
+Flags (Kern 6)
+Nicht umbenennen. Das Muster aus den Save-Engines: Mapper-Schicht (Player sieht Labels, GM sieht Rohflags). Das habt ihr in 00-ANWEISUNG.md schon als Vertrag.
+Was ich nicht übernehmen würde
+Kompletter Wechsel auf @react-text-game/core oder Ink — bricht Kanon, Flags und Weltwerkzeug.
+Live-KI-Texte aus ArielShamay/my-ai-game — widerspricht der handgeschriebenen Tal-Stimme.
+Server-Auth nur fürs Speichern — für „gleicher Name lädt Stand“ unnötig.
+Sinnvolle Reihenfolge für diese App
+Autosave + JSON-Export/Import am Namensslot
+Probenzeile mit echter Summe und ST/GE/CH
+HUD: Gunst / Last / Lage getrennt
+Zod-Validierung beim Laden
+Optional IndexedDB, wenn entscheidungen wächst
+Soll ich Option 1 (Autosave + Export) oder Option 2 (Probenzeile) als Nächstes in SpielVersion1.0 einbauen?

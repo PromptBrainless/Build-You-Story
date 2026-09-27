@@ -1,0 +1,77 @@
+{
+  "id": "ufer",
+  "titel": "Ufer und Kontor",
+  "quest": "muehle",
+  "datei": "muehle/ufer.json",
+  "szenen": [
+    {
+      "id": "wasserrad",
+      "title": "Wasserrad",
+      "art": "mill",
+      "portrait": null,
+      "lines": [
+        "Das Wasserrad dreht sich, weil das Wasser muss, nicht weil jemand mahlen will. Schaum steht in den Schaufeln, grau, mit Mehl, das nicht mehr Mehl ist.",
+        "Am Holz sind frische Schleifspuren, nass, als hätte jemand nachts ein Fass oder einen Sack die Böschung hinuntergezogen.",
+        "Der Fluss nimmt die Spuren ein paar Schritte mit und lässt sie dann im Schlamm liegen, damit der Nächste sie findet, der nicht wegsehen will."
+      ],
+      "choices": [
+        "Weiter"
+      ]
+    },
+    {
+      "id": "uferpfad",
+      "title": "Uferpfad",
+      "art": "ditch",
+      "portrait": null,
+      "lines": [
+        "Ohne klare Spur dauert der Weg länger. Du spürst es in den Waden, wie der bemooste Waldweg dich festhält, jede Sohle schwer vom nassen Lehm, der klebt und zerrt und den Geruch von fauler Erde und kaltem Wasser hochdrückt. Dornen greifen nach dem Stoff an deinen Beinen, reißen feine Linien in die Haut, lassen Wärme sickern, die sofort wieder erkaltet. Der Uferpfad knickt. Derselbe Knick. Nasser Lehm schmiert unter dem Gewicht deines Schritts, rutscht, hält. Du gehst weiter und triffst ihn wieder: denselben Knick im Ufer, denselben fauligen Hauch vom Wasser, dasselbe kalte Gewicht in den Knochen.",
+        "Schließlich der morsche Steg. Holz, das nachgibt unter dem Blick schon, weich vom ständigen Nässe, grünschillernd, schwer von Moos und dem Geruch nasser Fäulnis. Dahinter das Haus. Es will leer wirken. Läden hängen schief, Fenster starren dunkel, die Luft davor steht still und kalt. Es schafft es nicht. Irgendetwas lastet darin, ein dumpfes Gewicht hinter den Wänden, ein Geruch von bewohntem Dunkel, der durch die Ritzen drückt und dir sagt, dass Leerheit hier nur eine dünne Haut ist."
+      ],
+      "choices": [
+        "Weiter"
+      ]
+    },
+    {
+      "id": "morscher-steg",
+      "title": "Morscher Steg",
+      "art": "ditch",
+      "portrait": null,
+      "lines": [
+        "Der Steg ist morsch. Die Bretter geben nach, nicht auf einmal, sondern in dem Maß, in dem du Gewicht darauf lässt.",
+        "Darunter steht das Wasser dunkel. Ein Pfahl trägt eine Kerbe, frisch, als hätte jemand abgezählt, wie viel das Holz noch trägt, bevor es jemanden verrät.",
+        "Wer hier stürzt, stürzt nicht weit. Weit genug, dass das Dorf es als Unfall verkaufen kann."
+      ],
+      "choices": [
+        "Weiter"
+      ]
+    },
+    {
+      "id": "lagerhaus-am-fluss",
+      "title": "Lagerhaus am Fluss",
+      "art": "mill",
+      "portrait": null,
+      "lines": [
+        "Das Lagerhaus am Fluss hat ein Schloss, das neuer ist als die Tür. Durch eine Spalte siehst du Säcke, die die Mühle angeblich nicht mehr füllen kann.",
+        "Ein Wächter sitzt im Schatten, nicht schlafend. Er wartet auf Geräusche, nicht auf Gründe.",
+        "An der Schwelle klebt Matsch in einem Muster, das zum Uferpfad passt. Jemand trägt hierher, was unten fehlen soll."
+      ],
+      "choices": [
+        "Weiter"
+      ]
+    },
+    {
+      "id": "renniks-kontor",
+      "title": "Renniks Kontor",
+      "art": "mill",
+      "portrait": null,
+      "lines": [
+        "Im Kontor riecht es nach nassem Papier und Kupfer. Rennik wiegt nichts, während du da bist. Die Waage steht trotzdem bereit, als sei das Gespräch selbst eine Lieferung.",
+        "„Getreide hat einen Preis“, sagt er. „Leute, die ihn nicht zahlen, sollen nicht so tun, als gehöre ihnen das Tal.“",
+        "Hinter ihm an der Wand hängen Zettel mit Mengen, die das Dorf nicht mehr gesehen hat, seit das Rad nur noch schlägt."
+      ],
+      "choices": [
+        "Weiter"
+      ]
+    }
+  ]
+}

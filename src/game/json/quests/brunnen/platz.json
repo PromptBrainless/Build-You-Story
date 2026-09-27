@@ -1,0 +1,41 @@
+{
+  "id": "platz",
+  "titel": "Brunnenplatz",
+  "quest": "brunnen",
+  "datei": "brunnen/platz.json",
+  "szenen": [
+    {
+      "id": "brunnen-krug",
+      "title": "Der bittere Krug",
+      "art": "well",
+      "portrait": null,
+      "lines": [
+        "Der Wassereimer am Brunnen steht halb voll, so wie ihn die Nacht zurückgelassen hat — niemand hat ihn heute Morgen geleert und neu gefüllt, wie es sonst die erste Pflicht des Tages ist. Das Wasser darin hat die falsche Farbe: ein trübes Graubraun, das eher an aufgewühlten Teichgrund erinnert als an das, was aus der Tiefe kommen sollte.",
+        "Vor der Apotheke hustet ein Kind, trocken und hart. Die Mutter hält es fester, als das Husten allein verlangt. Am Brunnenrand rührt Ratsherr Dennek mit einem Stock im Eimer, im Kreis, immer wieder, als ließe sich die Frage glattstreichen. Er sieht dabei niemanden an."
+      ],
+      "choices": [
+        "Weiter"
+      ]
+    },
+    {
+      "id": "brunnen-hub",
+      "title": "Trübes Wasser",
+      "art": "well",
+      "portrait": null,
+      "lines": [
+        "Das Wasser im Eimer bleibt trüb bis auf den Grund. Sobald der Wind vom Wald herüberzieht, schmeckt es nach Eisen.",
+        "Kerns Tür steht einen Spalt offen, als warte sie auf jemanden, der endlich hineingeht, statt nur vorbeizulaufen. Dennek trommelt derweil mit den Fingern auf die Brunnenmauer, ein unruhiges, kleines Geräusch, das nicht zum Rühren im Eimer passen will — die Hände eines Mannes, der etwas weiß, das seine Zunge noch nicht hergeben will.",
+        "Das Wasser bleibt trüb bis auf den Grund. Wenn der Wind vom Wald kommt, schmeckt es nach Eisen.",
+        "Kerns Tür steht einen Spalt offen. Dennek trommelt auf die Mauer, nicht im Takt des Rührens. Die Hände wissen mehr als der Mund.",
+        "Der Eimer bleibt grau. Dennek rührt. Die Kinder husten zuerst. Niemand sagt, wer den Brunnen angefasst hat."
+      ],
+      "choices": [
+        "Mit Witwe Kern über das Wasser sprechen",
+        "Mit Ratsherr Dennek sprechen",
+        "Den Brunnen selbst untersuchen",
+        "Den Graben am Brunnenrand verfolgen",
+        "Zurück zum Dorfplatz"
+      ]
+    }
+  ]
+}

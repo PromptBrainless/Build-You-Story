@@ -1,0 +1,92 @@
+{
+  "id": "schluss",
+  "titel": "Ausgänge",
+  "quest": "gasse",
+  "datei": "gasse/schluss.json",
+  "szenen": [
+    {
+      "id": "vahls-stube-abend",
+      "title": "Vahls Stube, Abend",
+      "art": "townhall",
+      "portrait": null,
+      "lines": [
+        "Abends ist Vahls Stube dunkler, und der Ofen zu warm für einen Mann, der behauptet, das Dorf habe kein Holz zu verschenken.",
+        "Die Pläne liegen noch da. Das Lineal hat sich verschoben. Darunter kommt ein Name zum Vorschein, den die Tusche nicht ganz getilgt hat.",
+        "Vahl erwartet dich nicht als Gast. Er erwartet dich als Problem, das vor der Baufreigabe noch leise bleiben soll."
+      ],
+      "choices": [
+        "Weiter"
+      ]
+    },
+    {
+      "id": "was-die-liste-wiegt",
+      "title": "Was die Liste wiegt",
+      "art": "evidence",
+      "portrait": null,
+      "lines": [
+        "Die Liste wiegt wenig in der Hand und viel, sobald sie den Tisch berührt. Vahl sieht sie an, als könne Papier brennen, wenn man lange genug nicht blinzelt.",
+        "„Das ist Unordnung“, sagt er. Unordnung heißt in diesem Mund: Zeugen.",
+        "Du kannst sie ihm lassen, dem Rat tragen, Holm geben oder dem Feuer. Jede dieser Hände hat schon einmal Namen gehalten und sie nicht zurückgegeben."
+      ],
+      "choices": [
+        "Weiter"
+      ]
+    },
+    {
+      "id": "ein-zweites-schweigen",
+      "title": "Ein zweites Schweigen",
+      "art": "gate",
+      "portrait": null,
+      "lines": [
+        "Die Gasse bleibt leer, und die Bretter kommen trotzdem nicht. Holm hat den Bauplatz ruhen lassen. Die Liste liegt in einer Schublade, die nur er aufzieht.",
+        "Ein zweites Schweigen ist nicht dasselbe wie das erste. Das erste war Angst. Das zweite ist eine Vereinbarung zwischen Leuten, die wissen, was in der Schublade liegt.",
+        "Fenn sitzt noch an der Mauer. Die Füße im Wasser. Er hat zugehört. Mehr schuldet ihm das Dorf nicht, sagt das Dorf."
+      ],
+      "choices": [
+        "Weiter"
+      ]
+    },
+    {
+      "id": "was-ausgegraben-bleibt",
+      "title": "Was ausgegraben bleibt",
+      "art": "chapel",
+      "portrait": null,
+      "lines": [
+        "Was ausgegraben bleibt, bleibt nicht in der Erde. Der Rat hat Ilse Brandtners Liste gehört. Vahl hat seinen Sitz verloren, nicht seine Freunde.",
+        "Die Gasse hat wieder einen Namen, den man nicht laut sagt, und trotzdem kennt ihn jetzt, wer Ohren hat.",
+        "Unter der Kirche tropft es weiter. Der Tropfen ändert sich nicht, nur wer ihn hört."
+      ],
+      "choices": [
+        "Weiter"
+      ]
+    },
+    {
+      "id": "ein-name-unter-vielen",
+      "title": "Ein Name unter vielen",
+      "art": "village",
+      "portrait": null,
+      "lines": [
+        "Ein Name unter vielen ist trotzdem ein Name. Die Liste ist Asche, oder sie ist in einer Hand, die sie nicht zeigt, und die Gasse wird bebaut, als sei Asche Dünger.",
+        "Die Kinder, die hier Kratzer in Türstöcke gemacht haben, bekommen keine Tafel. Sie bekommen ein Lagerhaus und die Lüge, dass Ödland niemandem gehört hat.",
+        "Du gehst über den Platz und merkst, dass Lindendorf dich nicht fragt. Fragen wären schon ein Name."
+      ],
+      "choices": [
+        "Weiter"
+      ]
+    },
+    {
+      "id": "stille-rechnung",
+      "title": "Stille Rechnung",
+      "art": "village",
+      "portrait": null,
+      "lines": [
+        "Vahl hat die Baumannschaft abbestellt. Die Wahrheit bleibt zwischen euch, und zwischen euch ist ein Preis, der nicht in Holms Kasse steht.",
+        "Stille Rechnung: die Gasse bleibt leer, Vahl bleibt sitzen, und du trägst etwas, das wie ein Siegel wirkt, nur ohne Wachs.",
+        "Fenn rührt das Holz in der Tasche. Er weiß, dass Stille hier nie umsonst ist. Er sagt es nicht. Deshalb bleibt er an der Mauer."
+      ],
+      "choices": [
+        "Weiter"
+      ]
+    }
+  ]
+}

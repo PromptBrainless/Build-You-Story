@@ -1,0 +1,322 @@
+{
+  "id": "gasse",
+  "titel": "Das Kesseljahr",
+  "reihe": "Erinnerung",
+  "datei": "gasse.json",
+  "teile": [
+    {
+      "id": "kirche",
+      "titel": "Kirche und Fenn",
+      "quest": "gasse",
+      "datei": "gasse/kirche.json",
+      "szenen": [
+        {
+          "id": "gasse-kirche",
+          "title": "Vor der Kirche",
+          "art": "chapel",
+          "portrait": "beggar",
+          "lines": [
+            "Die Kirche von Lindendorf steht einen Schritt tiefer als der Platz davor, als hätte sie sich langsam in die Erde gesenkt, müde von allem, was ihr je gebeichtet wurde.",
+            "An der Schwelle hat der Stein eine flache Mulde geschliffen, in der das Regenwasser steht wie ein kleiner Spiegel. Niemand hat in zehn Jahren einen Abfluss geschlagen.",
+            "Im Schatten der Kirchmauer sitzt Fenn. Die nackten Füße im Wasser der Dachrinne, als sei Kälte ein alter Bekannter. Er hebt den Blick, noch bevor du an ihm vorbeigehst."
+          ],
+          "choices": [
+            "Weiter"
+          ]
+        },
+        {
+          "id": "gasse-hub",
+          "title": "Die leere Gasse",
+          "art": "gate",
+          "portrait": null,
+          "lines": [
+            "Hinter der Gerberei liegt eine Gasse, die niemand mehr als Weg benutzt. Die Bretter an den Fenstern sind älter als die Ausreden, warum niemand dort wohnt.",
+            "Fenn bleibt an der Mauer. Vahl sitzt irgendwo im Rathaus und rechnet mit Baumannschaft. Die Kirche hält die Schwelle nass.",
+            "In einer Woche kommen Bretter, sagt man. Bretter über eine Gasse sind keine Reparatur. Sie sind ein Beschluss."
+          ],
+          "choices": [
+            "Bei Fenn an der Kirchmauer bleiben",
+            "Ratsherr Vahl im Rathaus aufsuchen",
+            "Die Gasse hinter der Gerberei ansehen",
+            "Zurück zum Dorfplatz"
+          ]
+        },
+        {
+          "id": "fenn",
+          "title": "Fenn",
+          "art": "chapel",
+          "portrait": "beggar",
+          "lines": [
+            "Fenn ist Teil der Mauer, ein Schatten unter Schatten, den man grüßt, ohne ihn anzuschauen. Heute nicht. Heute sieht er zuerst.",
+            "In der Tasche des geflickten Mantels hält er ein morsches Stück Lattenzaun. Zehn Winter haben das Holz glattgeschliffen. Die Nagellöcher sind Dellen, aber wer hinsieht, erkennt noch den rechten Winkel.",
+            "Er wartet nicht auf eine Antwort. Die Hand in der Tasche bleibt in Bewegung, als zähle sie etwas, das niemand mehr zählen will."
+          ],
+          "choices": [
+            "Weiter"
+          ]
+        },
+        {
+          "id": "fenn-an-der-kirchmauer",
+          "title": "Fenn an der Kirchmauer",
+          "art": "chapel",
+          "portrait": null,
+          "lines": [
+            "Du hast deinen Platz so gewählt, dass die Kirchentür dich nicht trifft, wenn sie aufschlägt — eine Berechnung, die nur ein Mensch anstellt, der diesen Platz nicht zum ersten Mal einnimmt. Die Dämmerung liegt schwer auf dem nassen Dach der Steinkapelle, und der Geruch von nassem Stein und fauligem Moos drückt dir in die Nase, kalt, erdig, mit dem metallischen Beigeschmack von altem Eisen im Mörtel. Wasser sickert in dünnen Fäden über die Kante und tropft neben deinem Ohr auf den Boden, regelmäßig wie ein schwacher Puls.",
+            "Der Stein unter dir ist abgewetzt zu einer sanften Mulde, genau von der Form, die ein Körper über viele, viele Winter hinterlässt. Dein Gewicht sinkt hinein, die Kälte greift durch Hose und Haut bis in die Hüfte, zäh und bleiern, und die Mulde nimmt dich auf, als hätte sie schon lange auf genau dieses Maß gewartet. Die Kirchmauer im Rücken ist rau, fleckig von dunklen Flechten, die sich wie vertrocknete Wunden über die Blöcke ziehen; jeder Atemzug reibt deine Schultern daran, und du spürst das feine Abschaben, das Gewicht deines eigenen Körpers, das den Stein weiter aushöhlt.",
+            "Wer hier sitzt, sitzt nicht zum ersten Mal, und er sitzt auch nicht zum zehnten. Die Kälte hat sich in die Gelenke gesetzt, ein dumpfer Druck hinter den Knien, und der nasse Geruch steigt weiter, mischt sich mit dem schwachen Hauch von verrottetem Laub, der unter der Mauer hervorquillt.",
+            "„Weißt du, warum dort niemand mehr geht?“ Du stellst die Frage, ohne eine Antwort zu erwarten, als wäre die Frage selbst schon die halbe Last, die du abzugeben hattest. Der Dampf deines Atems hängt einen Moment vor dem Gesicht, dann reißt ihn die Dämmerung weg, und du bleibst in der Mulde sitzen, schwer, kalt, mit dem Stein, der dich hält."
+          ],
+          "choices": [
+            "Weiter"
+          ]
+        },
+        {
+          "id": "vahls-stube",
+          "title": "Vahls Stube",
+          "art": "townhall",
+          "portrait": null,
+          "lines": [
+            "Vahls Stube im Rathaus ist wärmer als der Platz. Die Wärme kommt von einem Ofen, der mehr Holz verbraucht, als ein Ratsherr zugeben würde.",
+            "Auf dem Tisch liegen Pläne, sauber, ohne die Gasse, als sei sie schon wegradiert. Ein Lineal liegt quer über Namen, die nicht mehr in der Tusche stehen.",
+            "Die Luft riecht nach Siegellack. Nicht nach dem Wachs vom Hang. Nach dem, das Beschlüsse hält, bis niemand mehr widerspricht."
+          ],
+          "choices": [
+            "Weiter"
+          ]
+        },
+        {
+          "id": "ratsherr-vahl",
+          "title": "Ratsherr Vahl",
+          "art": "townhall",
+          "portrait": null,
+          "lines": [
+            "Vahl lächelt, wie man lächelt, wenn man den Satz schon fertig hat. „Hinter der Gerberei liegt Ödland. Ödland wird nützlich, oder es bleibt eine offene Rechnung.“",
+            "Er bietet dir keinen Stuhl. Stühle sind für Leute, die bleiben sollen. Du sollst verstehen und gehen.",
+            "„Das Kesseljahr ist vorbei“, sagt er. „Wer es ausgräbt, gräbt für sich, nicht fürs Dorf.“ Die Hände bleiben ruhig. Ruhige Hände haben hier oft mehr getan als laute."
+          ],
+          "choices": [
+            "Weiter"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ort",
+      "titel": "Gerbereigasse",
+      "quest": "gasse",
+      "datei": "gasse/ort.json",
+      "szenen": [
+        {
+          "id": "gerbereigasse",
+          "title": "Gerbereigasse",
+          "art": "gate",
+          "portrait": null,
+          "lines": [
+            "Die Gerbereigasse ist eng genug, dass zwei Leute sich entschuldigen müssten, wenn noch jemand wohnte. Es wohnt niemand.",
+            "An den Türstöcken sind Kratzer in Höhe von Kinderschultern. Die Fensterbretter tragen Ringe, wo Töpfe standen. Der Geruch von Gerberlohe ist alt und trotzdem der jüngste, der hier geblieben ist.",
+            "Am Ende der Gasse liegt eine Kate, deren Türangel nicht rostet, als ginge noch jemand ein und aus, der nicht gesehen werden will."
+          ],
+          "choices": [
+            "Weiter"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "grete",
+      "titel": "Grete",
+      "quest": "gasse",
+      "datei": "gasse/grete.json",
+      "szenen": [
+        {
+          "id": "gretes-kate",
+          "title": "Gretes Kate",
+          "art": "village",
+          "portrait": null,
+          "lines": [
+            "Gretes Kate steht, wo die Gasse aufhört, ein Weg zu sein. Innen ist es dunkler als der Abend draußen, und es riecht nach kalter Asche und altem Tuch.",
+            "Die Schwelle ist abgetreten von Füßen, die nicht mehr kommen. An der Wand hängt ein Strick, rot, verblasst, zu kurz für ein Seil und zu lang für eine Erinnerung, die man wegwerfen könnte.",
+            "Jemand hat hier gewartet. Das Warten hat Möbel hinterlassen und eine Stille, die nicht leer ist."
+          ],
+          "choices": [
+            "Weiter"
+          ]
+        },
+        {
+          "id": "grete",
+          "title": "Grete",
+          "art": "village",
+          "portrait": null,
+          "lines": [
+            "Grete sieht dich nicht mit den Augen. Sie sieht dich an der Art, wie du die Schwelle nimmst, ob du sie abtrittst oder darüber nachdenkst.",
+            "„Die Gasse hat Namen gehabt“, sagt sie. „Ilse hat sie aufgeschrieben, bevor der Rat beschlossen hat, dass Namen Unordnung sind.“",
+            "Ihre Hände suchen den roten Strick an der Wand und finden ihn, ohne zu tasten. Blinde Frauen in diesem Tal verlieren nicht, was sie einmal gehalten haben."
+          ],
+          "choices": [
+            "Weiter"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gewoelbe",
+      "titel": "Gewölbe",
+      "quest": "gasse",
+      "datei": "gasse/gewoelbe.json",
+      "szenen": [
+        {
+          "id": "kirchengewoelbe",
+          "title": "Kirchengewölbe",
+          "art": "chapel",
+          "portrait": null,
+          "lines": [
+            "Unter der Kirche führt ein Gang, den man nicht von der Kanzel aus erklärt. Die Stufen sind abgetreten von Leuten, die keine Messe suchten.",
+            "Feuchte Luft, Stein, der nach altem Wasser schmeckt. An der Wand rußige Striche, wo jemand Licht gespart und trotzdem gesehen hat, was er tun musste.",
+            "Grete hat den Weg genannt, ohne ihn zu beschreiben. Der Stein beschreibt ihn selbst: hierhin trägt man, was oben nicht bleiben darf."
+          ],
+          "choices": [
+            "Weiter"
+          ]
+        },
+        {
+          "id": "unter-der-kirche",
+          "title": "Unter der Kirche",
+          "art": "chapel",
+          "portrait": null,
+          "lines": [
+            "Die Kirche steht kälter als der Platz. Kerzenwachs ist an den Bänken heruntergelaufen und wieder hart geworden.",
+            "Die Treppe zum Gewölbe liegt hinter einem Vorhang, den niemand zur Seite schiebt. Der Stoff ist dunkel genug, dass man ihn für eine Wand halten kann.",
+            "Unten am Platz hat jemand Gretes Stimme gehört. Oben steht der Pfarrer steifer als sonst.",
+            "Der Küster hat dich einmal gesehen. Die Tür quietscht, und der Riegel sitzt einen Fingerbreit fester.",
+            "Unten liegen die, die man ohne Namen begräbt. Oben redet niemand davon.",
+            "Der Pfarrer hat das Silber gesehen, das du trägst. Er sieht dich anders an als die, die nur fragen.",
+            "Der Pfarrer steht am Altar und tut, als gehörte die Treppe nicht zu seiner Kirche."
+          ],
+          "choices": [
+            "Weiter"
+          ]
+        },
+        {
+          "id": "im-gewoelbe",
+          "title": "Im Gewölbe",
+          "art": "evidence",
+          "portrait": null,
+          "lines": [
+            "Im Gewölbe stehen Kisten, die keine Schätze halten. Tuch, Bindfaden, eine Schachtel mit Kohle, zum Schreiben, nicht zum Heizen.",
+            "An einer Stelle ist der Boden weniger staubig. Dort hat jemand gekniet, oft, lange genug, dass der Stein sich daran erinnert.",
+            "Du hörst die Kirche über dir, gedämpft, als sei das Gebet eine Decke, unter der man Namen verstecken kann."
+          ],
+          "choices": [
+            "Weiter"
+          ]
+        },
+        {
+          "id": "hinter-dem-stein",
+          "title": "Hinter dem Stein",
+          "art": "evidence",
+          "portrait": null,
+          "lines": [
+            "Hinter einem Stein, der nicht tragend ist und trotzdem schwer, liegt ein Paket in Wachstuch. Die Schnur ist fest, die Knoten von einer Hebamme, die weiß, wann etwas halten muss.",
+            "Darin Namen. Daten. Häuser. Das Kesseljahr, in einer Schrift, die sich nicht entschuldigt.",
+            "Ilse hat die Toten nicht unter der Kirche versteckt. Sie hat verhindert, dass der Rat sie ein zweites Mal sterben lässt, indem er sie streicht."
+          ],
+          "choices": [
+            "Weiter"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "schluss",
+      "titel": "Ausgänge",
+      "quest": "gasse",
+      "datei": "gasse/schluss.json",
+      "szenen": [
+        {
+          "id": "vahls-stube-abend",
+          "title": "Vahls Stube, Abend",
+          "art": "townhall",
+          "portrait": null,
+          "lines": [
+            "Abends ist Vahls Stube dunkler, und der Ofen zu warm für einen Mann, der behauptet, das Dorf habe kein Holz zu verschenken.",
+            "Die Pläne liegen noch da. Das Lineal hat sich verschoben. Darunter kommt ein Name zum Vorschein, den die Tusche nicht ganz getilgt hat.",
+            "Vahl erwartet dich nicht als Gast. Er erwartet dich als Problem, das vor der Baufreigabe noch leise bleiben soll."
+          ],
+          "choices": [
+            "Weiter"
+          ]
+        },
+        {
+          "id": "was-die-liste-wiegt",
+          "title": "Was die Liste wiegt",
+          "art": "evidence",
+          "portrait": null,
+          "lines": [
+            "Die Liste wiegt wenig in der Hand und viel, sobald sie den Tisch berührt. Vahl sieht sie an, als könne Papier brennen, wenn man lange genug nicht blinzelt.",
+            "„Das ist Unordnung“, sagt er. Unordnung heißt in diesem Mund: Zeugen.",
+            "Du kannst sie ihm lassen, dem Rat tragen, Holm geben oder dem Feuer. Jede dieser Hände hat schon einmal Namen gehalten und sie nicht zurückgegeben."
+          ],
+          "choices": [
+            "Weiter"
+          ]
+        },
+        {
+          "id": "ein-zweites-schweigen",
+          "title": "Ein zweites Schweigen",
+          "art": "gate",
+          "portrait": null,
+          "lines": [
+            "Die Gasse bleibt leer, und die Bretter kommen trotzdem nicht. Holm hat den Bauplatz ruhen lassen. Die Liste liegt in einer Schublade, die nur er aufzieht.",
+            "Ein zweites Schweigen ist nicht dasselbe wie das erste. Das erste war Angst. Das zweite ist eine Vereinbarung zwischen Leuten, die wissen, was in der Schublade liegt.",
+            "Fenn sitzt noch an der Mauer. Die Füße im Wasser. Er hat zugehört. Mehr schuldet ihm das Dorf nicht, sagt das Dorf."
+          ],
+          "choices": [
+            "Weiter"
+          ]
+        },
+        {
+          "id": "was-ausgegraben-bleibt",
+          "title": "Was ausgegraben bleibt",
+          "art": "chapel",
+          "portrait": null,
+          "lines": [
+            "Was ausgegraben bleibt, bleibt nicht in der Erde. Der Rat hat Ilse Brandtners Liste gehört. Vahl hat seinen Sitz verloren, nicht seine Freunde.",
+            "Die Gasse hat wieder einen Namen, den man nicht laut sagt, und trotzdem kennt ihn jetzt, wer Ohren hat.",
+            "Unter der Kirche tropft es weiter. Der Tropfen ändert sich nicht, nur wer ihn hört."
+          ],
+          "choices": [
+            "Weiter"
+          ]
+        },
+        {
+          "id": "ein-name-unter-vielen",
+          "title": "Ein Name unter vielen",
+          "art": "village",
+          "portrait": null,
+          "lines": [
+            "Ein Name unter vielen ist trotzdem ein Name. Die Liste ist Asche, oder sie ist in einer Hand, die sie nicht zeigt, und die Gasse wird bebaut, als sei Asche Dünger.",
+            "Die Kinder, die hier Kratzer in Türstöcke gemacht haben, bekommen keine Tafel. Sie bekommen ein Lagerhaus und die Lüge, dass Ödland niemandem gehört hat.",
+            "Du gehst über den Platz und merkst, dass Lindendorf dich nicht fragt. Fragen wären schon ein Name."
+          ],
+          "choices": [
+            "Weiter"
+          ]
+        },
+        {
+          "id": "stille-rechnung",
+          "title": "Stille Rechnung",
+          "art": "village",
+          "portrait": null,
+          "lines": [
+            "Vahl hat die Baumannschaft abbestellt. Die Wahrheit bleibt zwischen euch, und zwischen euch ist ein Preis, der nicht in Holms Kasse steht.",
+            "Stille Rechnung: die Gasse bleibt leer, Vahl bleibt sitzen, und du trägst etwas, das wie ein Siegel wirkt, nur ohne Wachs.",
+            "Fenn rührt das Holz in der Tasche. Er weiß, dass Stille hier nie umsonst ist. Er sagt es nicht. Deshalb bleibt er an der Mauer."
+          ],
+          "choices": [
+            "Weiter"
+          ]
+        }
+      ]
+    }
+  ]
+}

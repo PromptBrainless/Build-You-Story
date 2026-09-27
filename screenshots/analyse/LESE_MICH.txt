@@ -1,0 +1,55 @@
+Spielerperspektive, eine Partie, Name Mara.
+Commit des Spiels: 71706739cd93cb52a0bc29c12943cc373ebbfdc9
+
+01-start.png
+Startbildschirm. Abenteuer starten, So wird gespielt, Weltwerkzeug, Standdatei, Ton, Einstellungen.
+
+01b-so-wird-gespielt.png
+Regeln: Steuerung, HUD, LP, Attribute, Gunst und Last, Inventar, Speichern, Proben.
+
+02-aufbruch.png
+Vor dem Tal. Name, dann drei zufällige Lagen von zehn.
+
+03-lage.png
+Lage mit drei Handlungen, ohne sichtbare Ausrichtung. Beispiel: Die Soldateska.
+
+03b-lage-folge.png
+Kurze Rückmeldung nach der Wahl, dann Nächste Lage.
+
+03c-blatt.png
+Charakterblatt. Danach Nach Lindendorf.
+
+04-ankunft.png
+Erste Szene der Ankunft: Der Weg nach Lindendorf. Eine Handlung: Weiter. HUD: Status, Speichern, Wissen (3).
+
+05-wissen.png
+Wissenstagebuch. Karten, Zurück/Weiter, nicht eine Questliste.
+
+05b-wissen-neu.png
+Nach dem Weg: Wissen (4). Der neue Eintrag liegt im Tagebuch, bevor die nächste Szene entschieden ist.
+
+06-szene.png
+Entscheidungsszene Der Fremde am Weg. Vier Wege: Stärke, Geschick (Schleichen), Charisma, Vorübergehen.
+
+07-schleichen.png
+Geschick-Weg gelungen. Probe steht im Text. Danach eine Wissenstafel: Das silberne Artefakt liegt bei dir. Wissen springt auf 7.
+
+08-speicher.png
+Einstellungen, Bereich Stände. Noch kein Stand.
+
+08b-regeln-speichern.png
+Abschnitt Speichern und Laden in den Regeln.
+
+08c-speichern-im-spiel.png
+Am Dorfplatz. Speichern legt einen Stand auf den Namen. Meldung: Spielstand für Mara gesichert.
+
+09-einstellungen.png
+Ton, Bild, Text, Spiel, Stände. Ton aus, bis man ihn einschaltet.
+
+10-platz.png
+Nach der Ankunft der Ort, an dem die Quests auseinanderlaufen.
+1 Bürgermeister  2 Taverne  3 Brunnen  4 Mühle  5 Gerbereigasse
+6 Schmiede und Apotheke  7 Glockenweg  8 Wald  9 Warten
+Wissen steht bei 13. Es gibt kein Questlog mit Häkchen.
+
+Was hier nicht zu sehen ist: Anker-IDs, Bedingungen, gesperrte Szenen. Dafür bleibt der Quellstand.

@@ -1,0 +1,185 @@
+# Lindendorf — Stil
+
+Ableitung aus den 71 Seitentexten. Keine neue Ästhetik. Keine neue Sprache. Neue Texte sollen wirken, als hätten sie immer zwischen den vorhandenen Seiten gestanden.
+
+Haltung
+
+Lindendorf ist bewohnt von Leuten, die gelernt haben, Fragen leise zu stellen. Der Spieler ist kein erbetener Held. Er wird geschickt, weil sonst niemand geht. Aufträge kommen als Gewicht, nicht als Bitte. Lösungen beseitigen selten ein Problem. Meist verschieben sie es.
+
+Die Welt erklärt sich nicht. Sie zeigt Befunde.
+
+Menschen reden über Arbeit, Vorräte, Preise, Wege, Wetter, Krankheiten und Schäden. Das Wichtigste steht oft neben dem Gesagten.
+
+Beobachtung und Gedanke
+
+Der Text bleibt nah bei dem, was du wahrnimmst.
+
+Er wechselt zwischen Beobachtung und unmittelbarem Gedanken des Protagonisten. Beides gehört derselben Stimme und geht oft ineinander über.
+
+Beobachtung beschreibt, was vorhanden ist.
+
+Gedanken beschreiben, was daraus folgt.
+
+«Das Wasser steht schwarz zwischen den Steinen. Niemand schöpft. Entweder vertraut hier niemand mehr dem Brunnen oder niemand will der Erste sein.»
+
+«Die Tür hängt schief. Frische Späne liegen darunter. Jemand wollte hinein. Wahrscheinlicher ist, dass jemand hinaus wollte.»
+
+Gedanken bleiben kurz. Keine langen inneren Monologe. Keine philosophischen Betrachtungen. Der Protagonist denkt wie jemand, der Arbeit, Hunger, Krankheit und schlechte Winter kennt.
+
+Er staunt selten.
+
+Er bemerkt.
+
+Beobachtungen dürfen nicht lügen.
+
+Gedanken dürfen irren.
+
+Ton
+
+Ruhig. Sachlich. Nüchtern.
+
+Der Text urteilt nicht. Er beschreibt.
+
+Mitleid entsteht aus Beobachtung, nicht aus Aufforderung.
+
+Grausamkeit wird weder beschönigt noch hervorgehoben. Krankheit, Hunger, Verwesung, Strafe, Geburt, Arbeit und Tod gehören zur Welt und werden als Teil der Wirklichkeit behandelt.
+
+Nicht:
+
+«Der schreckliche Anblick lässt dir das Blut gefrieren.»
+
+Sondern:
+
+«Die Haut am Unterarm ist bis zum Ellenbogen aufgerissen. Fliegen sitzen in der Wunde. Er arbeitet trotzdem weiter.»
+
+Nicht:
+
+«Das arme Kind hustet erbärmlich.»
+
+Sondern:
+
+«Das Kind hustet in den Ärmel. Der Stoff ist an derselben Stelle dunkel.»
+
+Grausamkeit entsteht aus Tatsachen, nicht aus Wertung.
+
+Grammatik
+
+- Immer "Du", Präsens.
+- Vorwiegend Hauptsätze.
+- Kurze Sätze bilden das Grundgerüst.
+- Längere Sätze sammeln Gewicht: Nässe, Gerüche, Kälte, Arbeit, Verfall, Schuld.
+- Keine Ausrufe.
+- Keine rhetorischen Fragen.
+- Wenig Adjektive, die nicht tastbar, sichtbar oder hörbar sind.
+- Verben tragen Stimmung stärker als Beschreibungen.
+- Bedeutung entsteht aus Beobachtung, nicht aus Erklärung.
+
+Dialog
+
+Dialoge sind kurz.
+
+Menschen nennen Preise, Mengen, Wege, Zeiten, Schäden und Namen.
+
+Sie nennen selten Gefühle.
+
+Fragen werden oft nur teilweise beantwortet.
+
+Viele Figuren sprechen weiter, während sie arbeiten.
+
+Persönlichkeit entsteht durch Wortwahl, Gewohnheiten, Auslassungen und das, was nicht beantwortet wird.
+
+Sensorik
+
+Die Welt wird über Material beschrieben.
+
+Wiederkehrende Stoffe:
+
+- nasser Stein
+- Schlamm
+- Lehm
+- Wachs
+- Ruß
+- Eisen
+- nasses Holz
+- Moder
+- Salzstaub
+- Gerberlohe
+- kalte Asche
+- feuchtes Stroh
+- tropfende Dächer
+- abgestandenes Wasser
+- Mehlstaub, besonders wenn er fehlt
+
+Wichtiger als das Aussehen ist oft der Zustand:
+
+- aufgequollen
+- verrußt
+- abgescheuert
+- stumpf
+- rissig
+- schief
+- feucht
+- ausgetreten
+
+Rauch ohne Wind ist kein Herdfeuer.
+
+Wasser mit falscher Farbe ist kein Wetter.
+
+Eine Mühle, die hörbar arbeitet und nichts mahlt, ist eine Nachricht.
+
+Verbote
+
+- Kein hohes Pathos.
+- Keine Rettungsreden.
+- Kein „Das Dorf wird dir danken.“
+- Keine Heldenverehrung.
+- Keine Schicksalsprosa.
+- Keine neuen Kulte.
+- Keine zusätzlichen Götterordnungen.
+- Keine Litaneien oder lateinischen Formeln.
+- Keine Comic-Banditen.
+- Keine moralische Kommentierung von Gewalt.
+- Keine Kinder als Quelle von Rührung.
+- Kinderschuh, Kinderumhang, Husten oder leeres Bett nur als Befund.
+- Keine Erklärung des Kesseljahrs über das hinaus, was Fenn, Grete, Ilse und Vahl tatsächlich wissen.
+- Keine allwissende Erzählerstimme.
+
+Kanonische Muster
+
+Weg:
+
+«Umkehren ist keine Richtung.»
+
+Dorf:
+
+«Es wirkt schlimmer: bewohnt.»
+
+Brunnen:
+
+«Dennek rührt, als ließe sich die Frage glattstreichen.»
+
+Mühle:
+
+«Das Rad schlägt gegen das Wasser und mahlt nichts.»
+
+Gasse:
+
+«Bretter über eine Gasse sind ein Beschluss.»
+
+Lager:
+
+«Lindendorf schickt keine Wache. Lindendorf schickt … dich.»
+
+Ende:
+
+Die Schlusskarte ist die Rückkehr zu Holm. Das Tal verabschiedet dich nicht auf dieser Karte. Folgen stehen im Epilog, und nur für Wege, die gegangen wurden.
+
+Umfang
+
+Keine Obergrenze. Kurze Karten werden nicht gekürzt, sie werden nachgezogen, wenn sie leer oder stichpunktartig sind.
+
+Richtwert, keine Decke: Ortsseiten ab etwa 220 Zeichen, Gespräche und Entscheidungen ab etwa 900. Die Nachbarseiten derselben Quest zählen mehr als der Durchschnitt.
+
+Die längere Fassung gewinnt nur, wenn sie dieselbe Handlung sagt. Eine längere Fassung, die eine andere Person handeln lässt, ist falsch und fliegt.
+
+Neue Texte orientieren sich zuerst an den unmittelbaren Nachbarseiten derselben Quest.

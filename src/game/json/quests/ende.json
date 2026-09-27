@@ -1,0 +1,34 @@
+{
+  "id": "ende",
+  "titel": "Ende",
+  "reihe": "Hauptfluss",
+  "datei": "ende.json",
+  "teile": [
+    {
+      "id": "ende",
+      "titel": "Ende",
+      "quest": "ende",
+      "datei": "ende/ende.json",
+      "szenen": [
+        {
+          "id": "ende",
+          "title": "Ende",
+          "art": "return",
+          "portrait": null,
+          "lines": [
+            "Lindendorf sieht dich früher als Holm. Dann sieht dich Holm.",
+            "Die Nachricht läuft nicht durch Rufe über den Platz. Sie läuft durch Türen, die sich öffnen, durch einen Eimer, der am Brunnen stehen bleibt, und durch Maras Hand, die mitten in einer Bewegung ruht.",
+            "Du bringst den Geruch des Steinbruchs mit: Rauch, Blut, nassen Kalk. Niemand fragt zuerst, ob du gesiegt hast.",
+            "Holm tritt aus dem Rathaus. Hinter ihm bleibt die Tür offen, als hätte selbst das Amt vergessen, vorsichtig zu sein. Das Amt hat nur die Banditen ausgesprochen. Alles andere steht in dem, was du mitbringst, oder es steht nirgends.",
+            "Der Lehm unter den Sohlen ist nass und kalt. Die Zäune sind noch unrepariert. Zwischen den Latten zieht ein Wind, der nach Moos, Mist und altem Eisen riecht. Was du getan hast, trägt das Dorf in Türen, die nicht mehr richtig schließen, und in Pausen, in denen kein Werkzeug fällt.",
+            "Ein geborstenes Joch fault an einer Wand. Ein Riegel rostet fest. Du trägst den Rest. Er sitzt in den Schultern, in den Handflächen, in der Kälte unter der Haut. Holm wartet, bis du sprichst.",
+            "Lindendorf bleibt. Die Dächer tropfen noch. Niemand fragt laut nach dem Warum. Fragen kosten Kraft, die man zum Trinken braucht. Es gibt keine Reinigung. Nur den Zustand, den du hinterlässt."
+          ],
+          "choices": [
+            "Weiter"
+          ]
+        }
+      ]
+    }
+  ]
+}

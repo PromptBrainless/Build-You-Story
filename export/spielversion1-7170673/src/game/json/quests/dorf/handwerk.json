@@ -1,0 +1,57 @@
+{
+  "id": "handwerk",
+  "titel": "Schmiede und Apotheke",
+  "quest": "dorf",
+  "datei": "dorf/handwerk.json",
+  "szenen": [
+    {
+      "id": "schmiede-apotheke",
+      "title": "Schmiede und Apotheke",
+      "art": "village",
+      "portrait": null,
+      "lines": [
+        "Schmiede und Apotheke teilen sich eine Mauer und sonst wenig. Auf der einen Seite schlägt Eisen auf Eisen, langsam, als spare jemand die Schläge. Auf der anderen steht die Tür einen Spalt offen, und es riecht nach Kräutern, die man nicht mehr zum Kochen verwendet.",
+        "Wer hier Hilfe sucht, muss sich entscheiden, ob er blutet oder fiebert. Manche brauchen beides und gehen trotzdem zuerst zur falschen Tür."
+      ],
+      "choices": [
+        "Zum Schmied",
+        "Zu Witwe Kern",
+        "Zurück zum Platz"
+      ]
+    },
+    {
+      "id": "beim-schmied",
+      "title": "Beim Schmied",
+      "art": "smithy",
+      "portrait": "smith",
+      "lines": [
+        "Hinter dem Haus schlägt jemand auf Eisen, das den Schlag nicht mehr verdient.",
+        "Der Schmied hält eine stumpfe Hacke gegen das Licht.",
+        "„Damit gräbt man keinen Steinbruch frei. Damit macht man nur Lärm.“",
+        "Die Esse glimmt schwach. Auf dem Kohlehaufen liegt eine Decke, damit der Regen nicht nimmt, was das Dorf noch wärmen kann.",
+        "An der Wand hängen drei unbeschlagene Hufeisen. Im Stall nebenan steht kein Pferd.",
+        "Der Schmied trägt eine Lederschürze voller heller Schnitte. „Eisen ist nicht knapp“, sagt er. „Zeit ist knapp. Kohle ist knapp. Hände sind knapp.“"
+      ],
+      "choices": [
+        "Weiter"
+      ]
+    },
+    {
+      "id": "bei-witwe-kern-dorf",
+      "title": "Bei Witwe Kern",
+      "art": "apothecary",
+      "portrait": "kern",
+      "lines": [
+        "Witwe Kern hat ihre Apotheke geöffnet, obwohl niemand hereinkommt.",
+        "Eine Schublade klemmt. Darauf liegt ein sauber gefaltetes Tuch.",
+        "„Der Restbestand ist kleiner geworden“, sagt sie. „Nicht durch Verkauf.“",
+        "An den Wänden hängen Bündel aus Schafgarbe, Wacholder und dunklen Blättern, deren Namen du nicht kennst. Unter jedem Bündel steht mit Kohle ein Datum.",
+        "Kern trägt die Ärmel hochgekrempelt. Auf ihren Unterarmen liegen alte Brandnarben. Ihre Hände riechen nach Alkohol und Eisen.",
+        "„Verband verschwindet nicht allein“, sagt sie. „Und wer ihn stiehlt, rechnet mit Wunden.“"
+      ],
+      "choices": [
+        "Weiter"
+      ]
+    }
+  ]
+}

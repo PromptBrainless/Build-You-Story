@@ -1,0 +1,42 @@
+{
+  "id": "grete",
+  "titel": "Grete",
+  "quest": "gasse",
+  "datei": "gasse/grete.json",
+  "szenen": [
+    {
+      "id": "gretes-kate",
+      "title": "Gretes Kate",
+      "art": "village",
+      "portrait": null,
+      "lines": [
+        "Gretes Kate steht, wo die Gasse aufhört, ein Weg zu sein. Innen ist es dunkler als der Abend draußen, und es riecht nach kalter Asche und altem Tuch.",
+        "Die Schwelle ist abgetreten von Füßen, die nicht mehr kommen. An der Wand hängt ein Strick, rot, verblasst, zu kurz für ein Seil und zu lang für eine Erinnerung, die man wegwerfen könnte.",
+        "Jemand hat hier gewartet. Das Warten hat Möbel hinterlassen und eine Stille, die nicht leer ist.",
+        "Die Kate steht so, dass man sie vom Platz aus nicht sieht. Das Dach ist geflickt, die Tür nicht.",
+        "Vor der Schwelle ist der Boden festgetreten. Hier geht jemand oft, und nie am hellen Tag.",
+        "Die Kate steht zu nah an den anderen Häusern. Deshalb wollte sie niemand. Grete hat Ilse geholfen, die Namen zu verbergen. Den Stein nennt sie nur, wenn du wartest."
+      ],
+      "choices": [
+        "Weiter"
+      ]
+    },
+    {
+      "id": "grete",
+      "title": "Grete",
+      "art": "village",
+      "portrait": null,
+      "lines": [
+        "Grete sieht dich nicht mit den Augen. Sie sieht dich an der Art, wie du die Schwelle nimmst, ob du sie abtrittst oder darüber nachdenkst.",
+        "„Die Gasse hat Namen gehabt“, sagt sie. „Ilse hat sie aufgeschrieben, bevor der Rat beschlossen hat, dass Namen Unordnung sind.“",
+        "Ihre Hände suchen den roten Strick an der Wand und finden ihn, ohne zu tasten. Blinde Frauen in diesem Tal verlieren nicht, was sie einmal gehalten haben.",
+        "Grete spricht leise, weil die Wände der Kate dünner sind als ihr Schweigen. Sie kennt die Namen und sagt sie nicht beim ersten Satz.",
+        "Auf dem Tisch liegt Brot für eine Person. Die zweite Schüssel ist sauber und unbenutzt.",
+        "Grete sieht fast nichts. Sie hört, ob du Zeit mitbringst oder nur eine Frage, deren Antwort du schon kennst. Drängen sperrt sie."
+      ],
+      "choices": [
+        "Weiter"
+      ]
+    }
+  ]
+}

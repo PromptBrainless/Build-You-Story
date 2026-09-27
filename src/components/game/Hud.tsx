@@ -1,0 +1,384 @@
+import { useEffect, useRef, useState } from "react";
+import {
+  BookOpen,
+  BriefcaseBusiness,
+  ExternalLink,
+  ChevronDown,
+  Coins,
+  FlaskConical,
+  Heart,
+  KeyRound,
+  Save,
+  ScrollText,
+  Settings2,
+  X,
+} from "lucide-react";
+import { HEILTRANK, SCHLUESSEL, type EffektId, type Held } from "@/game/types";
+import { mapHeldToPlayerHud } from "@/game/gm/mapHeldToPlayerHud";
+import { rufListe } from "@/game/reputation";
+import { TAGESZEIT_TEXT } from "@/game/tageszeit";
+import { Button } from "@/components/ui/button";
+import { spieleKlang } from "@/game/klang";
+import { wissenTafeln } from "@/game/wissen-tafeln";
+import { SeitenFuss } from "./SeitenFuss";
+import { ZustandLeiste } from "./ZustandLeiste";
+
+/** Farbe des Lebensbalkens folgt dem Zustand, nicht nur seine Breite. */
+function lpFarbe(anteil: number): string {
+  if (anteil <= 30) return "bg-hp";
+  if (anteil <= 60) return "bg-warn";
+  return "bg-ok";
+}
+
+export function Hud({
+  held,
+  onSave,
+  saveMessage,
+  onKnowledge,
+  onLeiter,
+  onWiki,
+  onSystem,
+  leiterOpen,
+  leiterAn = false,
+  wissenAnzahl = 0,
+  weltAnzahl = 0,
+  weltPunkt = false,
+  hinzu,
+  nimmt,
+  fort,
+}: {
+  held: Held;
+  onSave: () => void;
+  saveMessage: string | null;
+  onKnowledge: () => void;
+  onLeiter: () => void;
+  onWiki?: () => void;
+  onSystem?: () => void;
+  leiterOpen: boolean;
+  leiterAn?: boolean;
+  wissenAnzahl?: number;
+  weltAnzahl?: number;
+  weltPunkt?: boolean;
+  hinzu?: EffektId[];
+  nimmt?: EffektId[];
+  fort?: EffektId[];
+}) {
+  const [offen, setOffen] = useState(false);
+  const hud = mapHeldToPlayerHud(held);
+  const hpPct = Math.max(0, Math.min(100, (hud.lp / hud.maxLp) * 100));
+  const anzahl = hud.gunst.length + hud.last.length;
+  const rufe = rufListe(held);
+  const zeit = TAGESZEIT_TEXT[hud.tageszeit];
+  const spieltag = hud.spieltag;
+  const knapp = hpPct <= 30;
+  const vorherigerHpPct = useRef(hpPct);
+  const wissen = wissenTafeln(held);
+  useEffect(() => {
+    if (vorherigerHpPct.current > 30 && hpPct <= 30 && typeof navigator.vibrate === "function") {
+      navigator.vibrate(100);
+    }
+    vorherigerHpPct.current = hpPct;
+  }, [hpPct]);
+
+  const statusBadges = [
+    { label: "Gold", value: hud.gold, icon: Coins },
+    { label: "Trank", value: hud.inventar.includes(HEILTRANK) ? "Ja" : "Nein", icon: FlaskConical },
+    {
+      label: "Schlüssel",
+      value: hud.inventar.includes(SCHLUESSEL) ? "Ja" : "Nein",
+      icon: KeyRound,
+    },
+  ];
+
+  return (
+    <div className="sticky top-0 z-20 border-b border-border bg-ink/94 px-3 py-2 pt-[max(0.5rem,env(safe-area-inset-top))] shadow-sm backdrop-blur-md sm:px-4">
+      <div className="mx-auto flex max-w-5xl items-center gap-1.5 text-xs text-fg sm:gap-3 sm:text-sm">
+        <div className="min-w-0 flex-1">
+          <div className="flex items-baseline gap-2 sm:gap-3">
+            <p className="min-w-0 truncate font-display text-base font-semibold tracking-tight sm:text-lg">
+              {hud.name}
+            </p>
+            <span className="hidden shrink-0 text-muted-fg sm:inline">{zeit.name}</span>
+            <span className="hidden shrink-0 text-muted-fg tabular-nums sm:inline">
+              Tag {spieltag}
+            </span>
+            <span
+              className={`inline-flex shrink-0 items-center gap-1 font-mono tabular-nums ${
+                knapp ? "text-hp font-semibold" : "text-muted-fg"
+              }`}
+              title={`Lebenspunkte ${hud.lp} von ${hud.maxLp}`}
+              aria-live="polite"
+            >
+              <Heart
+                className={`size-3.5 text-hp ${knapp ? "lp-knapp rounded-full" : ""}`}
+                aria-hidden
+              />
+              {hud.lp}/{hud.maxLp}
+            </span>
+          </div>
+          <div className="mt-1.5 flex flex-wrap items-center gap-2 text-[10px] text-muted-fg sm:text-[11px]">
+            {statusBadges.map(({ label, value, icon: Icon }) => (
+              <span
+                key={label}
+                className="inline-flex items-center gap-1 rounded-full border border-border bg-surface/60 px-1.5 py-0.5"
+              >
+                <Icon className="size-3" aria-hidden />
+                <span className="tabular-nums">{value}</span>
+                <span>{label}</span>
+              </span>
+            ))}
+          </div>
+          <div
+            className="mt-2 h-1.5 max-w-64 overflow-hidden rounded-full bg-surface-2"
+            role="meter"
+            aria-valuenow={hud.lp}
+            aria-valuemin={0}
+            aria-valuemax={hud.maxLp}
+            aria-label="Lebenspunkte"
+          >
+            <div
+              className={`lp-balken h-full rounded-full ${lpFarbe(hpPct)}`}
+              style={{ width: `${hpPct}%` }}
+            />
+          </div>
+        </div>
+        <div className="hidden min-w-0 sm:block">
+          <ZustandLeiste held={held} nurWerte />
+        </div>
+        <button
+          type="button"
+          className="pointer-events-auto inline-flex h-11 shrink-0 items-center gap-1 rounded-sm border border-border px-1.5 text-xs text-muted-fg sm:px-2 transition-colors duration-[var(--motion-quick)] hover:border-accent hover:text-fg"
+          onClick={() => setOffen((wert) => !wert)}
+          aria-expanded={offen}
+          aria-label={anzahl ? `Status, ${anzahl} Zustände` : "Status"}
+        >
+          <span className="tabular-nums">
+            {anzahl ? (
+              <>
+                <span className="sm:hidden">{anzahl}</span>
+                <span className="hidden sm:inline">{anzahl} Zustände</span>
+              </>
+            ) : (
+              <span className="hidden sm:inline">Status</span>
+            )}
+          </span>
+          <ChevronDown
+            className={`size-4 transition-transform duration-[var(--motion-fast)] ${offen ? "rotate-180" : ""}`}
+          />
+        </button>
+        <Button
+          type="button"
+          variant="secondary"
+          className="pointer-events-auto h-11 shrink-0 px-1.5 text-xs sm:px-3"
+          onClick={onSave}
+          title="Spielstand speichern"
+          aria-label="Speichern"
+        >
+          <Save className="size-3.5" aria-hidden />
+          <span className="hidden sm:inline">Speichern</span>
+        </Button>
+        <Button
+          type="button"
+          variant="secondary"
+          className="pointer-events-auto h-11 shrink-0 px-1.5 text-xs sm:px-3"
+          onClick={onKnowledge}
+          title="Wissenstagebuch öffnen"
+          aria-label={wissenAnzahl ? `Wissen (${wissenAnzahl})` : "Wissen"}
+        >
+          <BookOpen className="size-3.5" aria-hidden />
+          <span className="tabular-nums sm:hidden">{wissenAnzahl || ""}</span>
+          <span className="hidden sm:inline">Wissen{wissenAnzahl ? ` (${wissenAnzahl})` : ""}</span>
+        </Button>
+        {onSystem ? (
+          <Button
+            type="button"
+            variant="secondary"
+            className="pointer-events-auto h-11 shrink-0 px-1.5 text-xs sm:px-3"
+            onClick={() => {
+              spieleKlang("oeffnen");
+              onSystem();
+            }}
+            title="Einstellungen öffnen"
+            aria-label="Einstellungen"
+          >
+            <Settings2 className="size-3.5" aria-hidden />
+            <span className="hidden sm:inline">Einstellungen</span>
+          </Button>
+        ) : null}
+        <Button
+          type="button"
+          variant={leiterAn ? "default" : "secondary"}
+          className="pointer-events-auto h-11 shrink-0 px-1.5 text-xs sm:px-3"
+          onClick={onLeiter}
+          title={
+            leiterAn
+              ? leiterOpen
+                ? "Menü schließen. Anfassen bleibt an."
+                : `Menü öffnen. Anfassen bleibt an.${weltAnzahl ? ` ${weltAnzahl} Auflagen.` : ""}`
+              : "Spielleiter einschalten"
+          }
+          aria-pressed={leiterAn}
+          aria-label={`${leiterAn ? "Spielleiter an" : "Spielleiter aus"}${weltPunkt ? ", Auflage für diese Szene" : ""}${weltAnzahl ? `, ${weltAnzahl} Auflagen` : ""}`}
+        >
+          <ScrollText className="size-3.5" aria-hidden />
+          <span className="sm:hidden">
+            {leiterAn ? "SL an" : "SL aus"}
+            {weltPunkt ? " ●" : ""}
+            {weltAnzahl ? ` ${weltAnzahl}` : ""}
+          </span>
+          <span className="hidden sm:inline">
+            {leiterAn ? "SL an" : "SL aus"}
+            {weltPunkt ? " ●" : ""}
+            {weltAnzahl ? ` ${weltAnzahl}` : ""}
+          </span>
+          {leiterAn ? (
+            <ChevronDown
+              className={`size-3 transition-transform ${leiterOpen ? "rotate-180" : ""}`}
+              aria-hidden
+            />
+          ) : null}
+        </Button>
+        {leiterAn && onWiki ? (
+          <Button
+            type="button"
+            variant="secondary"
+            className="pointer-events-auto h-11 shrink-0 px-1.5 text-xs sm:px-3"
+            onClick={onWiki}
+            title="Lindendorf-Wiki öffnen"
+            aria-label="Lindendorf-Wiki öffnen"
+          >
+            <ExternalLink className="size-3.5" aria-hidden />
+            <span className="hidden sm:inline">Wiki</span>
+          </Button>
+        ) : null}
+      </div>
+      {saveMessage ? (
+        <div
+          className={`pointer-events-none fixed ${offen ? "bottom-[calc(80dvh+1rem)]" : "bottom-4"} left-1/2 z-50 w-max max-w-[calc(100vw-2rem)] -translate-x-1/2 rounded-sm border border-border bg-ink/95 px-4 py-3 text-sm text-fg shadow-lg backdrop-blur-sm`}
+          role="status"
+          aria-live="polite"
+        >
+          {saveMessage}
+        </div>
+      ) : null}
+      {offen ? (
+        <>
+          <button
+            type="button"
+            className="fixed inset-0 z-40 bg-black/55 sm:hidden"
+            onClick={() => setOffen(false)}
+            aria-label="Status schließen"
+          />
+          <div
+            className="herein fixed inset-x-0 bottom-0 z-50 max-h-[80dvh] overflow-y-auto rounded-t-md border border-border bg-ink px-3 pt-3 pb-[max(1rem,env(safe-area-inset-bottom))] shadow-2xl sm:static sm:mx-auto sm:mt-2 sm:max-h-none sm:max-w-5xl sm:overflow-visible sm:rounded-none sm:border-x-0 sm:border-b-0 sm:bg-transparent sm:px-0 sm:pt-2 sm:pb-0 sm:shadow-none"
+            role="region"
+            aria-label="Spielstatus"
+          >
+            <div className="mb-3 flex items-center justify-between sm:hidden">
+              <h2 className="text-sm font-semibold text-fg">Status</h2>
+              <button
+                type="button"
+                className="inline-flex size-9 items-center justify-center rounded-sm text-muted-fg"
+                onClick={() => setOffen(false)}
+                aria-label="Status schließen"
+              >
+                <X className="size-4" aria-hidden />
+              </button>
+            </div>
+            <div className="grid gap-3 lg:grid-cols-[1.05fr_1.35fr]">
+              <div className="rounded-md border border-border bg-surface/60 p-3">
+                <div className="mb-2 flex items-center justify-between gap-3">
+                  <div className="flex items-center gap-2 text-sm font-medium text-fg">
+                    <BriefcaseBusiness className="size-4 text-accent" aria-hidden />
+                    Inventar
+                  </div>
+                  <span className="text-[11px] uppercase tracking-[0.12em] text-muted-fg tabular-nums">
+                    {held.inventar.length}{" "}
+                    {held.inventar.length === 1 ? "Gegenstand" : "Gegenstände"}
+                  </span>
+                </div>
+                {held.inventar.length ? (
+                  <ul className="grid gap-2 sm:grid-cols-2">
+                    {held.inventar.map((item) => (
+                      <li
+                        key={item}
+                        className="rounded-sm border border-border bg-bg/50 px-2 py-1.5 text-xs text-fg"
+                      >
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p className="rounded-sm border border-dashed border-border px-2 py-3 text-sm text-muted-fg">
+                    Der Beutel ist leer. Nur das Gewicht deiner Entscheidung bleibt.
+                  </p>
+                )}
+              </div>
+
+              <div className="rounded-md border border-border bg-surface/60 p-3">
+                <div className="mb-2 flex items-center justify-between gap-3">
+                  <div className="flex items-center gap-2 text-sm font-medium text-fg">
+                    <BookOpen className="size-4 text-accent" aria-hidden />
+                    Wissen
+                  </div>
+                  <span className="text-[11px] uppercase tracking-[0.12em] text-muted-fg tabular-nums">
+                    {wissen.length} Einträge
+                  </span>
+                </div>
+                {wissen.length ? (
+                  <ul className="space-y-2">
+                    {wissen.slice(0, 4).map((tafel) => (
+                      <li
+                        key={tafel.id}
+                        className="rounded-sm border border-border bg-bg/50 px-2 py-1.5"
+                      >
+                        <p className="text-xs uppercase tracking-[0.12em] text-muted-fg">
+                          {tafel.offen ? "Offen" : "Gesehen"}
+                        </p>
+                        <p className="mt-0.5 text-sm text-fg">{tafel.title}</p>
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p className="rounded-sm border border-dashed border-border px-2 py-3 text-sm text-muted-fg">
+                    Noch kein Satz hat sich in dir festgesetzt.
+                  </p>
+                )}
+              </div>
+            </div>
+
+            <ZustandLeiste held={held} />
+            <p className="mt-1.5 text-xs text-muted-fg">
+              {zeit.satz} · Tag {spieltag} · {hud.lp}/{hud.maxLp} LP · {hud.gold} Gold
+            </p>
+            <div className="mt-1.5 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-muted-fg">
+              {hud.inventar.includes(HEILTRANK) ? (
+                <span className="inline-flex items-center gap-1">
+                  <FlaskConical className="size-3.5" aria-hidden />
+                  Trank
+                </span>
+              ) : null}
+              {hud.inventar.includes(SCHLUESSEL) ? (
+                <span className="inline-flex items-center gap-1">
+                  <KeyRound className="size-3.5" aria-hidden />
+                  Schlüssel
+                </span>
+              ) : null}
+            </div>
+            {rufe.length ? (
+              <p className="mt-1.5 flex flex-wrap gap-x-3 gap-y-1 text-xs text-muted-fg">
+                {rufe.map((item) => (
+                  <span key={item.ziel} className={item.wert > 0 ? "text-ok" : "text-hp"}>
+                    {item.ziel} {item.wert > 0 ? "+" : ""}
+                    {item.wert}
+                  </span>
+                ))}
+              </p>
+            ) : null}
+            <SeitenFuss held={held} hinzu={hinzu} nimmt={nimmt} fort={fort} kompakt />
+          </div>
+        </>
+      ) : null}
+    </div>
+  );
+}

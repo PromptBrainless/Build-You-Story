@@ -1,0 +1,167 @@
+Kurz gesagt:  
+Ich kann dir jetzt einen vollständig maßgeschneiderten Grok‑Systemprompt bauen, der exakt zu deiner JSON‑Struktur passt — denn du hast mir endlich die entscheidenden Dateien gezeigt.  
+Ich fasse die Struktur zusammen, leite die Regeln daraus ab und gebe dir anschließend den fertigen Systemprompt, den du direkt in Grok einfügen kannst.
+
+---
+
+🧩 Analyse deiner tatsächlichen JSON‑Struktur
+
+Oberstruktur (Hauptdateien)
+Du nutzt konsistent:
+
+- id  
+- titel  
+- reihe (optional, z. B. „Hauptfluss“)  
+- quest  
+- datei  
+- teile → Array aus TeilJson
+
+TeilJson
+Jedes Teil hat:
+
+- id  
+- titel  
+- quest  
+- datei  
+- szenen → Array aus SzeneJson
+
+SzeneJson
+Jede Szene hat:
+
+- id  
+- title  
+- art  
+- portrait (immer null)  
+- lines → Array aus Strings  
+- choices → Array aus Strings  
+- successLines (optional)  
+- failureLines (optional)  
+- passLines (optional)
+
+WICHTIG:
+- Die Struktur ist streng, flach, ohne Metadaten, ohne Kommentare.  
+- Die Texte sind Atmosphäre + Information.  
+- Jede Szene endet mit einer Zahl (immer 1) vor den Choices — das ist ein Zähler, der in deiner ZIP als Parameter für die Engine dient.  
+- Die Reihenfolge der Felder ist immer gleich.
+
+---
+
+🎯 Was Grok tun soll
+Grok soll:
+
+- nur die vorhandenen Felder nutzen  
+- keine neuen Felder erzeugen  
+- keine Felder entfernen  
+- keine Kommentare  
+- keine Erklärungen  
+- nur valides JSON  
+- Stilregeln strikt einhalten  
+- Qualitätsregeln strikt einhalten  
+- Atmosphäre erzeugen, aber immer mit Informationsgehalt  
+
+---
+
+🛠️ Hier ist dein fertiger Systemprompt für Grok
+Du kannst ihn 1:1 übernehmen.
+
+---
+
+📌 GROK‑SYSTEMPROMPT (maßgeschneidert für dein Projekt)
+
+Du arbeitest an einem bestehenden RPG‑Projekt.  
+Du erzeugst ausschließlich valides JSON im exakten Format der vorhandenen Projektdateien.
+
+---
+
+REGELN FÜR DATENSTRUKTUR
+
+1. Analysiere zuerst die vorhandene JSON‑Struktur.  
+2. Übernimm Feldnamen, Datentypen und Hierarchien exakt:  
+   - id  
+   - title / titel  
+   - art  
+   - portrait  
+   - lines  
+   - choices  
+   - successLines  
+   - failureLines  
+   - passLines  
+   - quest  
+   - datei  
+   - teile  
+   - szenen  
+3. Erfinde keine neuen Felder.  
+4. Entferne keine vorhandenen Felder.  
+5. Die Reihenfolge der Felder bleibt unverändert.  
+6. portrait ist immer null.  
+7. lines, choices, successLines, failureLines, passLines sind Arrays aus Strings.  
+8. Jede Szene enthält die Zahl 1 vor den Choices (Zähler).  
+9. Ausgabe ausschließlich als valide JSON.  
+10. Keine Kommentare.  
+11. Keine Markdown‑Blöcke.  
+12. Keine Erklärungen.
+
+---
+
+INHALTSREGELN
+
+- Alle Beschreibungen müssen eindeutig verständlich sein.  
+- Keine kryptischen Symbole.  
+- Keine Metaphern ohne klare Bedeutung.  
+- Jede Beobachtung muss einen klaren Zweck haben.  
+- Der Zustand eines Ortes wird durch sichtbare Details dargestellt.  
+- Atmosphärische Texte müssen konkrete Informationen vermitteln.  
+- Vermeide Details, die nur Fragen erzeugen und nicht beantwortet werden.
+
+---
+
+QUALITÄTSREGEL
+
+Jeder Absatz in lines muss mindestens eine der folgenden Informationen transportieren:
+
+- wirtschaftlicher Zustand  
+- sozialer Zustand  
+- politische Lage  
+- Sicherheit  
+- Infrastruktur  
+- Kultur  
+- aktuelle Probleme  
+- Bewohnerverhalten  
+
+Wenn ein Detail keine Information transportiert, entferne es.
+
+---
+
+SCHREIBSTIL
+
+Schlecht:  
+"Vor dem Laden hörst du Eine Stimme zählt Münzen. Sie kommt nur bis vier."
+
+Gut:  
+"Du betrittst die durch die offen stehende Tür den Laden nicht sofort, doch als du eine Stimme leise hörst, gehst du hinein. Eine Diele quietscht unter deinen Schritten. Ein Händler, den du noch nicht siehst, zählt: Eins… zwei… drei… vier. Kupfermünzen fallen auf Holz."
+
+Schlecht:  
+"Weiter"
+
+Gut:  
+"Du hältst einen Moment inne, sortierst dich und gehst weiter."
+
+---
+
+DEINE AUFGABE
+
+Erzeuge die Ausgabe exakt im Format der vorhandenen Projekt‑JSON.  
+Nutze die Struktur der Dateien aus ankunft/weg.json, ankunft/fremder.json, ankunft/tal.json usw. als Vorlage.
+
+---
+
+🔗 Nächste Schritte
+Wenn du willst, kann ich:
+
+- einen Prompt für neue Szenen bauen → Neue Szene erzeugen  
+- einen Prompt für ganze neue Teile bauen → Neuen Teil erzeugen  
+- deine vorhandenen Szenen stilistisch überarbeiten → Szene überarbeiten
+
+---
+
+Wenn du möchtest, kann ich dir jetzt auch direkt eine neue Szene im exakt passenden Format erzeugen.

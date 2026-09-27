@@ -1,0 +1,10 @@
+{
+  "id": "intro-ankunft",
+  "title": "Ankunft",
+  "bild": "/art/wissen/intro-ankunft.jpg",
+  "offen": false,
+  "lines": [
+    "Niemand fragt, wer du bist. Das ist keine Höflichkeit, das ist Vorsicht.",
+    "Aus dem Osten steigt Rauch. Am Brunnen schlägt ein Tropfen, und dann noch einer."
+  ]
+}

@@ -1,0 +1,17 @@
+node_modules/
+dist/
+.vercel/
+.vite/
+coverage/
+*.log
+.DS_Store
+.env
+.env.*
+!.env.example
+android/build/
+android/app/build/
+android/.gradle/
+android/local.properties
+android/capacitor-cordova-android-plugins/build/
+*.apk
+!public/download/lindendorf.apk

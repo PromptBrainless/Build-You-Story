@@ -1,0 +1,68 @@
+{
+  "id": "gewoelbe",
+  "titel": "Gewölbe",
+  "quest": "gasse",
+  "datei": "gasse/gewoelbe.json",
+  "szenen": [
+    {
+      "id": "kirchengewoelbe",
+      "title": "Kirchengewölbe",
+      "art": "chapel",
+      "portrait": null,
+      "lines": [
+        "Unter der Kirche führt ein Gang, den man nicht von der Kanzel aus erklärt. Die Stufen sind abgetreten von Leuten, die keine Messe suchten.",
+        "Feuchte Luft, Stein, der nach altem Wasser schmeckt. An der Wand rußige Striche, wo jemand Licht gespart und trotzdem gesehen hat, was er tun musste.",
+        "Grete hat den Weg genannt, ohne ihn zu beschreiben. Der Stein beschreibt ihn selbst: hierhin trägt man, was oben nicht bleiben darf."
+      ],
+      "choices": [
+        "Weiter"
+      ]
+    },
+    {
+      "id": "unter-der-kirche",
+      "title": "Unter der Kirche",
+      "art": "chapel",
+      "portrait": null,
+      "lines": [
+        "Die Kirche steht kälter als der Platz. Kerzenwachs ist an den Bänken heruntergelaufen und wieder hart geworden.",
+        "Die Treppe zum Gewölbe liegt hinter einem Vorhang, den niemand zur Seite schiebt. Der Stoff ist dunkel genug, dass man ihn für eine Wand halten kann.",
+        "Unten am Platz hat jemand Gretes Stimme gehört. Oben steht der Pfarrer steifer als sonst.",
+        "Der Küster hat dich einmal gesehen. Die Tür quietscht, und der Riegel sitzt einen Fingerbreit fester.",
+        "Unten liegen die, die man ohne Namen begräbt. Oben redet niemand davon.",
+        "Der Pfarrer hat das Silber gesehen, das du trägst. Er sieht dich anders an als die, die nur fragen.",
+        "Der Pfarrer steht am Altar und tut, als gehörte die Treppe nicht zu seiner Kirche."
+      ],
+      "choices": [
+        "Weiter"
+      ]
+    },
+    {
+      "id": "im-gewoelbe",
+      "title": "Im Gewölbe",
+      "art": "evidence",
+      "portrait": null,
+      "lines": [
+        "Im Gewölbe stehen Kisten, die keine Schätze halten. Tuch, Bindfaden, eine Schachtel mit Kohle, zum Schreiben, nicht zum Heizen.",
+        "An einer Stelle ist der Boden weniger staubig. Dort hat jemand gekniet, oft, lange genug, dass der Stein sich daran erinnert.",
+        "Du hörst die Kirche über dir, gedämpft, als sei das Gebet eine Decke, unter der man Namen verstecken kann."
+      ],
+      "choices": [
+        "Weiter"
+      ]
+    },
+    {
+      "id": "hinter-dem-stein",
+      "title": "Hinter dem Stein",
+      "art": "evidence",
+      "portrait": null,
+      "lines": [
+        "Hinter einem Stein, der nicht tragend ist und trotzdem schwer, liegt ein Paket in Wachstuch. Die Schnur ist fest, die Knoten von einer Hebamme, die weiß, wann etwas halten muss.",
+        "Darin Namen. Daten. Häuser. Das Kesseljahr, in einer Schrift, die sich nicht entschuldigt.",
+        "Ilse hat die Toten nicht unter der Kirche versteckt. Sie hat verhindert, dass der Rat sie ein zweites Mal sterben lässt, indem er sie streicht."
+      ],
+      "choices": [
+        "Weiter"
+      ]
+    }
+  ]
+}

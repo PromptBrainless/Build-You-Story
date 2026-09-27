@@ -1,0 +1,222 @@
+[
+  {
+    "titel": "Die Soldateska",
+    "geschichte": [
+      "Wenn ich mein Leben opfere, könnten die anderen entkommen, doch das Gewicht dieser Entscheidung drückt wie eine eiserne Last auf meine Brust. Der kalte Atem der Nacht kriecht in meine Lungen, während die Dunkelheit um uns herum wie eine hungrige Bestie lauert. Mein Herz pocht laut in der Stille, jeder Schlag ein Schlag gegen den Tod.",
+      "Einen Plan schmieden, Schwäche vortäuschen, einen Hinterhalt legen. Das Risiko frisst die Seele, doch das Schweigen der Angst ist noch furchtbarer. Flammen züngeln in den Schatten, die Dunkelheit ist mein Verbündeter, mein Feind. Nur Mut oder Wahnsinn können das Verderben bannen.",
+      "Was auch immer ich tue, es wird nur Blut und Asche hinterlassen. Die Zeit ist mein Feind, die Sekunden fallen wie fallende Blätter, und in ihrem Schatten lauert der Tod. Vielleicht gibt es eine Flucht, eine Lücke im Dunkel, die nur ich nicht sehe. Der Tod ist schon hier, und das Warten wird zum Verhängnis."
+    ],
+    "antworten": [
+      {
+        "label": "Ich muss Opfer bringen",
+        "mal": "Ich stelle meinen Körper vor das Dorf, damit die anderen entkommen können. Mein Blut wird in den Staub sinken, während ich den Blick auf den Schatten richte, der alles verschlingt. Es ist das einzige Mittel, das ich noch habe, um das Überleben derer, die ich liebe, zu sichern."
+      },
+      {
+        "label": "Ich plane den Hinterhalt",
+        "mal": "Ich webe eine Falle aus Schatten und Feuer, auch wenn ich dafür mein Leben opfern muss. Das Risiko ist groß, doch das Dunkel verlangt Opfer. Ich stelle die Dunkelheit auf meine Seite, bereit, alles zu riskieren, um das Verderben aufzuhalten."
+      },
+      {
+        "label": "Ich akzeptiere das Schicksal",
+        "mal": "Ich lege das Schicksal in die kalten Hände des Unvermeidlichen. Das Ende ist unausweichlich, doch ich werde im Schatten des Todes warten, bis es mich holt. Kein Fluchtweg, nur das stille Vergehen im Dunkel."
+      }
+    ]
+  },
+  {
+    "titel": "Der verwundete Feind",
+    "geschichte": [
+      "Der Pfeifton in der Brust ist das letzte Geräusch, das er hört. Das Blut tropft schwer auf den Boden, das Metall aufgerissen, die Wunde tobt im Inneren. Sein Atem ist flach, die Augen glasig, doch er sieht mich. Sein Blick ist wie ein Messer, das in meine Seele sticht.",
+      "Der Blick spricht mehr als Worte. Ein Flüstern, das kaum noch die Lippen verlässt, bittet um Wasser. Das Messer liegt in meiner Hand, kalt und schwer, wie der Tod selbst. Ich spüre die Schwere der Entscheidung, die meine Seele zerreißt.",
+      "Plötzlich schießt mir das Blut durch die Adern, und ich habe die Wahl: Das Leben nehmen oder das Sterben beenden. Die Dunkelheit in seinem Blick ist schwerer als das Gewicht der Welt. Ich bin gefangen zwischen Mitgefühl und Pflicht."
+    ],
+    "antworten": [
+      {
+        "label": "Ich gebe Wasser",
+        "mal": "Ich gieße das letzte Wasser in seine trockenen Lippen, spüre die Bitterkeit des Moments. Das Leben ist ein zartes Band, das hier zerreißt, doch ich halte es fest, solange es noch besteht."
+      },
+      {
+        "label": "Ich durchtrennt das Herz",
+        "mal": "Ich führe das Messer, das in meiner Hand liegt, und beende sein Leid. Es ist schwer, doch die Dunkelheit im Innern verlangt nach Erlösung, auch wenn sie blutig sein muss."
+      },
+      {
+        "label": "Ich nehme ihn mit",
+        "mal": "Ich hebe ihn auf, trage ihn auf meinen Schultern durch den Staub. Vielleicht verschlingt ihn die Nacht, bevor das Verderben ihn erreicht. Es ist ein Akt der Verzweiflung, doch auch des Mitleids."
+      }
+    ]
+  },
+  {
+    "titel": "Die gestohlene Ernte",
+    "geschichte": [
+      "Die Frau kniet im Staub, die Hände voll mit drei Sack voller gestohlener Brotkrumen. Der Schweiß läuft in dunklen Binnenströmen, die Augen sind leer, doch der Hunger brennt noch immer hell. Ihr Blick ist wie ein Messer, das in meine Seele schneidet.",
+      "Der Blick der Kinder ist wie Messer, die in die Seele stechen. Sie halten sich an ihrem Rücken fest, als könnten sie den Verstand im Stoff verstecken. Ihre kleinen Gesichter sind von Dreck und Verzweiflung gezeichnet.",
+      "Der Atem der Verzweiflung hängt schwer in der Luft. Das Mehl ist nur eine Waffe, der Hunger eine noch größere Bedrohung, und das Leben ein stummer Zeuge des Verfalls. Ich spüre das Gewicht ihrer Not in meinem Herzen."
+    ],
+    "antworten": [
+      {
+        "label": "Melde die Tat",
+        "mal": "Ich kenne den Preis, doch ich spreche den Namen aus. Das Gesetz ist ein Messer, das alles zertrennt, doch die Ordnung muss sein, selbst wenn sie blutet."
+      },
+      {
+        "label": "Lass es sein",
+        "mal": "Ich schließe die Augen, ignoriere das Leid. Der Hunger schreit in meinen Ohren, doch ich versuche, die Fassade der Kälte aufrechtzuerhalten, um das Chaos zu verhindern."
+      },
+      {
+        "label": "Zwinge zu Arbeit",
+        "mal": "Ich zwinge die Kinder, im Dreck zu schuften, ihre kleinen Hände in den Staub. Das Leben ist nur noch ein Kampf im Schatten der Verzweiflung."
+      }
+    ]
+  },
+  {
+    "titel": "Der Verräter",
+    "geschichte": [
+      "Er steht im Schatten, verborgen in der Dunkelheit, das Gesicht wie eine Maske aus Blut und Dreck. Das Gold in seiner Hand leuchtet kalt im Mondlicht, doch seine Augen sind voll Angst. Sein Herz pocht wie ein Trommelschlag der Verzweiflung.",
+      "Er weiß, dass sein Geheimnis brennt, die Wahrheit wie eine Flamme im Wind. Die Stimme zittert, doch die Worte sind scharf wie Messer. Er spricht von Familie, doch sein Herz schlägt für den Verrat. Ich spüre die Gefahr in seinem Blick.",
+      "Der Blick auf ihn ist wie ein Urteil, so schwer wie das Eisen seiner Ketten. Das Blut in den Adern gefroren, während die Dunkelheit ihn verschlingt. Er ist ein Schatten, der alles zerfrisst."
+    ],
+    "antworten": [
+      {
+        "label": "Melde ihn",
+        "mal": "Ich nenne die Namen, ziehe die Ketten ab, und lasse das Gesetz der Dunkelheit walten. Der Verräter wird gehängt, seine Seele zerfetzt, während die Nacht alles verschlingt."
+      },
+      {
+        "label": "Deckung geben",
+        "mal": "Ich unterstütze ihn im Schatten, seine Flucht, während die Rache wie ein Messer in meinem Herz sitzt. Vielleicht verschlingt das Dunkel ihn, bevor die Gerechtigkeit kommt."
+      },
+      {
+        "label": "Erpressen",
+        "mal": "Ich zwinge ihn, für mich zu arbeiten, seine Familie im Blick. Das Gold zerfrisst seine Seele, während die Dunkelheit ihn verschlingt."
+      }
+    ]
+  },
+  {
+    "titel": "Die letzte Fuhre",
+    "geschichte": [
+      "Der Karren ächzt unter der Last, die Räder versinken im Schlamm. Das Brot ist die letzte Hoffnung, doch es ist nur noch ein Hauch von Mehl, der im Staub verpufft. Der Hunger nagt an meinen Knochen.",
+      "Die Kinder sitzen ausgemergelt, die Augen wie schwarze Löcher, die den Hunger verschlingen. Der Dreck klebt an ihren Gesichtern, als wären sie Teil des Bodens. Ihr Schweigen ist schwerer als das Gewicht der Welt.",
+      "Der Atem ist schwer, der Blick leer. Das Leben hängt an einem seidenen Faden, gespannt zwischen Tod und Überleben, während das Brot im Staub zerbricht. Ich fühle die Verzweiflung in meinem Inneren."
+    ],
+    "antworten": [
+      {
+        "label": "Verteile das Brot",
+        "mal": "Ich gebe den Kindern das letzte Brot, sehe das Leuchten in ihren Augen, während die Dämmerung naht. Das Leben ist nur noch ein Kampf gegen den Hunger."
+      },
+      {
+        "label": "Weiterfahren",
+        "mal": "Ich lasse das Brot im Korb, ignoriere den Hunger, und hoffe auf eine bessere Zukunft. Der Schatten des Todes wächst im Dämmerlicht."
+      },
+      {
+        "label": "Kinder mitnehmen",
+        "mal": "Ich hebe sie auf, trage sie durch den Staub, im Hoffen, dass das Leben noch eine Chance hat. Das Schicksal ist wie ein Messer in der Nacht."
+      }
+    ]
+  },
+  {
+    "titel": "Die Scheune",
+    "geschichte": [
+      "Die Scheune brennt nicht, noch nicht, doch die Schreie in ihrem Innern sind wie ein Hauch aus der Hölle. Das Fieber hat das Holz durchbohrt, die Krankheit breitet sich aus wie dunkle Tinte auf vergilbtem Papier. Der Rauch ist das Flüstern des Todes.",
+      "Draußen stehen die Gesunden, die nur noch auf das Ende warten, während die Kranken im Rauch und Flammen verzweifeln. Das Fieber ist ihr König, der Tod ihr Herrscher. Das Feuer ist die letzte Hoffnung, doch auch die letzte Verdammnis.",
+      "Der Riegel knackt, die Tür ist nur noch ein Schatten. Das Feuer wird kommen, und mit ihm die endgültige Dunkelheit. Ich höre den Ruf des Verderbens."
+    ],
+    "antworten": [
+      {
+        "label": "Hilfe holen",
+        "mal": "Ich öffne die Tür, riskiere alles, um Leben zu retten. Das Fieber soll in die kalte Nacht getrieben werden, auch wenn die Seuche im Rauch verschwindet."
+      },
+      {
+        "label": "Lass sie sterben",
+        "mal": "Ich lasse die Tür geschlossen, ignoriere das Leid, und hoffe, dass das Feuer alles verschlingt. Das Verderben ist schon im Innern."
+      },
+      {
+        "label": "Brände legen",
+        "mal": "Ich zünde die Scheune an, lasse die Flammen alles verschlingen. Das Feuer bringt das Ende, und das Dorf atmet wieder auf, im Schatten der Asche."
+      }
+    ]
+  },
+  {
+    "titel": "Der Gefangene",
+    "geschichte": [
+      "An den Pfahl gebunden, das Gesicht wie eine Maske aus Blut und Dreck. Die Augen voller Angst, doch die Lippen verschlossen, schweigend im Schatten der Nacht. Das Leben hängt an einem seidenen Faden.",
+      "Das Messer in meiner Hand ist wie ein kalter Schatten, das in der Dunkelheit lauert. Er kennt den Weg, doch seine Stimme ist erstickt im Staub. Sein Herz schlägt wie ein Trommelschlag der Verzweiflung.",
+      "Das Herz schlägt schwer, während ich zwischen Leben und Tod entscheide. Das Dunkel umgibt mich, schwerer als das Eisen, das ihn hält. Der Schatten der Entscheidung ist mein Begleiter."
+    ],
+    "antworten": [
+      {
+        "label": "Zum Reden bringen",
+        "mal": "Ich nenne die Namen, ziehe die Ketten ab, und lasse das Gesetz der Dunkelheit walten. Das Schweigen zerreiße ich, um die Wahrheit ans Licht zu bringen, bevor die Nacht alles verschlingt."
+      },
+      {
+        "label": "Ihn freilassen",
+        "mal": "Ich unterstütze seine Flucht im Schatten, seine Schuld im Rücken. Vielleicht verschlingt das Dunkel ihn, bevor die Rache naht. Das Risiko ist groß, doch das Leben ist mehr wert als das Gold."
+      },
+      {
+        "label": "Töten",
+        "mal": "Ich treibe das Messer in seine Brust, bringe das Ende herbei. Das Schweigen wird zum letzten Urteil, das Blut fließt wie ein Fluss der Dunkelheit."
+      }
+    ]
+  },
+  {
+    "titel": "Die letzte Waffe",
+    "geschichte": [
+      "Zwischen euch liegt das Messer, blutverschmiert, das grüne Gras im nassen Tau. Zwei Verwundete, das Blut läuft wie Wasser, die Klinge glänzt im Licht des fahlen Mondes. Das Schicksal hängt an einem seidenen Faden.",
+      "Der eine hält noch durch, der andere ist kaum noch bei Bewusstsein. Stimmen rufen im Wald, wie Geister, die zum Tod locken, während der Atem schwer in der Nacht liegt. Das Messer ist der letzte Funke des Lebens oder die kalte Umarmung des Todes.",
+      "Nur einer wird den Morgen sehen, das ist sicher. Das Messer in meiner Hand ist der letzte Funke, das Ende oder das Erwachen im Schatten."
+    ],
+    "antworten": [
+      {
+        "label": "Dem Stärkeren geben",
+        "mal": "Ich gebe die letzte Klinge dem, der noch steht, im Blick das Überleben, während die Dunkelheit im Schatten lauert. Das Schicksal ist ein Messer im Nebel."
+      },
+      {
+        "label": "Dem Schwächeren geben",
+        "mal": "Ich treibe das Messer in die Brust des, der schon liegt, und bringe das Ende herbei. Der Schatten verschlingt ihn im Dämmerlicht."
+      },
+      {
+        "label": "Zerbrechen",
+        "mal": "Ich zerbreche die Waffe, das letzte Streben nach Leben im Staub. Vielleicht verschwindet das Dunkel im Gras."
+      }
+    ]
+  },
+  {
+    "titel": "Vor dem Tor",
+    "geschichte": [
+      "Die Vorräte im Rathaus sind nur noch ein Hauch, das Brot fehlt, doch vor dem Tor stehen hungrige Seelen, ohne Brot, mit Kindern, die im Dreck schreien. Das Tor ist eine Grenze zwischen Leben und Tod.",
+      "Die Wache steht müde, hungrig, doch in der Pflicht. Das Tor ist wie eine Klaue, die das Schicksal trennt. Wer hineinkommt, riskiert alles; wer draußen bleibt, verliert alles.",
+      "Das Schicksal liegt im Zwielicht der Entscheidung. Das Tor ist der letzte Schritt ins Unbekannte, in die Dunkelheit oder ins Licht."
+    ],
+    "antworten": [
+      {
+        "label": "Alle einlassen",
+        "mal": "Ich öffne das Tor, im Schatten der Barmherzigkeit. Das Leid der Hungrigen ist schwer, doch ich muss das Leben im Innern schützen, egal zu welchem Preis."
+      },
+      {
+        "label": "Abweisen",
+        "mal": "Ich verschließe das Tor, im Schatten der Pflicht. Das Leid bleibt draußen, selbst wenn das Leben im Innern stirbt. Das Gesetz ist schwer, doch notwendig."
+      },
+      {
+        "label": "Nur Frauen und Kinder",
+        "mal": "Ich lasse nur die Frauen und Kinder hinein, die Männer draußen im Schatten. Das ist Gerechtigkeit in einer Welt voller Dunkelheit."
+      }
+    ]
+  },
+  {
+    "titel": "Der letzte Ausweg",
+    "geschichte": [
+      "Der Feind ist nah, die Rufe im Wald, die Pferde trampeln im Schlamm. Einer bleibt zurück, um die Flucht zu sichern, damit andere entkommen. Das Leben hängt an einem seidenen Faden.",
+      "Der Verwundete sinkt auf die Knie, sein Atem ist schwer, doch er weigert sich aufzugeben. Die Dunkelheit wächst im Schatten, während die Entscheidung schwer auf den Schultern lastet.",
+      "Das Los wird geworfen, das Schicksal entscheidet, wer im Nebel bleibt, während die Angst wie ein Messer in der Brust liegt. Das Leben ist ein Kampf gegen die Dunkelheit."
+    ],
+    "antworten": [
+      {
+        "label": "Zurückbleiben",
+        "mal": "Ich bleibe im Schatten, während die anderen fliehen. Mein Blut wird im Staub verklärt, doch ich halte stand, bis das Dunkel mich verschlingt."
+      },
+      {
+        "label": "Den Verwundeten lassen",
+        "mal": "Ich lasse ihn auf den Knien, gebe ihm den letzten Atemzug. Der Schatten verschlingt ihn, während die Flucht im Nebel verschwindet."
+      },
+      {
+        "label": "Auslosen",
+        "mal": "Das Los entscheidet, wer bleibt. Ich ziehe den Strick, während die Angst in meinen Knochen sitzt und der Schatten naht."
+      }
+    ]
+  }
+]

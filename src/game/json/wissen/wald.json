@@ -1,0 +1,10 @@
+{
+  "id": "wald",
+  "title": "Wald",
+  "bild": "/art/wissen/wald.jpg",
+  "offen": false,
+  "lines": [
+    "Der Pfad hört auf, ein Pfad zu sein, sobald das letzte Dach hinter dir liegt.",
+    "Der Rauch im Osten ist näher. Er gehört keinem Herd."
+  ]
+}
