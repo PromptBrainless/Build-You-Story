@@ -37,6 +37,9 @@ export function validateWorkspace(input: unknown): { workspace?: Workspace; find
         findings.push({ severity: "error", message: `${issue.path.join(".") || "data"}: ${issue.message}`, entityId: entity.id });
       }
     }
+    if (registration.validate) {
+      findings.push(...registration.validate(entity));
+    }
   }
   if (workspace.startSceneId) {
     const start = entitiesById.get(workspace.startSceneId);

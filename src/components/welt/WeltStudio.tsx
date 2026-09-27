@@ -2,12 +2,14 @@ import { useMemo, useState } from "react";
 import { ArrowLeft, BookOpen, Download, Play, Plus, Search, ShieldCheck, Trash2, Upload } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { newEntity, newWorkspace, validateWorkspace, type Entity, type Workspace } from "@/game/studio/model";
+import { newEntity, newWorkspace, validateWorkspace, type Entity, type ValidationFinding, type Workspace } from "@/game/studio/model";
+import { analyseWorkspaceFlow } from "@/game/studio/analysis";
 import { downloadWorkspace, LocalWorkspaceStore } from "@/game/studio/store";
 import { registeredSchemas } from "@/game/studio/plugins";
 import { importedLibraryEntryIds, lindendorfLibrary, type LibraryCategory, type LibraryEntry } from "@/game/studio/library";
 import { neueSzenendaten } from "@/game/studio/runner";
 import { StudioBibliothek } from "./StudioBibliothek";
+import { StudioEntityEditor } from "./StudioEntityEditor";
 import { StudioSzeneneditor } from "./StudioSzeneneditor";
 import { StudioVorschau } from "./StudioVorschau";
 
@@ -48,6 +50,7 @@ export function WeltStudio() {
     (entity) => (typ === "alle" || entity.type === typ) && `${entity.title} ${entity.type}`.toLowerCase().includes(suche.toLowerCase()),
   );
   const validation = useMemo(() => validateWorkspace(workspace), [workspace]);
+  const flow = useMemo(() => analyseWorkspaceFlow(workspace), [workspace]);
 
   function aktualisiere(next: Workspace) {
     const mitStempel = { ...next, updatedAt: new Date().toISOString() };
@@ -84,9 +87,9 @@ export function WeltStudio() {
     const initialData = entityType === "szene"
       ? neueSzenendaten()
       : entityType === "figur"
-        ? { rolle: "", ort: "", weltbild: "", angst: "", ziel: "" }
+        ? { rolle: "", ort: "", weltbild: "", angst: "", ziel: "", notizen: "", portraitSrc: "", stimmeSrc: "" }
         : entityType === "wissen"
-          ? { text: "", szenen: "" }
+          ? { text: "", lines: [], bild: "", stimmeSrc: "", szenen: "", sourceSceneIds: [] }
           : entityType === "gegenstand"
             ? { beschreibung: "" }
             : entityType === "medium"
@@ -94,7 +97,7 @@ export function WeltStudio() {
               : entityType === "abschnitt"
                 ? { sourceQuest: "", sourceSectionId: "", sceneCount: 0, sourceSceneIds: [] }
                 : entityType === "ort"
-                  ? { beschreibung: "" }
+                  ? { beschreibung: "", bild: "", sceneIds: [] }
                   : { text: "" };
     const entity = newEntity(workspace.id, entityType, schema?.label ?? "Neue Notiz", initialData);
     const next = { ...workspace, entities: [...workspace.entities, entity] };
@@ -251,6 +254,15 @@ export function WeltStudio() {
       </div>
 
       {bereich === "material" ? <>
+      <StudioPruefpanel
+        workspace={workspace}
+        validation={validation.findings}
+        flow={flow}
+        onSelect={(entityId) => {
+          setSelected(entityId);
+          setBereich("material");
+        }}
+      />
       <div className="flex flex-wrap gap-2">
         <button className={`rounded-sm border px-3 py-1.5 text-xs ${typ === "alle" ? "border-accent bg-accent text-accent-fg" : "border-border text-muted-fg hover:bg-surface-2"}`} onClick={() => setTyp("alle")}>
           Alle
@@ -305,6 +317,7 @@ export function WeltStudio() {
               onSetStart={() => aktualisiere({ ...workspace, startSceneId: selectedEntity.id })}
               onChoiceTarget={(choiceIndex, targetId) => setzeWahlziel(selectedEntity.id, choiceIndex, targetId)}
               onPreview={() => setVorschauOffen(true)}
+              onDelete={() => loesche(selectedEntity.id)}
             />
           ) : (
             <div className="space-y-3">
@@ -314,21 +327,7 @@ export function WeltStudio() {
                   <Trash2 size={16} />
                 </Button>
               </div>
-              <div className="space-y-2">
-                {Object.entries(selectedEntity.data).map(([feld, wert]) => {
-                  const istListe = Array.isArray(wert);
-                  return (
-                    <label key={feld} className="block text-sm">
-                      <span className="mb-1 block text-xs uppercase tracking-wide text-subtle-fg">{feld}</span>
-                      <textarea
-                        className="min-h-16 w-full rounded-sm border border-border bg-ink/70 p-2 text-sm text-fg outline-none focus-visible:ring-2 focus-visible:ring-ring"
-                        value={istListe ? wert.join("\n") : typeof wert === "string" ? wert : JSON.stringify(wert)}
-                        onChange={(event) => bearbeite({ data: { ...selectedEntity.data, [feld]: istListe ? event.target.value.split("\n") : event.target.value } })}
-                      />
-                    </label>
-                  );
-                })}
-              </div>
+              <StudioEntityEditor entity={selectedEntity} workspace={workspace} onData={(patch) => bearbeite({ data: { ...selectedEntity.data, ...patch } })} />
             </div>
           )}
         </div>
@@ -338,5 +337,141 @@ export function WeltStudio() {
       {meldung ? <p className="text-sm text-muted-fg">{meldung}</p> : null}
       {vorschauOffen && previewSceneId ? <StudioVorschau workspace={workspace} startSceneId={previewSceneId} onClose={() => setVorschauOffen(false)} /> : null}
     </div>
+  );
+}
+
+function StudioPruefpanel({
+  workspace,
+  validation,
+  flow,
+  onSelect,
+}: {
+  workspace: Workspace;
+  validation: ValidationFinding[];
+  flow: ReturnType<typeof analyseWorkspaceFlow>;
+  onSelect: (entityId: string) => void;
+}) {
+  const karten = [
+    { label: "Szenen", value: flow.sceneCount },
+    { label: "Wege", value: flow.linkedChoices },
+    { label: "Endwahlen", value: flow.endingChoices },
+    { label: "Lücken", value: flow.incompleteChoices.length + validation.filter((item) => item.severity === "error").length },
+  ];
+  const knotenById = new Map(flow.nodes.map((node) => [node.sceneId, node]));
+
+  return (
+    <section className="space-y-4 rounded-sm border border-border bg-surface/30 p-4">
+      <div className="grid gap-3 sm:grid-cols-4">
+        {karten.map((karte) => (
+          <div key={karte.label} className="rounded-sm border border-border bg-ink/40 px-3 py-3">
+            <p className="text-xl font-semibold text-fg">{karte.value}</p>
+            <p className="text-[11px] uppercase tracking-[0.16em] text-muted-fg">{karte.label}</p>
+          </div>
+        ))}
+      </div>
+
+      <div className="grid gap-4 xl:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)]">
+        <div className="space-y-3">
+          <div className="flex items-center justify-between gap-3">
+            <div>
+              <p className="text-xs uppercase tracking-[0.16em] text-muted-fg">Szenenfluss</p>
+              <p className="text-sm text-fg">{flow.startSceneId ? `Startszene gesetzt · ${workspace.entities.find((entity) => entity.id === flow.startSceneId)?.title ?? flow.startSceneId}` : "Noch keine Startszene gesetzt."}</p>
+            </div>
+          </div>
+          <div className="grid gap-2 md:grid-cols-2">
+            {flow.nodes.length === 0 ? <p className="text-sm text-muted-fg">Lege zuerst Szenen an, damit der Maker Wege und Sackgassen lesen kann.</p> : null}
+            {flow.nodes.map((node) => (
+              <button
+                key={node.sceneId}
+                type="button"
+                onClick={() => onSelect(node.sceneId)}
+                className={`rounded-sm border px-3 py-2 text-left ${node.isStart ? "border-accent bg-accent/10" : "border-border bg-ink/30 hover:bg-surface-2"}`}
+              >
+                <div className="flex items-center justify-between gap-3">
+                  <strong className="truncate text-sm text-fg">{node.title}</strong>
+                  {node.isStart ? <span className="rounded-full border border-accent/40 px-2 py-0.5 text-[10px] uppercase tracking-[0.14em] text-accent">Start</span> : null}
+                </div>
+                <p className="mt-1 text-xs text-muted-fg">
+                  rein {node.incoming} · raus {node.outgoing} · enden {node.endings}
+                  {node.missingTargets ? ` · offen ${node.missingTargets}` : ""}
+                </p>
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <div className="space-y-3">
+          <div>
+            <p className="text-xs uppercase tracking-[0.16em] text-muted-fg">Prüfbericht</p>
+            <p className="text-sm text-fg">{validation.length ? "Der Maker meldet konkrete Stellen, die noch geschlossen werden müssen." : "Keine Schemafehler. Die Werkstatt ist logisch lesbar."}</p>
+          </div>
+          <div className="space-y-2">
+            {validation.slice(0, 8).map((finding, index) => (
+              <button
+                key={`${finding.entityId ?? "global"}-${index}`}
+                type="button"
+                onClick={() => finding.entityId && onSelect(finding.entityId)}
+                disabled={!finding.entityId}
+                className={`block w-full rounded-sm border px-3 py-2 text-left text-xs ${finding.severity === "error" ? "border-warn/40 bg-warn/10 text-warn" : finding.severity === "warning" ? "border-border bg-ink/40 text-fg" : "border-border/70 bg-ink/20 text-muted-fg"} disabled:cursor-default`}
+              >
+                <span className="block uppercase tracking-[0.14em] opacity-70">{finding.severity}</span>
+                <span className="mt-1 block">{finding.message}</span>
+              </button>
+            ))}
+            {!validation.length ? <p className="rounded-sm border border-border bg-ink/20 px-3 py-2 text-xs text-muted-fg">Schema und Projektbasis sind sauber.</p> : null}
+          </div>
+          <div className="space-y-2 text-xs">
+            {flow.incompleteChoices.length ? (
+              <div className="rounded-sm border border-border bg-ink/30 px-3 py-2 text-fg">
+                <p className="font-semibold">Wahlen ohne Ziel</p>
+                <div className="mt-2 space-y-1">
+                  {flow.incompleteChoices.slice(0, 5).map((choice) => (
+                    <button key={`${choice.sceneId}-${choice.choiceIndex}`} type="button" className="block text-left text-muted-fg hover:text-fg" onClick={() => onSelect(choice.sceneId)}>
+                      {choice.title} · Wahl {choice.choiceIndex + 1}: {choice.label || "Unbenannt"}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            ) : null}
+            {flow.deadEndSceneIds.length ? (
+              <div className="rounded-sm border border-border bg-ink/30 px-3 py-2 text-fg">
+                <p className="font-semibold">Sackgassen ohne Ende</p>
+                <div className="mt-2 flex flex-wrap gap-2">
+                  {flow.deadEndSceneIds.map((sceneId) => (
+                    <button key={sceneId} type="button" className="rounded-sm border border-border px-2 py-1 text-muted-fg hover:text-fg" onClick={() => onSelect(sceneId)}>
+                      {knotenById.get(sceneId)?.title ?? sceneId}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            ) : null}
+            {flow.unreachableSceneIds.length ? (
+              <div className="rounded-sm border border-border bg-ink/30 px-3 py-2 text-fg">
+                <p className="font-semibold">Vom Start nicht erreichbar</p>
+                <div className="mt-2 flex flex-wrap gap-2">
+                  {flow.unreachableSceneIds.map((sceneId) => (
+                    <button key={sceneId} type="button" className="rounded-sm border border-border px-2 py-1 text-muted-fg hover:text-fg" onClick={() => onSelect(sceneId)}>
+                      {knotenById.get(sceneId)?.title ?? sceneId}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            ) : null}
+            {flow.sourceSceneIds.length ? (
+              <div className="rounded-sm border border-border bg-ink/30 px-3 py-2 text-fg">
+                <p className="font-semibold">Szenen ohne Eingang</p>
+                <div className="mt-2 flex flex-wrap gap-2">
+                  {flow.sourceSceneIds.map((sceneId) => (
+                    <button key={sceneId} type="button" className="rounded-sm border border-border px-2 py-1 text-muted-fg hover:text-fg" onClick={() => onSelect(sceneId)}>
+                      {knotenById.get(sceneId)?.title ?? sceneId}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            ) : null}
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }

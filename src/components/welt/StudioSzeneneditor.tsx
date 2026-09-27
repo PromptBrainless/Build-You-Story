@@ -1,4 +1,4 @@
-import { Flag, Play } from "lucide-react";
+import { Flag, Play, Trash2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import type { Entity, Workspace } from "@/game/studio/model";
@@ -25,6 +25,7 @@ export function StudioSzeneneditor({
   onSetStart,
   onChoiceTarget,
   onPreview,
+  onDelete,
 }: {
   entity: Entity;
   workspace: Workspace;
@@ -34,6 +35,7 @@ export function StudioSzeneneditor({
   onSetStart: () => void;
   onChoiceTarget: (choiceIndex: number, targetId: string) => void;
   onPreview: () => void;
+  onDelete: () => void;
 }) {
   const data = MakerSceneDataSchema.parse(entity.data);
   const scenes = workspace.entities.filter((candidate) => candidate.type === "szene");
@@ -59,6 +61,9 @@ export function StudioSzeneneditor({
       <div className="flex flex-wrap items-center justify-between gap-2">
         <Input aria-label="Szenentitel" value={entity.title} onChange={(event) => onTitle(event.target.value)} className="min-w-48 flex-1 text-base font-semibold" />
         <div className="flex gap-2">
+          <Button type="button" variant="ghost" className="h-11 px-3" onClick={onDelete} title="Szene löschen">
+            <Trash2 size={16} />
+          </Button>
           <Button type="button" variant={isStart ? "default" : "secondary"} className="h-11 px-3" onClick={onSetStart} aria-pressed={isStart}>
             <Flag size={16} /> {isStart ? "Startszene" : "Als Start"}
           </Button>
@@ -103,6 +108,11 @@ export function StudioSzeneneditor({
       <label className="block text-sm">
         <span className="mb-1 block text-xs font-medium uppercase text-muted-fg">Wahlen · eine pro Zeile</span>
         <textarea className="min-h-28 w-full rounded-sm border border-border bg-ink/70 p-3 text-sm text-fg outline-none focus-visible:ring-2 focus-visible:ring-ring" value={data.choices.join("\n")} onChange={(event) => onData({ choices: event.target.value.split("\n") })} />
+      </label>
+
+      <label className="block text-sm">
+        <span className="mb-1 block text-xs font-medium uppercase text-muted-fg">Szenennotizen</span>
+        <textarea className="min-h-24 w-full rounded-sm border border-border bg-ink/70 p-3 text-sm leading-relaxed text-fg outline-none focus-visible:ring-2 focus-visible:ring-ring" value={data.notizen ?? ""} onChange={(event) => onData({ notizen: event.target.value })} />
       </label>
 
       <section className="space-y-2 border-t border-border pt-4" aria-label="Wahlziele">
