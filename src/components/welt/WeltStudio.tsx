@@ -1,11 +1,33 @@
 import { useMemo, useState } from "react";
-import { ArrowLeft, BookOpen, Download, Play, Plus, Search, ShieldCheck, Trash2, Upload } from "lucide-react";
+import {
+  ArrowLeft,
+  BookOpen,
+  Download,
+  Play,
+  Plus,
+  Search,
+  ShieldCheck,
+  Trash2,
+  Upload,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { newEntity, newWorkspace, validateWorkspace, type Entity, type Workspace } from "@/game/studio/model";
+import { ART, PORTRAITS } from "@/game/art";
+import {
+  newEntity,
+  newWorkspace,
+  validateWorkspace,
+  type Entity,
+  type Workspace,
+} from "@/game/studio/model";
 import { downloadWorkspace, LocalWorkspaceStore } from "@/game/studio/store";
 import { registeredSchemas } from "@/game/studio/plugins";
-import { importedLibraryEntryIds, lindendorfLibrary, type LibraryCategory, type LibraryEntry } from "@/game/studio/library";
+import {
+  importedLibraryEntryIds,
+  lindendorfLibrary,
+  type LibraryCategory,
+  type LibraryEntry,
+} from "@/game/studio/library";
 import { neueSzenendaten } from "@/game/studio/runner";
 import { StudioBibliothek } from "./StudioBibliothek";
 import { StudioSzeneneditor } from "./StudioSzeneneditor";
@@ -19,6 +41,7 @@ const ENTITY_TYPES: Record<LibraryCategory, string> = {
   figur: "figur",
   wissen: "wissen",
   gegenstand: "gegenstand",
+  ort: "ort",
 };
 
 /**
@@ -36,16 +59,25 @@ export function WeltStudio() {
   const [vorschauOffen, setVorschauOffen] = useState(false);
   const [meldung, setMeldung] = useState("");
   const bibliothek = useMemo(() => lindendorfLibrary(), []);
-  const importedIds = useMemo(() => importedLibraryEntryIds(workspace.entities), [workspace.entities]);
-  const projektListe = projekte.some((project) => project.id === workspace.id) ? projekte : [...projekte, workspace];
+  const importedIds = useMemo(
+    () => importedLibraryEntryIds(workspace.entities),
+    [workspace.entities],
+  );
+  const projektListe = projekte.some((project) => project.id === workspace.id)
+    ? projekte
+    : [...projekte, workspace];
 
   const selectedEntity = workspace.entities.find((entity) => entity.id === selected) ?? null;
-  const startSceneId = workspace.entities.some((entity) => entity.id === workspace.startSceneId && entity.type === "szene")
+  const startSceneId = workspace.entities.some(
+    (entity) => entity.id === workspace.startSceneId && entity.type === "szene",
+  )
     ? workspace.startSceneId!
-    : workspace.entities.find((entity) => entity.type === "szene")?.id ?? "";
+    : (workspace.entities.find((entity) => entity.type === "szene")?.id ?? "");
   const previewSceneId = selectedEntity?.type === "szene" ? selectedEntity.id : startSceneId;
   const sichtbar = workspace.entities.filter(
-    (entity) => (typ === "alle" || entity.type === typ) && `${entity.title} ${entity.type}`.toLowerCase().includes(suche.toLowerCase()),
+    (entity) =>
+      (typ === "alle" || entity.type === typ) &&
+      `${entity.title} ${entity.type}`.toLowerCase().includes(suche.toLowerCase()),
   );
   const validation = useMemo(() => validateWorkspace(workspace), [workspace]);
 
@@ -58,7 +90,9 @@ export function WeltStudio() {
 
   function neuesProjekt() {
     const vorhandene = store.list().length;
-    const project = newWorkspace(vorhandene ? `Neues RPG-Projekt ${vorhandene + 1}` : "Neues RPG-Projekt");
+    const project = newWorkspace(
+      vorhandene ? `Neues RPG-Projekt ${vorhandene + 1}` : "Neues RPG-Projekt",
+    );
     store.save(project);
     setWorkspace(project);
     setProjekte(store.list());
@@ -81,21 +115,22 @@ export function WeltStudio() {
 
   function neueEntity(entityType = neuerTyp) {
     const schema = registeredSchemas().find((item) => item.type === entityType);
-    const initialData = entityType === "szene"
-      ? neueSzenendaten()
-      : entityType === "figur"
-        ? { rolle: "", ort: "", weltbild: "", angst: "", ziel: "" }
-        : entityType === "wissen"
-          ? { text: "", szenen: "" }
-          : entityType === "gegenstand"
-            ? { beschreibung: "" }
-            : entityType === "medium"
-              ? { assetId: "", assetKind: "buehnenbild", format: "", mediaType: "image", src: "" }
-              : entityType === "abschnitt"
-                ? { sourceQuest: "", sourceSectionId: "", sceneCount: 0, sourceSceneIds: [] }
-                : entityType === "ort"
-                  ? { beschreibung: "" }
-                  : { text: "" };
+    const initialData =
+      entityType === "szene"
+        ? neueSzenendaten()
+        : entityType === "figur"
+          ? { rolle: "", ort: "", weltbild: "", angst: "", ziel: "" }
+          : entityType === "wissen"
+            ? { text: "", szenen: "" }
+            : entityType === "gegenstand"
+              ? { beschreibung: "" }
+              : entityType === "medium"
+                ? { assetId: "", assetKind: "buehnenbild", format: "", mediaType: "image", src: "" }
+                : entityType === "abschnitt"
+                  ? { sourceQuest: "", sourceSectionId: "", sceneCount: 0, sourceSceneIds: [] }
+                  : entityType === "ort"
+                    ? { beschreibung: "" }
+                    : { text: "" };
     const entity = newEntity(workspace.id, entityType, schema?.label ?? "Neue Notiz", initialData);
     const next = { ...workspace, entities: [...workspace.entities, entity] };
     if (entityType === "szene" && !startSceneId) next.startSceneId = entity.id;
@@ -107,15 +142,27 @@ export function WeltStudio() {
     if (!selectedEntity) return;
     aktualisiere({
       ...workspace,
-      entities: workspace.entities.map((entity) => (entity.id === selected ? { ...entity, ...patch, revision: entity.revision + 1, updatedAt: new Date().toISOString() } : entity)),
+      entities: workspace.entities.map((entity) =>
+        entity.id === selected
+          ? {
+              ...entity,
+              ...patch,
+              revision: entity.revision + 1,
+              updatedAt: new Date().toISOString(),
+            }
+          : entity,
+      ),
     });
   }
 
   function loesche(id: string) {
     const entities = workspace.entities.filter((entity) => entity.id !== id);
-    const relations = workspace.relations.filter((relation) => relation.fromId !== id && relation.toId !== id);
+    const relations = workspace.relations.filter(
+      (relation) => relation.fromId !== id && relation.toId !== id,
+    );
     const next = { ...workspace, entities, relations };
-    if (workspace.startSceneId === id) next.startSceneId = entities.find((entity) => entity.type === "szene")?.id;
+    if (workspace.startSceneId === id)
+      next.startSceneId = entities.find((entity) => entity.type === "szene")?.id;
     aktualisiere(next);
     if (selected === id) setSelected("");
   }
@@ -152,7 +199,12 @@ export function WeltStudio() {
 
   function setzeWahlziel(sceneId: string, choiceIndex: number, targetId: string) {
     const relations = workspace.relations.filter(
-      (relation) => !(relation.kind === "choice" && relation.fromId === sceneId && relation.data.choiceIndex === choiceIndex),
+      (relation) =>
+        !(
+          relation.kind === "choice" &&
+          relation.fromId === sceneId &&
+          relation.data.choiceIndex === choiceIndex
+        ),
     );
     const istEnde = targetId === "__ending__";
     if (targetId && !istEnde) {
@@ -183,6 +235,18 @@ export function WeltStudio() {
     aktualisiere({ ...workspace, entities, relations });
   }
 
+  function vorschauFuerEntity(entity: Entity): string | undefined {
+    const data = entity.data;
+    if (typeof data.src === "string" && data.src) return data.src;
+    if (typeof data.artSrc === "string" && data.artSrc) return data.artSrc;
+    if (typeof data.bild === "string" && data.bild) return data.bild;
+    if (typeof data.portraitSrc === "string" && data.portraitSrc) return data.portraitSrc;
+    if (typeof data.portrait === "string")
+      return PORTRAITS[data.portrait as keyof typeof PORTRAITS];
+    if (typeof data.art === "string") return ART[data.art as keyof typeof ART];
+    return undefined;
+  }
+
   return (
     <div className="space-y-5">
       <div className="flex flex-wrap items-center justify-between gap-3">
@@ -192,11 +256,25 @@ export function WeltStudio() {
               ? "Durchsuche Lindendorfs Medien und Spielbausteine. Einträge werden nur einzeln und auf deine Auswahl hin in dein Projekt kopiert."
               : "Dein Projekt startet unabhängig und leer. Hier bearbeitest du eigene Szenen, Figuren, Wissen und Notizen."}
           </p>
-          <Input aria-label="Projektname" value={workspace.name} onChange={(event) => aktualisiere({ ...workspace, name: event.target.value })} className="h-10 max-w-sm" />
+          <Input
+            aria-label="Projektname"
+            value={workspace.name}
+            onChange={(event) => aktualisiere({ ...workspace, name: event.target.value })}
+            className="h-10 max-w-sm"
+          />
         </div>
         <div className="flex flex-wrap items-center gap-2">
-          <select aria-label="Projekt wechseln" className="h-11 max-w-48 rounded-sm border border-border bg-surface px-3 text-sm" value={workspace.id} onChange={(event) => wechsleProjekt(event.target.value)}>
-            {projektListe.map((project) => <option key={project.id} value={project.id}>{project.name}</option>)}
+          <select
+            aria-label="Projekt wechseln"
+            className="h-11 max-w-48 rounded-sm border border-border bg-surface px-3 text-sm"
+            value={workspace.id}
+            onChange={(event) => wechsleProjekt(event.target.value)}
+          >
+            {projektListe.map((project) => (
+              <option key={project.id} value={project.id}>
+                {project.name}
+              </option>
+            ))}
           </select>
           <Button type="button" variant="secondary" size="default" onClick={neuesProjekt}>
             <Plus size={16} /> Neues Projekt
@@ -210,7 +288,12 @@ export function WeltStudio() {
               <BookOpen size={16} /> Lindendorf-Bibliothek
             </Button>
           )}
-          <Button variant="secondary" size="default" onClick={() => downloadWorkspace(workspace)} title="Studio exportieren">
+          <Button
+            variant="secondary"
+            size="default"
+            onClick={() => downloadWorkspace(workspace)}
+            title="Studio exportieren"
+          >
             <Download size={16} /> Export
           </Button>
           <label className="inline-flex h-11 cursor-pointer items-center gap-2 rounded-sm border border-border bg-surface px-4 text-sm hover:bg-surface-2">
@@ -228,13 +311,27 @@ export function WeltStudio() {
           </label>
           {bereich === "material" ? (
             <>
-              <select aria-label="Typ des neuen Eintrags" className="h-11 rounded-sm border border-border bg-surface px-3 text-sm" value={neuerTyp} onChange={(event) => setNeuerTyp(event.target.value)}>
-                {registeredSchemas().map((schema) => <option key={schema.type} value={schema.type}>{schema.label}</option>)}
+              <select
+                aria-label="Typ des neuen Eintrags"
+                className="h-11 rounded-sm border border-border bg-surface px-3 text-sm"
+                value={neuerTyp}
+                onChange={(event) => setNeuerTyp(event.target.value)}
+              >
+                {registeredSchemas().map((schema) => (
+                  <option key={schema.type} value={schema.type}>
+                    {schema.label}
+                  </option>
+                ))}
               </select>
               <Button variant="secondary" size="default" onClick={() => neueEntity()}>
                 <Plus size={16} /> Neu
               </Button>
-              <Button variant="default" size="default" onClick={() => setVorschauOffen(true)} disabled={!previewSceneId}>
+              <Button
+                variant="default"
+                size="default"
+                onClick={() => setVorschauOffen(true)}
+                disabled={!previewSceneId}
+              >
                 <Play size={16} /> Spielen
               </Button>
             </>
@@ -244,99 +341,175 @@ export function WeltStudio() {
 
       <div className="flex flex-wrap items-center gap-3 text-xs text-muted-fg">
         <span className="inline-flex items-center gap-1">
-          <ShieldCheck size={14} /> {validation.findings.length ? `${validation.findings.length} Befunde` : "Workspace valide"}
+          <ShieldCheck size={14} />{" "}
+          {validation.findings.length
+            ? `${validation.findings.length} Befunde`
+            : "Workspace valide"}
         </span>
         <span>{workspace.entities.length} Einträge</span>
         {bereich === "bibliothek" ? <span>{bibliothek.length} Bibliothekseinträge</span> : null}
       </div>
 
-      {bereich === "material" ? <>
-      <div className="flex flex-wrap gap-2">
-        <button className={`rounded-sm border px-3 py-1.5 text-xs ${typ === "alle" ? "border-accent bg-accent text-accent-fg" : "border-border text-muted-fg hover:bg-surface-2"}`} onClick={() => setTyp("alle")}>
-          Alle
-        </button>
-        {registeredSchemas().map((schema) => (
-          <button
-            key={schema.type}
-            className={`rounded-sm border px-3 py-1.5 text-xs ${typ === schema.type ? "border-accent bg-accent text-accent-fg" : "border-border text-muted-fg hover:bg-surface-2"}`}
-            onClick={() => setTyp(schema.type)}
-          >
-            {schema.label} <span className="opacity-70">{workspace.entities.filter((e) => e.type === schema.type).length || ""}</span>
-          </button>
-        ))}
-      </div>
-
-      <div className="grid gap-5 xl:grid-cols-[minmax(14rem,20rem)_minmax(0,1fr)]">
-        <div className="space-y-2">
-          <div className="relative">
-            <Search size={16} className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-muted-fg" />
-            <Input className="pl-9" value={suche} onChange={(event) => setSuche(event.target.value)} placeholder="Projektmaterial suchen..." />
+      {bereich === "material" ? (
+        <>
+          <div className="flex flex-wrap gap-2">
+            <button
+              className={`rounded-sm border px-3 py-1.5 text-xs ${typ === "alle" ? "border-accent bg-accent text-accent-fg" : "border-border text-muted-fg hover:bg-surface-2"}`}
+              onClick={() => setTyp("alle")}
+            >
+              Alle
+            </button>
+            {registeredSchemas().map((schema) => (
+              <button
+                key={schema.type}
+                className={`rounded-sm border px-3 py-1.5 text-xs ${typ === schema.type ? "border-accent bg-accent text-accent-fg" : "border-border text-muted-fg hover:bg-surface-2"}`}
+                onClick={() => setTyp(schema.type)}
+              >
+                {schema.label}{" "}
+                <span className="opacity-70">
+                  {workspace.entities.filter((e) => e.type === schema.type).length || ""}
+                </span>
+              </button>
+            ))}
           </div>
-          <div className="max-h-[28rem] overflow-y-auto rounded-sm border border-border">
-            {sichtbar.length === 0 ? (
-              <div className="p-4 text-sm text-muted-fg">Noch keine Einträge. Lege eine Notiz an oder übernimm Lindendorf-Daten.</div>
-            ) : (
-              sichtbar.map((entity) => (
-                <button
-                  key={entity.id}
-                  className={`flex w-full items-center justify-between gap-2 border-b border-border px-3 py-2 text-left text-sm last:border-b-0 ${selected === entity.id ? "bg-accent text-accent-fg" : "hover:bg-surface-2"}`}
-                  onClick={() => setSelected(entity.id)}
-                >
-                  <span className="min-w-0 truncate">
-                    <strong className="block truncate">{entity.title}</strong>
-                    <span className="block truncate text-xs opacity-70">{registeredSchemas().find((s) => s.type === entity.type)?.label ?? entity.type} · Rev. {entity.revision}</span>
-                  </span>
-                </button>
-              ))
-            )}
-          </div>
-        </div>
 
-              <div className="rounded-sm border border-border p-4">
-          {!selectedEntity ? (
-            <p className="text-sm text-muted-fg">Wähle einen Eintrag links oder lege einen neuen an.</p>
-          ) : selectedEntity.type === "szene" ? (
-            <StudioSzeneneditor
-              entity={selectedEntity}
-              workspace={workspace}
-              isStart={startSceneId === selectedEntity.id}
-              onTitle={(title) => bearbeite({ title })}
-              onData={(patch) => bearbeite({ data: { ...selectedEntity.data, ...patch } })}
-              onSetStart={() => aktualisiere({ ...workspace, startSceneId: selectedEntity.id })}
-              onChoiceTarget={(choiceIndex, targetId) => setzeWahlziel(selectedEntity.id, choiceIndex, targetId)}
-              onPreview={() => setVorschauOffen(true)}
-            />
-          ) : (
-            <div className="space-y-3">
-              <div className="flex items-center justify-between gap-2">
-                <Input value={selectedEntity.title} onChange={(event) => bearbeite({ title: event.target.value })} className="text-base font-semibold" />
-                <Button variant="ghost" size="default" onClick={() => loesche(selectedEntity.id)} title="Eintrag löschen">
-                  <Trash2 size={16} />
-                </Button>
+          <div className="grid gap-5 xl:grid-cols-[minmax(14rem,20rem)_minmax(0,1fr)]">
+            <div className="space-y-2">
+              <div className="relative">
+                <Search
+                  size={16}
+                  className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-muted-fg"
+                />
+                <Input
+                  className="pl-9"
+                  value={suche}
+                  onChange={(event) => setSuche(event.target.value)}
+                  placeholder="Projektmaterial suchen..."
+                />
               </div>
-              <div className="space-y-2">
-                {Object.entries(selectedEntity.data).map(([feld, wert]) => {
-                  const istListe = Array.isArray(wert);
-                  return (
-                    <label key={feld} className="block text-sm">
-                      <span className="mb-1 block text-xs uppercase tracking-wide text-subtle-fg">{feld}</span>
-                      <textarea
-                        className="min-h-16 w-full rounded-sm border border-border bg-ink/70 p-2 text-sm text-fg outline-none focus-visible:ring-2 focus-visible:ring-ring"
-                        value={istListe ? wert.join("\n") : typeof wert === "string" ? wert : JSON.stringify(wert)}
-                        onChange={(event) => bearbeite({ data: { ...selectedEntity.data, [feld]: istListe ? event.target.value.split("\n") : event.target.value } })}
-                      />
-                    </label>
-                  );
-                })}
+              <div className="max-h-[28rem] overflow-y-auto rounded-sm border border-border">
+                {sichtbar.length === 0 ? (
+                  <div className="p-4 text-sm text-muted-fg">
+                    Noch keine Einträge. Lege eine Notiz an oder übernimm Lindendorf-Daten.
+                  </div>
+                ) : (
+                  sichtbar.map((entity) => {
+                    const vorschau = vorschauFuerEntity(entity);
+                    return (
+                      <button
+                        key={entity.id}
+                        className={`flex w-full items-center justify-between gap-2 border-b border-border px-3 py-2 text-left text-sm last:border-b-0 ${selected === entity.id ? "bg-accent text-accent-fg" : "hover:bg-surface-2"}`}
+                        onClick={() => setSelected(entity.id)}
+                      >
+                        <span className="flex min-w-0 items-center gap-2 truncate">
+                          {vorschau ? (
+                            <img
+                              src={vorschau}
+                              alt=""
+                              className="h-10 w-14 shrink-0 rounded-xs border border-border object-cover"
+                              loading="lazy"
+                            />
+                          ) : null}
+                          <span className="min-w-0 truncate">
+                            <strong className="block truncate">{entity.title}</strong>
+                            <span className="block truncate text-xs opacity-70">
+                              {registeredSchemas().find((s) => s.type === entity.type)?.label ??
+                                entity.type}{" "}
+                              · Rev. {entity.revision}
+                            </span>
+                          </span>
+                        </span>
+                      </button>
+                    );
+                  })
+                )}
               </div>
             </div>
-          )}
-        </div>
-      </div>
-      </> : <StudioBibliothek importedIds={importedIds} onImport={uebernehmeEintrag} />}
+
+            <div className="rounded-sm border border-border p-4">
+              {!selectedEntity ? (
+                <p className="text-sm text-muted-fg">
+                  Wähle einen Eintrag links oder lege einen neuen an.
+                </p>
+              ) : selectedEntity.type === "szene" ? (
+                <StudioSzeneneditor
+                  entity={selectedEntity}
+                  workspace={workspace}
+                  isStart={startSceneId === selectedEntity.id}
+                  onTitle={(title) => bearbeite({ title })}
+                  onData={(patch) => bearbeite({ data: { ...selectedEntity.data, ...patch } })}
+                  onSetStart={() => aktualisiere({ ...workspace, startSceneId: selectedEntity.id })}
+                  onChoiceTarget={(choiceIndex, targetId) =>
+                    setzeWahlziel(selectedEntity.id, choiceIndex, targetId)
+                  }
+                  onPreview={() => setVorschauOffen(true)}
+                />
+              ) : (
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between gap-2">
+                    <Input
+                      value={selectedEntity.title}
+                      onChange={(event) => bearbeite({ title: event.target.value })}
+                      className="text-base font-semibold"
+                    />
+                    <Button
+                      variant="ghost"
+                      size="default"
+                      onClick={() => loesche(selectedEntity.id)}
+                      title="Eintrag löschen"
+                    >
+                      <Trash2 size={16} />
+                    </Button>
+                  </div>
+                  <div className="space-y-2">
+                    {Object.entries(selectedEntity.data).map(([feld, wert]) => {
+                      const istListe = Array.isArray(wert);
+                      return (
+                        <label key={feld} className="block text-sm">
+                          <span className="mb-1 block text-xs uppercase tracking-wide text-subtle-fg">
+                            {feld}
+                          </span>
+                          <textarea
+                            className="min-h-16 w-full rounded-sm border border-border bg-ink/70 p-2 text-sm text-fg outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                            value={
+                              istListe
+                                ? wert.join("\n")
+                                : typeof wert === "string"
+                                  ? wert
+                                  : JSON.stringify(wert)
+                            }
+                            onChange={(event) =>
+                              bearbeite({
+                                data: {
+                                  ...selectedEntity.data,
+                                  [feld]: istListe
+                                    ? event.target.value.split("\n")
+                                    : event.target.value,
+                                },
+                              })
+                            }
+                          />
+                        </label>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+        </>
+      ) : (
+        <StudioBibliothek importedIds={importedIds} onImport={uebernehmeEintrag} />
+      )}
 
       {meldung ? <p className="text-sm text-muted-fg">{meldung}</p> : null}
-      {vorschauOffen && previewSceneId ? <StudioVorschau workspace={workspace} startSceneId={previewSceneId} onClose={() => setVorschauOffen(false)} /> : null}
+      {vorschauOffen && previewSceneId ? (
+        <StudioVorschau
+          workspace={workspace}
+          startSceneId={previewSceneId}
+          onClose={() => setVorschauOffen(false)}
+        />
+      ) : null}
     </div>
   );
 }
