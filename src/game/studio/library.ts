@@ -3,6 +3,7 @@ import { QUESTS } from "../json/baum";
 import { stimmeDatei } from "../json/stimme";
 import { wissenDatei, wissenIds } from "../json/wissen";
 import { FIGUR_NAME } from "../stimme";
+import { WELTBILD } from "../weltbild";
 import {
   AMULETT,
   ARTEFAKT,
@@ -21,7 +22,8 @@ import {
 import { STUDIO_MEDIA } from "./assets.generated";
 import type { Entity } from "./model";
 
-export type LibraryCategory = "medium" | "abschnitt" | "szene" | "figur" | "wissen" | "gegenstand";
+export type LibraryCategory =
+  "medium" | "abschnitt" | "szene" | "figur" | "wissen" | "gegenstand" | "ort";
 export type LibraryEntry = {
   id: string;
   category: LibraryCategory;
@@ -40,13 +42,14 @@ export function importedLibraryEntryIds(entities: readonly Entity[]): Set<string
       ids.add(explicitId);
       continue;
     }
-    const legacyId = entity.type === "szene"
-      ? entity.data.szeneId
-      : entity.type === "figur"
-        ? entity.data.figurId
-        : entity.type === "wissen"
-          ? entity.data.tafelId
-          : undefined;
+    const legacyId =
+      entity.type === "szene"
+        ? entity.data.szeneId
+        : entity.type === "figur"
+          ? entity.data.figurId
+          : entity.type === "wissen"
+            ? entity.data.tafelId
+            : undefined;
     if (typeof legacyId === "string") ids.add(`lindendorf:${entity.type}:${legacyId}`);
   }
   return ids;
@@ -54,6 +57,11 @@ export function importedLibraryEntryIds(entities: readonly Entity[]): Set<string
 
 const AUDIO_FORMATS = new Set(["m4a", "mp3", "ogg", "wav"]);
 const STUDIO_MEDIA_PATHS = new Set<string>(STUDIO_MEDIA.map((media) => media.src));
+const SCENE_BY_ID = new Map(
+  QUESTS.flatMap((quest) =>
+    quest.teile.flatMap((teil) => teil.szenen.map((szene) => [szene.id, szene] as const)),
+  ),
+);
 
 function titleCase(value: string) {
   return value.replace(/\b\p{L}/gu, (letter) => letter.toLocaleUpperCase("de-DE"));
@@ -71,7 +79,15 @@ function mediaEntry(media: (typeof STUDIO_MEDIA)[number]): LibraryEntry {
   const assetKey = Object.entries(ART).find(([, src]) => src === media.src)?.[0];
   const portraitKey = Object.entries(PORTRAITS).find(([, src]) => src === media.src)?.[0];
   const layerKey = Object.entries(LAGEN_ART).find(([, src]) => src === media.src)?.[0];
-  const role = voice ? "stimme" : portraitKey ? "portraet" : layerKey ? "lage" : assetKey ? "buehnenbild" : "zusatzmedium";
+  const role = voice
+    ? "stimme"
+    : portraitKey
+      ? "portraet"
+      : layerKey
+        ? "lage"
+        : assetKey
+          ? "buehnenbild"
+          : "zusatzmedium";
   return {
     id: `lindendorf:medium:${media.id}`,
     category: "medium",
@@ -96,7 +112,9 @@ function sceneEntries(): LibraryEntry[] {
     quest.teile.flatMap((teil) =>
       teil.szenen.map((szene) => {
         const sceneImage = `/art/wissen/${szene.id}.jpg`;
-        const preview = STUDIO_MEDIA_PATHS.has(sceneImage) ? sceneImage : ART[szene.art as keyof typeof ART];
+        const preview = STUDIO_MEDIA_PATHS.has(sceneImage)
+          ? sceneImage
+          : ART[szene.art as keyof typeof ART];
         return {
           id: `lindendorf:szene:${szene.id}`,
           category: "szene",
@@ -153,6 +171,33 @@ function sectionEntries(): LibraryEntry[] {
   );
 }
 
+function placeEntries(): LibraryEntry[] {
+  return WELTBILD.map((ort) => {
+    const firstSceneId = ort.szenen[0];
+    const firstScene = firstSceneId ? SCENE_BY_ID.get(firstSceneId) : undefined;
+    const sceneImage = firstSceneId ? `/art/wissen/${firstSceneId}.jpg` : "";
+    const preview = STUDIO_MEDIA_PATHS.has(sceneImage)
+      ? sceneImage
+      : firstScene
+        ? ART[firstScene.art as keyof typeof ART]
+        : undefined;
+    return {
+      id: `lindendorf:ort:${ort.id}`,
+      category: "ort" as const,
+      title: ort.name,
+      sourceLabel: "Lindendorf · Ort",
+      preview,
+      mediaType: "image" as const,
+      data: {
+        sourceId: ort.id,
+        beschreibung: ort.funktion,
+        sourceSceneIds: [...ort.szenen],
+        sourceProject: "Lindendorf",
+      },
+    };
+  });
+}
+
 function characterEntries(): LibraryEntry[] {
   return Object.entries(FIGUR_NAME).map(([portrait, title]) => ({
     id: `lindendorf:figur:${portrait}`,
@@ -175,21 +220,23 @@ function knowledgeEntries(): LibraryEntry[] {
   return wissenIds().flatMap((id) => {
     const page = wissenDatei(id);
     if (!page) return [];
-    return [{
-      id: `lindendorf:wissen:${id}`,
-      category: "wissen" as const,
-      title: page.title,
-      sourceLabel: "Lindendorf · Wissenstafel",
-      preview: page.bild,
-      mediaType: "image" as const,
-      data: {
-        sourceId: id,
-        lines: [...page.lines],
-        bild: page.bild,
-        sourceSceneIds: [...(page.szenen ?? [])],
-        sourceProject: "Lindendorf",
+    return [
+      {
+        id: `lindendorf:wissen:${id}`,
+        category: "wissen" as const,
+        title: page.title,
+        sourceLabel: "Lindendorf · Wissenstafel",
+        preview: page.bild,
+        mediaType: "image" as const,
+        data: {
+          sourceId: id,
+          lines: [...page.lines],
+          bild: page.bild,
+          sourceSceneIds: [...(page.szenen ?? [])],
+          sourceProject: "Lindendorf",
+        },
       },
-    }];
+    ];
   });
 }
 
@@ -226,15 +273,17 @@ function voiceEntries(): LibraryEntry[] {
     stimmeDatei(scene.id).flatMap((voice, index) => {
       if (!voice.src || seen.has(voice.src)) return [];
       seen.add(voice.src);
-      return [{
-        id: `lindendorf:stimme:${scene.id}:${index}`,
-        category: "medium" as const,
-        title: voice.name || scene.title,
-        sourceLabel: `Lindendorf · Stimme · ${scene.title}`,
-        preview: voice.src,
-        mediaType: "audio" as const,
-        data: { src: voice.src, sceneId: scene.id, sourceProject: "Lindendorf" },
-      }];
+      return [
+        {
+          id: `lindendorf:stimme:${scene.id}:${index}`,
+          category: "medium" as const,
+          title: voice.name || scene.title,
+          sourceLabel: `Lindendorf · Stimme · ${scene.title}`,
+          preview: voice.src,
+          mediaType: "audio" as const,
+          data: { src: voice.src, sceneId: scene.id, sourceProject: "Lindendorf" },
+        },
+      ];
     }),
   );
 }
@@ -242,6 +291,7 @@ function voiceEntries(): LibraryEntry[] {
 export function lindendorfLibrary(): LibraryEntry[] {
   return [
     ...STUDIO_MEDIA.map(mediaEntry),
+    ...placeEntries(),
     ...sectionEntries(),
     ...sceneEntries(),
     ...characterEntries(),
