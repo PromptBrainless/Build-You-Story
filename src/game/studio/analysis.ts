@@ -37,6 +37,19 @@ function szenen(workspace: Workspace) {
 export function analyseWorkspaceFlow(workspace: Workspace): StudioFlowReport {
   const scenes = szenen(workspace);
   const sceneIds = new Set(scenes.map((scene) => scene.id));
+  const scenesById = new Map(scenes.map((scene) => [scene.id, scene]));
+  const validChoiceRelations = workspace.relations.filter((relation) => {
+    if (relation.kind !== "choice" || !sceneIds.has(relation.toId)) return false;
+    const source = scenesById.get(relation.fromId);
+    if (!source) return false;
+    const parsed = MakerSceneDataSchema.safeParse(source.data);
+    const choiceIndex = relation.data.choiceIndex;
+    return parsed.success
+      && typeof choiceIndex === "number"
+      && Number.isInteger(choiceIndex)
+      && choiceIndex >= 0
+      && choiceIndex < parsed.data.choices.length;
+  });
   const eingehend = new Map<string, number>();
   const ausgehend = new Map<string, number>();
   const endings = new Map<string, number>();
@@ -44,9 +57,7 @@ export function analyseWorkspaceFlow(workspace: Workspace): StudioFlowReport {
   let linkedChoices = 0;
   let endingChoices = 0;
 
-  for (const relation of workspace.relations) {
-    if (relation.kind !== "choice") continue;
-    if (!sceneIds.has(relation.fromId) || !sceneIds.has(relation.toId)) continue;
+  for (const relation of validChoiceRelations) {
     linkedChoices += 1;
     ausgehend.set(relation.fromId, (ausgehend.get(relation.fromId) ?? 0) + 1);
     eingehend.set(relation.toId, (eingehend.get(relation.toId) ?? 0) + 1);
@@ -55,18 +66,17 @@ export function analyseWorkspaceFlow(workspace: Workspace): StudioFlowReport {
   for (const scene of scenes) {
     const parsed = MakerSceneDataSchema.safeParse(scene.data);
     if (!parsed.success) continue;
-    parsed.data.endingChoices.forEach(() => {
+    const validEndings = parsed.data.endingChoices.filter(
+      (choiceIndex) => choiceIndex < parsed.data.choices.length,
+    );
+    validEndings.forEach(() => {
       endingChoices += 1;
       endings.set(scene.id, (endings.get(scene.id) ?? 0) + 1);
     });
     parsed.data.choices.forEach((choice, index) => {
-      const hatEnde = parsed.data.endingChoices.includes(index);
-      const hatZiel = workspace.relations.some(
-        (relation) =>
-          relation.kind === "choice"
-          && relation.fromId === scene.id
-          && relation.data.choiceIndex === index
-          && sceneIds.has(relation.toId),
+      const hatEnde = validEndings.includes(index);
+      const hatZiel = validChoiceRelations.some(
+        (relation) => relation.fromId === scene.id && relation.data.choiceIndex === index,
       );
       if (!hatEnde && !hatZiel) {
         luecken.push({
@@ -85,8 +95,8 @@ export function analyseWorkspaceFlow(workspace: Workspace): StudioFlowReport {
     const sceneId = stack.pop()!;
     if (reachable.has(sceneId)) continue;
     reachable.add(sceneId);
-    workspace.relations.forEach((relation) => {
-      if (relation.kind !== "choice" || relation.fromId !== sceneId || !sceneIds.has(relation.toId)) return;
+    validChoiceRelations.forEach((relation) => {
+      if (relation.fromId !== sceneId) return;
       stack.push(relation.toId);
     });
   }

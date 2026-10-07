@@ -117,7 +117,11 @@ test("Wahlziel löst nur explizite Szenenrelationen auf", () => {
 });
 
 test("explizite Endwahlen sind keine fehlenden Szenenziele", () => {
-  const ending = scene("ending", { choices: ["Das Dorf verlassen"], endingChoices: [0] });
+  const ending = scene("ending", {
+    lines: ["Das Dorf bleibt hinter dir."],
+    choices: ["Das Dorf verlassen"],
+    endingChoices: [0],
+  });
   const workspace = workspaceWith([ending]);
   assert.equal(runner.wahlIstEnde(ending, 0), true);
   assert.equal(runner.wahlZiel(workspace, ending.id, 0), null);

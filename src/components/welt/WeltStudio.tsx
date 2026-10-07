@@ -160,7 +160,54 @@ export function WeltStudio() {
   }
 
   function loesche(id: string) {
-    const entities = workspace.entities.filter((entity) => entity.id !== id);
+    const geloeschteEntity = workspace.entities.find((entity) => entity.id === id);
+    const sceneReferences = new Set([
+      id,
+    ]);
+    if (
+      geloeschteEntity?.type === "szene"
+      && typeof geloeschteEntity.data.sourceId === "string"
+      && geloeschteEntity.data.sourceId
+    ) {
+      sceneReferences.add(geloeschteEntity.data.sourceId);
+    }
+    const entities = workspace.entities
+      .filter((entity) => entity.id !== id)
+      .map((entity) => {
+        if (geloeschteEntity?.type !== "szene") return entity;
+        const data = { ...entity.data };
+        let changed = false;
+        for (const key of ["sceneIds", "sourceSceneIds"] as const) {
+          const references = data[key];
+          if (!Array.isArray(references)) continue;
+          const nextReferences = references.filter(
+            (reference) => typeof reference !== "string" || !sceneReferences.has(reference),
+          );
+          if (nextReferences.length !== references.length) {
+            data[key] = nextReferences;
+            changed = true;
+          }
+        }
+        if (typeof data.szenen === "string") {
+          const nextReferences = data.szenen
+            .split(",")
+            .map((reference) => reference.trim())
+            .filter((reference) => reference && !sceneReferences.has(reference))
+            .join(", ");
+          if (nextReferences !== data.szenen) {
+            data.szenen = nextReferences;
+            changed = true;
+          }
+        }
+        return changed
+          ? {
+              ...entity,
+              data,
+              revision: entity.revision + 1,
+              updatedAt: new Date().toISOString(),
+            }
+          : entity;
+      });
     const relations = workspace.relations.filter(
       (relation) => relation.fromId !== id && relation.toId !== id,
     );
@@ -188,8 +235,15 @@ export function WeltStudio() {
       setMeldung("Dieser Eintrag ist bereits in deinem Projekt.");
       return;
     }
+    const importData = { ...entry.data };
+    if (entry.category === "figur" && typeof importData.role === "string") {
+      if (typeof importData.rolle !== "string" || !importData.rolle.trim()) {
+        importData.rolle = importData.role;
+      }
+      delete importData.role;
+    }
     const entity = newEntity(workspace.id, ENTITY_TYPES[entry.category], entry.title, {
-      ...entry.data,
+      ...importData,
       libraryEntryId: entry.id,
       librarySource: entry.sourceLabel,
     });
@@ -566,21 +620,30 @@ function StudioPruefpanel({
         <div className="space-y-3">
           <div>
             <p className="text-xs uppercase tracking-[0.16em] text-muted-fg">Prüfbericht</p>
-            <p className="text-sm text-fg">{validation.length ? "Der Maker meldet konkrete Stellen, die noch geschlossen werden müssen." : "Keine Schemafehler. Die Werkstatt ist logisch lesbar."}</p>
+            <p className="text-sm text-fg">{validation.length ? "Der Maker meldet konkrete Stellen, die noch geschlossen werden müssen." : "Keine Schemafehler."}</p>
           </div>
           <div className="space-y-2">
-            {validation.slice(0, 8).map((finding, index) => (
-              <button
-                key={`${finding.entityId ?? "global"}-${index}`}
-                type="button"
-                onClick={() => finding.entityId && onSelect(finding.entityId)}
-                disabled={!finding.entityId}
-                className={`block w-full rounded-sm border px-3 py-2 text-left text-xs ${finding.severity === "error" ? "border-warn/40 bg-warn/10 text-warn" : finding.severity === "warning" ? "border-border bg-ink/40 text-fg" : "border-border/70 bg-ink/20 text-muted-fg"} disabled:cursor-default`}
-              >
-                <span className="block uppercase tracking-[0.14em] opacity-70">{finding.severity}</span>
-                <span className="mt-1 block">{finding.message}</span>
-              </button>
-            ))}
+            {validation.map((finding, index) => {
+              const selectableId = workspace.entities.some(
+                (entity) => entity.id === finding.entityId,
+              )
+                ? finding.entityId
+                : undefined;
+              return (
+                <button
+                  key={`${finding.entityId ?? "global"}-${index}`}
+                  type="button"
+                  onClick={() => {
+                    if (selectableId) onSelect(selectableId);
+                  }}
+                  disabled={!selectableId}
+                  className={`block w-full rounded-sm border px-3 py-2 text-left text-xs ${finding.severity === "error" ? "border-warn/40 bg-warn/10 text-warn" : finding.severity === "warning" ? "border-border bg-ink/40 text-fg" : "border-border/70 bg-ink/20 text-muted-fg"} disabled:cursor-default`}
+                >
+                  <span className="block uppercase tracking-[0.14em] opacity-70">{finding.severity}</span>
+                  <span className="mt-1 block">{finding.message}</span>
+                </button>
+              );
+            })}
             {!validation.length ? <p className="rounded-sm border border-border bg-ink/20 px-3 py-2 text-xs text-muted-fg">Schema und Projektbasis sind sauber.</p> : null}
           </div>
           <div className="space-y-2 text-xs">
