@@ -115,7 +115,31 @@ export function WeltStudio() {
   }
 
   function loesche(id: string) {
-    const entities = workspace.entities.filter((entity) => entity.id !== id);
+    const geloeschteSzene = workspace.entities.find((entity) => entity.id === id && entity.type === "szene");
+    const sceneReferences = new Set([id, typeof geloeschteSzene?.data.sourceId === "string" ? geloeschteSzene.data.sourceId : ""]);
+    const entities = workspace.entities
+      .filter((entity) => entity.id !== id)
+      .map((entity) => {
+        if (!geloeschteSzene) return entity;
+        const sourceSceneIds = Array.isArray(entity.data.sourceSceneIds) ? entity.data.sourceSceneIds : null;
+        const sceneIds = Array.isArray(entity.data.sceneIds) ? entity.data.sceneIds : null;
+        const nextSourceSceneIds = sourceSceneIds?.filter((sceneId) => !sceneReferences.has(String(sceneId)));
+        const nextSceneIds = sceneIds?.filter((sceneId) => !sceneReferences.has(String(sceneId)));
+        if (
+          (!sourceSceneIds || sourceSceneIds.length === nextSourceSceneIds?.length)
+          && (!sceneIds || sceneIds.length === nextSceneIds?.length)
+        ) return entity;
+        return {
+          ...entity,
+          data: {
+            ...entity.data,
+            ...(nextSourceSceneIds ? { sourceSceneIds: nextSourceSceneIds } : {}),
+            ...(nextSceneIds ? { sceneIds: nextSceneIds } : {}),
+          },
+          revision: entity.revision + 1,
+          updatedAt: new Date().toISOString(),
+        };
+      });
     const relations = workspace.relations.filter((relation) => relation.fromId !== id && relation.toId !== id);
     const next = { ...workspace, entities, relations };
     if (workspace.startSceneId === id) next.startSceneId = entities.find((entity) => entity.type === "szene")?.id;
@@ -140,8 +164,10 @@ export function WeltStudio() {
       setMeldung("Dieser Eintrag ist bereits in deinem Projekt.");
       return;
     }
+    const { role, ...entryData } = entry.data;
     const entity = newEntity(workspace.id, ENTITY_TYPES[entry.category], entry.title, {
-      ...entry.data,
+      ...entryData,
+      ...(entry.category === "figur" && typeof entry.data.rolle !== "string" && typeof role === "string" ? { rolle: role } : {}),
       libraryEntryId: entry.id,
       librarySource: entry.sourceLabel,
     });
@@ -403,15 +429,15 @@ function StudioPruefpanel({
         <div className="space-y-3">
           <div>
             <p className="text-xs uppercase tracking-[0.16em] text-muted-fg">Prüfbericht</p>
-            <p className="text-sm text-fg">{validation.length ? "Der Maker meldet konkrete Stellen, die noch geschlossen werden müssen." : "Keine Schemafehler. Die Werkstatt ist logisch lesbar."}</p>
+            <p className="text-sm text-fg">{validation.length ? "Der Maker meldet konkrete Stellen, die noch geschlossen werden müssen." : "Keine Schemafehler."}</p>
           </div>
           <div className="space-y-2">
-            {validation.slice(0, 8).map((finding, index) => (
+            {validation.map((finding, index) => (
               <button
                 key={`${finding.entityId ?? "global"}-${index}`}
                 type="button"
-                onClick={() => finding.entityId && onSelect(finding.entityId)}
-                disabled={!finding.entityId}
+                onClick={() => finding.entityId && workspace.entities.some((entity) => entity.id === finding.entityId) && onSelect(finding.entityId)}
+                disabled={!finding.entityId || !workspace.entities.some((entity) => entity.id === finding.entityId)}
                 className={`block w-full rounded-sm border px-3 py-2 text-left text-xs ${finding.severity === "error" ? "border-warn/40 bg-warn/10 text-warn" : finding.severity === "warning" ? "border-border bg-ink/40 text-fg" : "border-border/70 bg-ink/20 text-muted-fg"} disabled:cursor-default`}
               >
                 <span className="block uppercase tracking-[0.14em] opacity-70">{finding.severity}</span>

@@ -1,9 +1,9 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { analyseWorkspaceFlow } from "./analysis.ts";
-import { validateWorkspace } from "./model.ts";
+import { validateWorkspace, type Workspace } from "./model.ts";
 
-function workspaceFixture() {
+function workspaceFixture(): Workspace {
   return {
     id: "workspace-1",
     name: "Maker",
@@ -118,4 +118,29 @@ test("Workspace-Prüfung ergänzt Studio-spezifische Warnungen", () => {
   assert.ok(meldungen.includes("Figur braucht noch rolle."));
   assert.ok(meldungen.includes("Wissenstafel hat noch keinen vollständigen Text."));
   assert.ok(meldungen.includes("Wissenstafel ist noch an keine Szene gebunden."));
+});
+
+test("Studiofluss ignoriert veraltete Wahl- und Endpositionen", () => {
+  const workspace = workspaceFixture();
+  workspace.relations[0]!.data.choiceIndex = 8;
+  const endingScene = workspace.entities.find((entity) => entity.id === "scene-b")!;
+  endingScene.data.choices = [];
+  endingScene.data.endingChoices = [8];
+
+  const report = analyseWorkspaceFlow(workspace);
+
+  assert.equal(report.linkedChoices, 0);
+  assert.equal(report.endingChoices, 0);
+  assert.deepEqual(report.unreachableSceneIds, ["scene-b", "scene-c"]);
+  assert.deepEqual(report.deadEndSceneIds, ["scene-b"]);
+});
+
+test("Figuren mit gespeichertem role-Feld gelten als vollständig", () => {
+  const workspace = workspaceFixture();
+  const figure = workspace.entities.find((entity) => entity.id === "figur-1")!;
+  figure.data = { role: "Figur aus Lindendorf", ort: "Dorf", weltbild: "Hoffnung", angst: "Verlust", ziel: "Überleben" };
+
+  const result = validateWorkspace(workspace);
+
+  assert.ok(!result.findings.some((finding) => finding.entityId === figure.id && finding.message === "Figur braucht noch rolle."));
 });

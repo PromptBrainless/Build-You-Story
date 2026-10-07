@@ -56,7 +56,7 @@ function FigurenEditor({ entity, onData }: Omit<EditorProps, "workspace">) {
         />
       </div>
       <div className="grid gap-3 sm:grid-cols-2">
-        <Feld label="Rolle" value={text(data.rolle)} onChange={(value) => onData({ rolle: value })} />
+        <Feld label="Rolle" value={text(data.rolle) || text(data.role)} onChange={(value) => onData({ rolle: value })} />
         <Feld label="Ort" value={text(data.ort)} onChange={(value) => onData({ ort: value })} />
       </div>
       <Textfeld label="Weltbild" value={text(data.weltbild)} onChange={(value) => onData({ weltbild: value })} />
@@ -79,7 +79,16 @@ function FigurenEditor({ entity, onData }: Omit<EditorProps, "workspace">) {
 function WissensEditor({ entity, workspace, onData }: EditorProps) {
   const data = entity.data;
   const szenen = workspace.entities.filter((candidate) => candidate.type === "szene");
-  const ausgewaehlt = list(data.sourceSceneIds);
+  const sourceSceneIds = list(data.sourceSceneIds);
+  const sceneBindings = szenen
+    .map((szene) => ({
+      id: szene.id,
+      bindingId: text(szene.data.sourceId) || szene.id,
+      title: szene.title,
+    }));
+  const ausgewaehlt = sceneBindings
+    .filter((szene) => sourceSceneIds.includes(szene.bindingId) || sourceSceneIds.includes(szene.id))
+    .map((szene) => szene.bindingId);
   const textwert = text(data.text) || list(data.lines).join("\n\n");
   return (
     <div className="space-y-4">
@@ -112,10 +121,15 @@ function WissensEditor({ entity, workspace, onData }: EditorProps) {
       />
       <Szenenwahl
         label="An Szenen binden"
-        szenen={szenen.map((szene) => ({ id: szene.id, title: szene.title }))}
+        szenen={sceneBindings.map((szene) => ({ id: szene.bindingId, title: szene.title }))}
         ausgewaehlt={ausgewaehlt}
-        onToggle={(sceneId) => {
-          const next = toggleListe(ausgewaehlt, sceneId);
+        onToggle={(bindingId) => {
+          const szene = sceneBindings.find((candidate) => candidate.bindingId === bindingId);
+          if (!szene) return;
+          const aliases = new Set([szene.id, szene.bindingId]);
+          const warAusgewaehlt = sourceSceneIds.some((sceneId) => aliases.has(sceneId));
+          const next = sourceSceneIds.filter((sceneId) => !aliases.has(sceneId));
+          if (!warAusgewaehlt) next.push(szene.bindingId);
           onData({ sourceSceneIds: next, szenen: next.join(", ") });
         }}
       />
@@ -198,7 +212,10 @@ function MedienEditor({ entity, onData }: Omit<EditorProps, "workspace">) {
 function AbschnittEditor({ entity, workspace, onData }: EditorProps) {
   const data = entity.data;
   const sceneIds = list(data.sourceSceneIds);
-  const fehlende = sceneIds.filter((sceneId) => !workspace.entities.some((candidate) => candidate.id === sceneId));
+  const bekannteSzenen = new Set(workspace.entities
+    .filter((candidate) => candidate.type === "szene")
+    .flatMap((candidate) => [candidate.id, text(candidate.data.sourceId)]));
+  const fehlende = sceneIds.filter((sceneId) => !bekannteSzenen.has(sceneId));
   return (
     <div className="space-y-4">
       <div className="grid gap-3 sm:grid-cols-2">

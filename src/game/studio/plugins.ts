@@ -2,13 +2,13 @@
 import { z, type ZodType } from "zod";
 import type { Entity, ValidationFinding } from "./model";
 
-export type SchemaRegistration = { type: string; version: number; schema: ZodType<Record<string, unknown>>; label: string };
+export type SchemaRegistration = { type: string; version: number; schema: ZodType<Record<string, unknown>>; label: string; validate?: (entity: Entity) => ValidationFinding[] };
 export type WorldForgePlugin = { id: string; version: string; apiVersion: "1"; schemas: SchemaRegistration[]; validate?: (entity: Entity) => ValidationFinding[] };
 
 const registry = new Map<string, SchemaRegistration>();
 export function registerPlugin(plugin: WorldForgePlugin) {
   if (plugin.apiVersion !== "1") throw new Error("Nicht unterstuetzte Plugin-API");
-  for (const schema of plugin.schemas) registry.set(schema.type, schema);
+  for (const schema of plugin.schemas) registry.set(schema.type, { ...schema, validate: plugin.validate });
 }
 export function schemaFor(type: string) {
   return registry.get(type);
@@ -51,7 +51,7 @@ registerPlugin({
     }
     if (entity.type === "figur") {
       for (const feld of ["rolle", "ort", "weltbild", "angst", "ziel"] as const) {
-        if (!istText(entity.data[feld])) {
+        if (!istText(entity.data[feld]) && !(feld === "rolle" && istText(entity.data.role))) {
           meldungen.push({ severity: "warning", message: `Figur braucht noch ${feld}.`, entityId: entity.id });
         }
       }
